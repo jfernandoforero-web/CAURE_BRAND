@@ -151,7 +151,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
       
       <!-- Logo Tipográfico Disruptivo -->
-      <a href="#" class="flex items-center gap-3.5 group">
+      <a href="#inicio" class="flex items-center gap-3.5 group">
         <div class="w-9 h-9 bg-accent-acid text-black flex items-center justify-center font-syne font-black text-xl rounded-none transition-transform group-hover:scale-105 group-hover:rotate-2 shadow-[0_0_15px_rgba(204,255,0,0.6)]">
           C
         </div>
@@ -163,17 +163,17 @@
         </div>
       </a>
 
-      <!-- Dynamic Drop Badge & Countdown (Centerpiece) -->
-      <div class="hidden lg:flex items-center gap-3 px-4 py-1.5 rounded-full bg-noir-900 border border-noir-border/80 shadow-inner">
+      <!-- Dynamic Drop Badge & Countdown (Clickable: Scrolls to Catalog) -->
+      <a href="#catalogo" class="hidden lg:flex items-center gap-3 px-4 py-1.5 rounded-full bg-noir-900 border border-noir-border/80 shadow-inner hover:border-accent-acid/40 transition-all cursor-pointer group" title="Ver Drop Exclusivo">
         <div class="flex items-center gap-2">
           <span class="w-2 h-2 rounded-full bg-accent-orange animate-ping"></span>
-          <span class="text-[11px] font-mono uppercase tracking-wider text-gray-400 font-bold">🔥 Drop Exclusivo:</span>
+          <span class="text-[11px] font-mono uppercase tracking-wider text-gray-400 font-bold group-hover:text-white transition-colors">🔥 Drop Exclusivo:</span>
         </div>
         <div class="font-mono text-xs font-bold text-accent-acid tracking-widest bg-black px-2.5 py-0.5 rounded border border-white/10" id="countdownTimer">
           04h : 18m : 42s
         </div>
         <span class="text-[10px] font-mono uppercase tracking-widest text-accent-orange font-bold">12 Pares Restantes</span>
-      </div>
+      </a>
 
       <!-- Navigation & Action Links -->
       <nav class="hidden md:flex items-center space-x-7 font-mono text-xs uppercase tracking-wider font-semibold">
@@ -185,13 +185,14 @@
 
       <!-- Right Actions: Cart & VIP Contact -->
       <div class="flex items-center gap-3 sm:gap-4">
-        <a id="navWhatsappDirect" href="#" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded bg-white/5 hover:bg-white/10 border border-white/10 hover:border-accent-acid/50 text-xs font-mono tracking-wider text-gray-300 hover:text-white transition-all">
+        <!-- Direct Functional WhatsApp Link -->
+        <a id="navWhatsappDirect" href="https://wa.me/573001234567?text=%C2%A1Hola!%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Quisiera%20asesor%C3%ADa%20sobre%20el%20cat%C3%A1logo%20exclusivo%20y%20disponibilidad%20de%20tallas." target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded bg-white/5 hover:bg-white/10 border border-white/10 hover:border-accent-acid/50 text-xs font-mono tracking-wider text-gray-300 hover:text-white transition-all cursor-pointer">
           <i data-lucide="message-square" class="w-3.5 h-3.5 text-accent-acid"></i>
           <span>Asesor VIP</span>
         </a>
 
         <!-- Cart Trigger Button -->
-        <button id="cartDrawerOpenBtn" class="relative p-2.5 rounded bg-noir-900 hover:bg-noir-850 border border-noir-border text-white hover:text-accent-acid transition-all" aria-label="Ver Carrito">
+        <button id="cartDrawerOpenBtn" class="relative p-2.5 rounded bg-noir-900 hover:bg-noir-850 border border-noir-border text-white hover:text-accent-acid transition-all cursor-pointer" aria-label="Ver Carrito">
           <i data-lucide="shopping-bag" class="w-4 h-4"></i>
           <span id="cartCountPill" class="absolute -top-1.5 -right-1.5 bg-accent-acid text-black font-mono font-black text-[10px] w-4 h-4 rounded-full flex items-center justify-center scale-0 transition-transform">
             0
@@ -199,7 +200,7 @@
         </button>
 
         <!-- Mobile Menu Toggle -->
-        <button id="mobileNavToggle" class="md:hidden p-2.5 rounded bg-noir-900 border border-noir-border text-white hover:text-accent-acid transition-colors" aria-label="Menú">
+        <button id="mobileNavToggle" class="md:hidden p-2.5 rounded bg-noir-900 border border-noir-border text-white hover:text-accent-acid transition-colors cursor-pointer" aria-label="Menú">
           <i data-lucide="menu" id="mobileMenuIconOpen" class="w-5 h-5"></i>
           <i data-lucide="x" id="mobileMenuIconClose" class="w-5 h-5 hidden"></i>
         </button>
@@ -211,10 +212,10 @@
     <div id="mobileDrawerMenu" class="hidden md:hidden border-t border-noir-border bg-noir-950/98 px-6 py-6 transition-all">
       <div class="flex flex-col space-y-4 font-mono text-xs uppercase tracking-widest font-bold">
         <!-- Mobile Drop Countdown -->
-        <div class="p-3 bg-noir-900 rounded border border-white/10 flex items-center justify-between mb-2">
+        <a href="#catalogo" class="p-3 bg-noir-900 rounded border border-white/10 flex items-center justify-between mb-2">
           <span class="text-accent-orange text-[10px]">🔥 PRÓXIMO DROP:</span>
           <span class="font-mono text-accent-acid text-xs font-black" id="countdownTimerMobile">04h : 18m : 42s</span>
-        </div>
+        </a>
 
         <a href="#inicio" class="mobile-nav-link text-gray-300 hover:text-accent-acid py-2 border-b border-white/5">Inicio</a>
         <a href="#catalogo" class="mobile-nav-link text-gray-300 hover:text-accent-acid py-2 border-b border-white/5">Catálogo de Tenis</a>
@@ -222,7 +223,7 @@
         <a href="#garantia" class="mobile-nav-link text-gray-300 hover:text-accent-acid py-2 border-b border-white/5">Garantía & Envíos</a>
         
         <div class="pt-2">
-          <a id="mobileWhatsappDirect" href="#" target="_blank" class="w-full flex items-center justify-center gap-2 bg-accent-acid text-black py-3 rounded font-mono font-black text-xs uppercase tracking-wider shadow-lg">
+          <a id="mobileWhatsappDirect" href="https://wa.me/573001234567?text=%C2%A1Hola!%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Quisiera%20asesor%C3%ADa%20sobre%20el%20cat%C3%A1logo%20exclusivo%20y%20disponibilidad%20de%20tallas." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 bg-accent-acid text-black py-3 rounded font-mono font-black text-xs uppercase tracking-wider shadow-lg cursor-pointer">
             <i data-lucide="message-circle" class="w-4 h-4"></i>
             Chatear por WhatsApp
           </a>
@@ -265,12 +266,12 @@
 
           <!-- Dual Contrasting CTAs -->
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
-            <a href="#catalogo" class="inline-flex items-center justify-center gap-3 bg-accent-acid hover:bg-accent-acidHover text-black px-8 py-4 font-mono font-black text-xs uppercase tracking-widest transition-all transform hover:-translate-y-0.5 glow-acid">
+            <a href="#catalogo" class="inline-flex items-center justify-center gap-3 bg-accent-acid hover:bg-accent-acidHover text-black px-8 py-4 font-mono font-black text-xs uppercase tracking-widest transition-all transform hover:-translate-y-0.5 glow-acid cursor-pointer">
               <span>Explorar Catálogo</span>
               <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
             </a>
 
-            <a id="heroAdvisorBtn" href="#" target="_blank" class="inline-flex items-center justify-center gap-3 bg-noir-900 hover:bg-noir-850 border border-noir-border hover:border-white/30 text-white px-7 py-4 font-mono font-bold text-xs uppercase tracking-widest transition-all">
+            <a id="heroAdvisorBtn" href="https://wa.me/573001234567?text=%C2%A1Hola!%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Quisiera%20asesor%C3%ADa%20sobre%20el%20cat%C3%A1logo%20exclusivo%20y%20disponibilidad%20de%20tallas." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-noir-900 hover:bg-noir-850 border border-noir-border hover:border-white/30 text-white px-7 py-4 font-mono font-bold text-xs uppercase tracking-widest transition-all cursor-pointer">
               <i data-lucide="message-circle" class="w-4 h-4 text-accent-acid"></i>
               <span>Hablar con Asesor</span>
             </a>
@@ -294,7 +295,7 @@
 
         </div>
 
-        <!-- Right Hero Showcase (Iconic Travis Scott Jordan 1 Visual) -->
+        <!-- Right Hero Showcase (Iconic Travis Scott Jordan 1 Visual - Clickable to open Modal) -->
         <div class="lg:col-span-5 relative flex justify-center">
           <div class="relative w-full max-w-lg">
             
@@ -302,7 +303,7 @@
             <div class="absolute inset-0 bg-gradient-to-tr from-accent-acid/15 via-transparent to-accent-orange/15 rounded-none blur-2xl -z-10"></div>
 
             <!-- Showcase Box -->
-            <div class="bg-noir-900/90 border border-noir-border hover:border-accent-acid/40 p-6 relative transition-all duration-500 shadow-2xl group">
+            <div onclick="openQuickModal(1)" class="bg-noir-900/90 border border-noir-border hover:border-accent-acid/40 p-6 relative transition-all duration-500 shadow-2xl group cursor-pointer" title="Ver Detalles de AJ1 Reverse Mocha">
               
               <!-- Floating Top Labels -->
               <div class="flex items-center justify-between border-b border-white/10 pb-3 mb-4">
@@ -334,9 +335,9 @@
                   <div class="font-mono text-sm text-gray-300 font-bold mt-0.5">$ 195.000 COP</div>
                 </div>
                 
-                <a href="#catalogo" class="p-3 bg-accent-acid text-black hover:bg-white transition-colors" title="Ver en Catálogo">
+                <button type="button" class="p-3 bg-accent-acid text-black group-hover:bg-white transition-colors" aria-label="Abrir vista rápida">
                   <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                </a>
+                </button>
               </div>
 
             </div>
@@ -365,7 +366,7 @@
             SNEAKER <span class="editorial-outline">ARCHIVE</span>
           </h2>
           <p class="text-gray-400 text-xs sm:text-sm font-inter max-w-xl">
-            Pasa el mouse sobre cualquier silueta para ver su ángulo alternativo. Selecciona tu talla US (7 a 11) y asegura tu par con atención inmediata por WhatsApp.
+            Pasa el mouse sobre cualquier silueta para ver su ángulo alternativo. Selecciona tu talla US (7 a 11) y pulsa "Comprar Ahora" para pedir directamente por WhatsApp.
           </p>
         </div>
 
@@ -379,7 +380,7 @@
               placeholder="Buscar modelo o marca..." 
               class="w-full bg-noir-900 border border-noir-border focus:border-accent-acid pl-10 pr-10 py-3 text-xs font-mono text-white placeholder-gray-500 outline-none transition-colors"
             />
-            <button id="clearSearchBtn" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white">
+            <button id="clearSearchBtn" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white cursor-pointer" title="Limpiar búsqueda">
               <i data-lucide="x" class="w-4 h-4"></i>
             </button>
           </div>
@@ -388,19 +389,19 @@
 
       <!-- Instant Filter Tabs (Interactive without reload) -->
       <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 font-mono text-xs uppercase tracking-wider scrollbar-none">
-        <button class="filter-tab active-tab px-5 py-2.5 bg-accent-acid text-black font-black border border-accent-acid transition-all whitespace-nowrap" data-brand="all">
+        <button class="filter-tab active-tab px-5 py-2.5 bg-accent-acid text-black font-black border border-accent-acid transition-all whitespace-nowrap cursor-pointer" data-brand="all">
           Todos los Pares
         </button>
-        <button class="filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-noir-border hover:border-white/20 transition-all whitespace-nowrap" data-brand="Nike">
+        <button class="filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-noir-border hover:border-white/20 transition-all whitespace-nowrap cursor-pointer" data-brand="Nike">
           Nike
         </button>
-        <button class="filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-noir-border hover:border-white/20 transition-all whitespace-nowrap" data-brand="Jordan">
+        <button class="filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-noir-border hover:border-white/20 transition-all whitespace-nowrap cursor-pointer" data-brand="Jordan">
           Jordan
         </button>
-        <button class="filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-noir-border hover:border-white/20 transition-all whitespace-nowrap" data-brand="Adidas">
+        <button class="filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-noir-border hover:border-white/20 transition-all whitespace-nowrap cursor-pointer" data-brand="Adidas">
           Adidas
         </button>
-        <button class="filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-noir-border hover:border-white/20 transition-all whitespace-nowrap" data-brand="New Balance">
+        <button class="filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-noir-border hover:border-white/20 transition-all whitespace-nowrap cursor-pointer" data-brand="New Balance">
           New Balance
         </button>
       </div>
@@ -408,15 +409,15 @@
       <!-- Results Indicator Bar -->
       <div class="flex items-center justify-between text-xs font-mono text-gray-500 uppercase pb-6 border-b border-noir-border/60 mb-8">
         <span id="catalogCountFeedback">Cargando colección...</span>
-        <span class="flex items-center gap-1.5 text-accent-acid font-bold">
-          <span class="w-2 h-2 rounded-full bg-accent-acid inline-block animate-pulse"></span>
-          Doble Ángulo al Hover Activado
-        </span>
+        <button onclick="openSizeGuideModal()" class="text-accent-acid hover:underline font-bold flex items-center gap-1 cursor-pointer">
+          <i data-lucide="ruler" class="w-3.5 h-3.5"></i>
+          <span>Ver Guía de Tallas (US / CM)</span>
+        </button>
       </div>
 
       <!-- Dynamic Product Grid -->
       <div id="catalogGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        <!-- Injected dynamically via JS -->
+        <!-- Injected dynamically via JS with dual image hover and functional buttons -->
       </div>
 
       <!-- Empty Search Fallback -->
@@ -426,7 +427,7 @@
         </div>
         <h3 class="font-syne font-black text-xl text-white uppercase">Sin coincidencias en el archivo</h3>
         <p class="text-gray-400 text-xs font-mono mt-1 mb-4">Intenta con otra marca o limpia el buscador.</p>
-        <button id="resetSearchBtn" class="px-5 py-2.5 bg-accent-acid text-black font-mono font-bold text-xs uppercase">
+        <button id="resetSearchBtn" class="px-5 py-2.5 bg-accent-acid text-black font-mono font-bold text-xs uppercase cursor-pointer">
           Restablecer Filtros
         </button>
       </div>
@@ -569,7 +570,7 @@
   </section>
 
   <!-- ============================================================ -->
-  <!-- 6. VALUE PILLARS & GUARNTEE                                  -->
+  <!-- 6. VALUE PILLARS & GUARANTEE                                 -->
   <!-- ============================================================ -->
   <section id="garantia" class="py-20 bg-noir-950 border-b border-noir-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -646,32 +647,34 @@
             Firma especializada en calzado urbano de alta gama y cultura sneaker. Elevamos tu rotación diaria con las piezas más exclusivas del mundo.
           </p>
           <div class="flex items-center gap-3 pt-2">
-            <a href="https://instagram.com" target="_blank" class="w-9 h-9 bg-noir-900 hover:bg-accent-acid hover:text-black border border-noir-border flex items-center justify-center text-gray-400 transition-colors" aria-label="Instagram">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-noir-900 hover:bg-accent-acid hover:text-black border border-noir-border flex items-center justify-center text-gray-400 transition-colors cursor-pointer" aria-label="Instagram">
               <i data-lucide="instagram" class="w-4 h-4"></i>
             </a>
-            <a href="https://tiktok.com" target="_blank" class="w-9 h-9 bg-noir-900 hover:bg-accent-acid hover:text-black border border-noir-border flex items-center justify-center text-gray-400 transition-colors" aria-label="TikTok">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-noir-900 hover:bg-accent-acid hover:text-black border border-noir-border flex items-center justify-center text-gray-400 transition-colors cursor-pointer" aria-label="TikTok">
               <i data-lucide="video" class="w-4 h-4"></i>
             </a>
-            <a id="footerWaDirect" href="#" target="_blank" class="w-9 h-9 bg-noir-900 hover:bg-emerald-400 hover:text-black border border-noir-border flex items-center justify-center text-gray-400 transition-colors" aria-label="WhatsApp">
+            <a id="footerWaDirect" href="https://wa.me/573001234567?text=%C2%A1Hola!%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Quisiera%20asesor%C3%ADa%20sobre%20el%20cat%C3%A1logo%20exclusivo%20y%20disponibilidad%20de%20tallas." target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-noir-900 hover:bg-emerald-400 hover:text-black border border-noir-border flex items-center justify-center text-gray-400 transition-colors cursor-pointer" aria-label="WhatsApp">
               <i data-lucide="message-circle" class="w-4 h-4"></i>
             </a>
           </div>
         </div>
 
+        <!-- Siluetas con filtro funcional al hacer clic -->
         <div class="space-y-3">
           <h4 class="text-white text-xs font-bold uppercase tracking-widest">Siluetas</h4>
           <ul class="space-y-2 text-xs text-gray-400">
-            <li><a href="#catalogo" class="hover:text-accent-acid transition-colors">Air Jordan 1 & 4</a></li>
-            <li><a href="#catalogo" class="hover:text-accent-acid transition-colors">Nike Dunk Low</a></li>
-            <li><a href="#catalogo" class="hover:text-accent-acid transition-colors">New Balance 550 & 9060</a></li>
-            <li><a href="#catalogo" class="hover:text-accent-acid transition-colors">Adidas Campus 00s</a></li>
+            <li><button onclick="quickFilterFromFooter('Jordan')" class="hover:text-accent-acid transition-colors cursor-pointer text-left">Air Jordan 1 & 4</button></li>
+            <li><button onclick="quickFilterFromFooter('Nike')" class="hover:text-accent-acid transition-colors cursor-pointer text-left">Nike Dunk Low</button></li>
+            <li><button onclick="quickFilterFromFooter('New Balance')" class="hover:text-accent-acid transition-colors cursor-pointer text-left">New Balance 550 & 9060</button></li>
+            <li><button onclick="quickFilterFromFooter('Adidas')" class="hover:text-accent-acid transition-colors cursor-pointer text-left">Adidas Campus 00s</button></li>
           </ul>
         </div>
 
+        <!-- Atención al cliente & Guía de tallas -->
         <div class="space-y-3">
           <h4 class="text-white text-xs font-bold uppercase tracking-widest">Atención</h4>
           <ul class="space-y-2 text-xs text-gray-400">
-            <li><a id="footerWaGuide" href="#" target="_blank" class="hover:text-accent-acid transition-colors">Guía de Tallas US / CM</a></li>
+            <li><button onclick="openSizeGuideModal()" class="hover:text-accent-acid transition-colors cursor-pointer text-left">Guía de Tallas US / CM</button></li>
             <li><a href="#garantia" class="hover:text-accent-acid transition-colors">Envíos a Todo el País</a></li>
             <li><a href="#garantia" class="hover:text-accent-acid transition-colors">Políticas de Garantía</a></li>
             <li><a href="#comunidad" class="hover:text-accent-acid transition-colors">Reseñas de Clientes</a></li>
@@ -707,21 +710,29 @@
   </footer>
 
   <!-- ============================================================ -->
-  <!-- 8. FLOATING WHATSAPP BUTTON WITH SIMULATED NOTIFICATION      -->
+  <!-- 8. FLOATING WHATSAPP BUTTON WITH CLICKABLE NOTIFICATION      -->
   <!-- ============================================================ -->
   <div class="fixed bottom-6 right-6 z-40 flex items-center gap-3">
-    <!-- Bubble with requested text -->
-    <div id="dynamicWaBubble" class="hidden sm:flex items-center gap-2.5 bg-noir-900/95 backdrop-blur-md border border-accent-acid/40 py-2 px-3.5 shadow-2xl rounded">
+    <!-- Clickable Bubble with requested text -->
+    <a 
+      id="dynamicWaBubble" 
+      href="https://wa.me/573001234567?text=%C2%A1Hola!%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Tengo%20dudas%20con%20mi%20talla%20de%20tenis.%20%C2%BFMe%20pueden%20asesorar%3F" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      class="hidden sm:flex items-center gap-2.5 bg-noir-900/95 backdrop-blur-md border border-accent-acid/50 hover:border-accent-acid py-2 px-3.5 shadow-2xl rounded cursor-pointer transition-all hover:scale-105"
+      title="Escríbenos por WhatsApp"
+    >
       <span class="w-2 h-2 rounded-full bg-accent-acid animate-ping"></span>
       <span class="font-mono text-xs text-white font-bold">¡Hola! ¿Dudas con tu talla? Escríbenos 👟</span>
-    </div>
+    </a>
 
-    <!-- Floating Trigger -->
+    <!-- Floating Round Button -->
     <a 
       id="floatingWhatsappTrigger" 
-      href="#" 
+      href="https://wa.me/573001234567?text=%C2%A1Hola!%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Quisiera%20asesor%C3%ADa%20sobre%20el%20cat%C3%A1logo%20exclusivo%20y%20disponibilidad%20de%20tallas." 
       target="_blank" 
-      class="relative w-14 h-14 bg-accent-acid text-black flex items-center justify-center shadow-[0_0_25px_rgba(204,255,0,0.5)] hover:scale-105 active:scale-95 transition-transform"
+      rel="noopener noreferrer"
+      class="relative w-14 h-14 bg-accent-acid text-black flex items-center justify-center shadow-[0_0_25px_rgba(204,255,0,0.5)] hover:scale-105 active:scale-95 transition-transform cursor-pointer"
       aria-label="Atención por WhatsApp"
     >
       <!-- Radar ring -->
@@ -734,7 +745,7 @@
   <!-- 9. SHOPPING CART SLIDE-OVER DRAWER                           -->
   <!-- ============================================================ -->
   <div id="cartSlideDrawer" class="fixed inset-0 z-50 pointer-events-none overflow-hidden transition-opacity duration-300 opacity-0">
-    <div id="cartOverlayBackdrop" class="absolute inset-0 bg-black/85 backdrop-blur-sm pointer-events-auto"></div>
+    <div id="cartOverlayBackdrop" class="absolute inset-0 bg-black/85 backdrop-blur-sm pointer-events-auto cursor-pointer"></div>
 
     <div class="absolute inset-y-0 right-0 max-w-full flex pl-10">
       <div id="cartDrawerPanel" class="w-screen max-w-md bg-noir-900 border-l border-noir-border p-6 shadow-2xl flex flex-col pointer-events-auto transform translate-x-full transition-transform duration-300">
@@ -745,7 +756,7 @@
             <h3 class="font-syne font-black text-xl text-white uppercase">Tu Carrito</h3>
             <span id="cartDrawerTotalBadge" class="text-xs font-mono bg-accent-acid text-black px-2 py-0.5 font-bold">0</span>
           </div>
-          <button id="cartDrawerCloseBtn" class="p-2 text-gray-400 hover:text-white" aria-label="Cerrar">
+          <button id="cartDrawerCloseBtn" class="p-2 text-gray-400 hover:text-white cursor-pointer" aria-label="Cerrar">
             <i data-lucide="x" class="w-5 h-5"></i>
           </button>
         </div>
@@ -770,10 +781,10 @@
             </div>
           </div>
 
-          <button id="cartCheckoutWaBtn" class="w-full py-4 bg-accent-acid hover:bg-accent-acidHover text-black font-mono font-black text-xs uppercase tracking-widest flex items-center justify-center gap-2 transition-all">
+          <a id="cartCheckoutWaBtn" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-4 bg-accent-acid hover:bg-accent-acidHover text-black font-mono font-black text-xs uppercase tracking-widest flex items-center justify-center gap-2 transition-all cursor-pointer">
             <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
             Completar Pedido por WhatsApp
-          </button>
+          </a>
 
           <p class="text-[10px] text-center text-gray-400">
             Coordinarás pago contra entrega o transferencia directamente con un asesor.
@@ -788,10 +799,10 @@
   <!-- 10. QUICK VIEW MODAL                                         -->
   <!-- ============================================================ -->
   <div id="quickModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
-    <div id="quickModalBackdrop" class="absolute inset-0 bg-black/90 backdrop-blur-md"></div>
+    <div id="quickModalBackdrop" class="absolute inset-0 bg-black/90 backdrop-blur-md cursor-pointer"></div>
 
     <div class="relative bg-noir-900 border border-noir-border max-w-3xl w-full p-6 sm:p-8 shadow-2xl z-10 max-h-[90vh] overflow-y-auto">
-      <button id="quickModalCloseBtn" class="absolute top-5 right-5 p-2 bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white" aria-label="Cerrar">
+      <button id="quickModalCloseBtn" class="absolute top-5 right-5 p-2 bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white cursor-pointer" aria-label="Cerrar">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
 
@@ -817,7 +828,7 @@
           <div class="space-y-2 pt-2 font-mono">
             <div class="flex items-center justify-between text-xs">
               <span class="text-white font-bold uppercase">Talla US:</span>
-              <span class="text-accent-acid" id="quickSelectedSizeLabel">Selecciona una</span>
+              <span class="text-accent-acid font-bold" id="quickSelectedSizeLabel">US 9</span>
             </div>
             <div id="quickSizesContainer" class="flex flex-wrap gap-1.5">
               <!-- Rendered dynamically -->
@@ -825,13 +836,13 @@
           </div>
 
           <div class="pt-4 flex flex-col sm:flex-row gap-3 font-mono text-xs">
-            <button id="quickBuyWaBtn" class="flex-1 py-3.5 bg-accent-acid hover:bg-accent-acidHover text-black font-black uppercase tracking-wider flex items-center justify-center gap-2">
+            <a id="quickBuyWaBtn" href="#" target="_blank" rel="noopener noreferrer" class="flex-1 py-3.5 bg-accent-acid hover:bg-accent-acidHover text-black font-black uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer transition-all">
               <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
               Comprar Ahora
-            </button>
-            <button id="quickAddCartBtn" class="px-5 py-3.5 bg-noir-850 hover:bg-noir-800 border border-noir-border text-white font-bold uppercase tracking-wider flex items-center justify-center gap-2">
+            </a>
+            <button id="quickAddCartBtn" class="px-5 py-3.5 bg-noir-850 hover:bg-noir-800 border border-noir-border text-white font-bold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer transition-all">
               <i data-lucide="shopping-bag" class="w-4 h-4"></i>
-              Añadir
+              Añadir al Carrito
             </button>
           </div>
         </div>
@@ -840,7 +851,66 @@
   </div>
 
   <!-- ============================================================ -->
-  <!-- 11. TOAST FEEDBACK ALERT                                     -->
+  <!-- 11. SIZE GUIDE MODAL (GUÍA DE TALLAS US / EU / CM)           -->
+  <!-- ============================================================ -->
+  <div id="sizeGuideModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+    <div id="sizeGuideBackdrop" class="absolute inset-0 bg-black/90 backdrop-blur-md cursor-pointer"></div>
+
+    <div class="relative bg-noir-900 border border-noir-border max-w-xl w-full p-6 sm:p-8 shadow-2xl z-10 max-h-[90vh] overflow-y-auto font-mono">
+      <button onclick="closeSizeGuideModal()" class="absolute top-5 right-5 p-2 bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white cursor-pointer" aria-label="Cerrar">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="space-y-4">
+        <div class="border-b border-white/10 pb-3">
+          <div class="flex items-center gap-2 text-accent-acid text-xs font-bold uppercase tracking-widest mb-1">
+            <i data-lucide="ruler" class="w-4 h-4"></i>
+            <span>EQUIVALENCIAS OFICIALES</span>
+          </div>
+          <h3 class="font-syne font-black text-2xl text-white uppercase">Guía de Tallas (Streetwear)</h3>
+          <p class="text-xs text-gray-400 font-inter mt-1">
+            Recomendamos medir tu plantilla en centímetros para seleccionar la talla US adecuada.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto border border-white/10 rounded">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-noir-950 text-accent-acid border-b border-white/10 uppercase">
+              <tr>
+                <th class="p-2.5">Talla US</th>
+                <th class="p-2.5">Talla COL / EU</th>
+                <th class="p-2.5">Centímetros (CM)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5 text-gray-300">
+              <tr><td class="p-2.5 font-bold text-white">US 7</td><td class="p-2.5">38 - 39</td><td class="p-2.5">25.0 cm</td></tr>
+              <tr><td class="p-2.5 font-bold text-white">US 7.5</td><td class="p-2.5">39 - 40</td><td class="p-2.5">25.5 cm</td></tr>
+              <tr><td class="p-2.5 font-bold text-white">US 8</td><td class="p-2.5">40</td><td class="p-2.5">26.0 cm</td></tr>
+              <tr><td class="p-2.5 font-bold text-white">US 8.5</td><td class="p-2.5">41</td><td class="p-2.5">26.5 cm</td></tr>
+              <tr><td class="p-2.5 font-bold text-accent-acid">US 9</td><td class="p-2.5 text-accent-acid">41 - 42 (Más común)</td><td class="p-2.5 text-accent-acid">27.0 cm</td></tr>
+              <tr><td class="p-2.5 font-bold text-white">US 9.5</td><td class="p-2.5">42</td><td class="p-2.5">27.5 cm</td></tr>
+              <tr><td class="p-2.5 font-bold text-white">US 10</td><td class="p-2.5">43</td><td class="p-2.5">28.0 cm</td></tr>
+              <tr><td class="p-2.5 font-bold text-white">US 10.5</td><td class="p-2.5">43 - 44</td><td class="p-2.5">28.5 cm</td></tr>
+              <tr><td class="p-2.5 font-bold text-white">US 11</td><td class="p-2.5">44 - 45</td><td class="p-2.5">29.0 cm</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pt-2 flex flex-col sm:flex-row gap-3">
+          <a href="https://wa.me/573001234567?text=%C2%A1Hola!%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Tengo%20dudas%20con%20mi%20talla%20y%20quisiera%20asesor%C3%ADa%20personalizada." target="_blank" rel="noopener noreferrer" class="flex-1 py-3 bg-accent-acid text-black font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer">
+            <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+            Asesoría de Talla por WhatsApp
+          </a>
+          <button onclick="closeSizeGuideModal()" class="px-5 py-3 bg-noir-950 border border-white/10 text-white font-bold text-xs uppercase cursor-pointer">
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- 12. TOAST FEEDBACK ALERT                                     -->
   <!-- ============================================================ -->
   <div id="toastAlert" class="fixed top-6 right-6 z-50 transform translate-y-[-160%] transition-transform duration-300 flex items-center gap-3 bg-noir-900 border border-accent-acid text-white px-5 py-3.5 shadow-2xl font-mono text-xs font-bold pointer-events-none">
     <i data-lucide="check" class="w-4 h-4 text-accent-acid"></i>
@@ -848,14 +918,14 @@
   </div>
 
   <!-- ============================================================ -->
-  <!-- JAVASCRIPT: LOGIC, DUAL IMAGES & SPECIFIC WHATSAPP FLOW     -->
+  <!-- JAVASCRIPT: LOGIC, FULLY FUNCTIONAL BUTTONS & WHATSAPP       -->
   <!-- ============================================================ -->
   <script>
     /* ==============================================================
        CONFIGURACIÓN MAESTRA DE CAURE BRAND
        ============================================================== */
     const CAURE_CONFIG = {
-      phone: "573001234567", // Tu WhatsApp internacional sin '+' (Ej: 57 para Colombia + número)
+      phone: "573001234567", // Tu WhatsApp internacional sin '+' ni espacios
       brandName: "CAURE BRAND",
       formatPrice: (amount) => `$ ${amount.toLocaleString('es-CO')} COP`
     };
@@ -955,13 +1025,17 @@
       }
     ];
 
-    /* Estado de la aplicación */
+    /* Estado de la aplicación: Pre-asignamos US 9 por defecto a cada par para que cualquier botón funcione al primer clic */
     let selectedBrandFilter = 'all';
     let currentSearchTerm = '';
-    let chosenSizes = {}; // { [productId]: "US 9" }
+    let chosenSizes = {};
+    SNEAKERS_DATA.forEach(item => {
+      chosenSizes[item.id] = "9";
+    });
+
     let shoppingCart = [];
     let quickActiveProduct = null;
-    let quickActiveSize = null;
+    let quickActiveSize = "9";
 
     /* ==============================================================
        GENERADOR DE ENLACES DE WHATSAPP (MENSAJE EXACTO SOLICITADO)
@@ -969,7 +1043,7 @@
        ============================================================== */
     function buildWhatsAppPurchaseUrl(product, size) {
       const modelText = `${product.brand} ${product.name}`;
-      const sizeText = size ? `US ${size}` : "por confirmar";
+      const sizeText = size ? `US ${size}` : "US 9";
       
       const message = `¡Hola! 👋 Vengo de la web de CAURE BRAND. Me interesa asegurar los tenis ${modelText} en talla ${sizeText}. ¿Me confirman disponibilidad y métodos de envío?`;
       
@@ -977,7 +1051,9 @@
     }
 
     function buildCartWhatsAppUrl() {
-      if (shoppingCart.length === 0) return '#';
+      if (shoppingCart.length === 0) {
+        return `https://wa.me/${CAURE_CONFIG.phone}?text=${encodeURIComponent("¡Hola! 👋 Vengo de la web de CAURE BRAND. Quisiera asesoría sobre disponibilidad de tenis.")}`;
+      }
       let itemsList = shoppingCart.map((it, i) => 
         `${i + 1}. *${it.name}* | Talla: *US ${it.size}* | Cantidad: ${it.quantity} | ${CAURE_CONFIG.formatPrice(it.price * it.quantity)}`
       ).join('\n');
@@ -989,7 +1065,7 @@
     }
 
     /* ==============================================================
-       RENDERIZADO DEL CATÁLOGO (DUAL-IMAGE HOVER & US SIZE SELECTOR)
+       RENDERIZADO DEL CATÁLOGO CON BOTONES TOTALMENTE FUNCIONALES
        ============================================================== */
     function renderCatalogGrid() {
       const grid = document.getElementById('catalogGrid');
@@ -1017,13 +1093,14 @@
       }
 
       grid.innerHTML = filtered.map(item => {
-        const activeSize = chosenSizes[item.id] || null;
+        const activeSize = chosenSizes[item.id] || "9";
+        const waUrl = buildWhatsAppPurchaseUrl(item, activeSize);
 
         return `
           <div class="product-card group bg-noir-900 border border-noir-border hover:border-accent-acid/50 p-4 sm:p-5 flex flex-col justify-between transition-all duration-300 relative shadow-xl hover:-translate-y-1">
             
             <!-- DUAL IMAGE PERSPECTIVE CONTAINER -->
-            <div class="relative w-full aspect-square bg-black overflow-hidden mb-4 border border-white/5 flex items-center justify-center p-3 cursor-pointer" onclick="openQuickModal(${item.id})">
+            <div class="relative w-full aspect-square bg-black overflow-hidden mb-4 border border-white/5 flex items-center justify-center p-3 cursor-pointer" onclick="openQuickModal(${item.id})" title="Click para ver detalles">
               
               <!-- Tag Pill -->
               <span class="absolute top-3 left-3 z-20 px-2 py-0.5 text-[9px] font-mono font-black tracking-widest uppercase ${
@@ -1040,7 +1117,7 @@
               <button 
                 type="button"
                 onclick="event.stopPropagation(); openQuickModal(${item.id})" 
-                class="absolute top-3 right-3 z-20 w-8 h-8 bg-noir-950/80 hover:bg-accent-acid hover:text-black border border-white/10 text-white flex items-center justify-center transition-all opacity-0 group-hover:opacity-100"
+                class="absolute top-3 right-3 z-20 w-8 h-8 bg-noir-950/80 hover:bg-accent-acid hover:text-black border border-white/10 text-white flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 cursor-pointer"
                 title="Vista Rápida"
               >
                 <i data-lucide="eye" class="w-4 h-4"></i>
@@ -1075,7 +1152,7 @@
                   <span>${item.brand}</span>
                   <span class="text-accent-acid font-bold">STOCK CONFIRMADO</span>
                 </div>
-                <h3 class="font-syne font-black text-base text-white uppercase group-hover:text-accent-acid transition-colors mt-0.5 line-clamp-1">
+                <h3 onclick="openQuickModal(${item.id})" class="font-syne font-black text-base text-white uppercase group-hover:text-accent-acid transition-colors mt-0.5 line-clamp-1 cursor-pointer">
                   ${item.name}
                 </h3>
               </div>
@@ -1095,7 +1172,7 @@
                 <div class="flex items-center justify-between text-[10px] font-mono text-gray-400 mb-1.5 uppercase">
                   <span>Talla US:</span>
                   <span class="text-accent-acid font-bold" id="sizeLabelFeedback-${item.id}">
-                    ${activeSize ? `US ${activeSize}` : 'Elige tu talla'}
+                    US ${activeSize}
                   </span>
                 </div>
 
@@ -1106,7 +1183,7 @@
                       <button 
                         type="button"
                         onclick="setProductSize(${item.id}, '${sz}')"
-                        class="py-1 font-mono text-[11px] font-bold border transition-all text-center ${
+                        class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer ${
                           isSelected 
                             ? 'bg-accent-acid text-black border-accent-acid font-black shadow-[0_0_8px_rgba(204,255,0,0.5)]' 
                             : 'bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white'
@@ -1119,26 +1196,28 @@
                 </div>
               </div>
 
-              <!-- Action CTAs -->
+              <!-- Action CTAs: Direct functional WhatsApp Link & Add to Cart -->
               <div class="pt-3 grid grid-cols-1 gap-2 font-mono text-xs">
-                <!-- Direct Purchase via WhatsApp with specified message -->
-                <button 
-                  type="button"
-                  onclick="triggerWhatsAppBuy(${item.id})"
-                  class="w-full py-3 bg-accent-acid hover:bg-accent-acidHover text-black font-black uppercase tracking-wider flex items-center justify-center gap-2 transition-all transform active:scale-95 glow-acid-sm"
+                <!-- Direct Functional WhatsApp Link -->
+                <a 
+                  id="waBuyBtn-${item.id}"
+                  href="${waUrl}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full py-3 bg-accent-acid hover:bg-accent-acidHover text-black font-black uppercase tracking-wider flex items-center justify-center gap-2 transition-all transform active:scale-95 glow-acid-sm cursor-pointer"
                 >
                   <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
-                  Comprar Ahora
-                </button>
+                  <span>Comprar Ahora</span>
+                </a>
 
-                <!-- Add to cart -->
+                <!-- Functional Add to Cart -->
                 <button 
                   type="button"
                   onclick="triggerAddToCart(${item.id})"
-                  class="w-full py-2 bg-noir-950 hover:bg-noir-850 border border-noir-border hover:border-white/30 text-gray-300 hover:text-accent-acid font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-colors text-[11px]"
+                  class="w-full py-2 bg-noir-950 hover:bg-noir-850 border border-noir-border hover:border-white/30 text-gray-300 hover:text-accent-acid font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-colors text-[11px] cursor-pointer"
                 >
                   <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
-                  Añadir al Carrito
+                  <span>Añadir al Carrito</span>
                 </button>
               </div>
 
@@ -1152,48 +1231,38 @@
     }
 
     /* ==============================================================
-       SELECCIÓN INTERACTIVA DE TALLAS US
+       SELECCIÓN INTERACTIVA DE TALLAS US & ACTUALIZACIÓN INMEDIATA
        ============================================================== */
     function setProductSize(productId, sizeStr) {
       chosenSizes[productId] = sizeStr;
 
+      // Update feedback label
       const label = document.getElementById(`sizeLabelFeedback-${productId}`);
       if (label) label.textContent = `US ${sizeStr}`;
 
+      // Update button styling
       const container = document.getElementById(`sizeGrid-${productId}`);
       if (container) {
         const btns = container.querySelectorAll('button');
         btns.forEach(b => {
           if (b.textContent.trim() === sizeStr) {
-            b.className = 'py-1 font-mono text-[11px] font-bold border transition-all text-center bg-accent-acid text-black border-accent-acid font-black shadow-[0_0_8px_rgba(204,255,0,0.5)]';
+            b.className = 'py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-accent-acid text-black border-accent-acid font-black shadow-[0_0_8px_rgba(204,255,0,0.5)]';
           } else {
-            b.className = 'py-1 font-mono text-[11px] font-bold border transition-all text-center bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white';
+            b.className = 'py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white';
           }
         });
       }
-    }
 
-    /* ==============================================================
-       DISPARADOR DE COMPRA POR WHATSAPP (VALIDACIÓN DE TALLA)
-       ============================================================== */
-    function triggerWhatsAppBuy(productId) {
+      // Update WhatsApp button URL dynamically
       const product = SNEAKERS_DATA.find(p => p.id === productId);
-      if (!product) return;
-
-      const size = chosenSizes[productId];
-
-      if (!size) {
-        showToastAlert("⚠️ Por favor selecciona tu talla US antes de comprar", "warning");
-        const container = document.getElementById(`sizeGrid-${productId}`);
-        if (container) {
-          container.classList.add('ring-2', 'ring-accent-orange', 'p-1');
-          setTimeout(() => container.classList.remove('ring-2', 'ring-accent-orange', 'p-1'), 1600);
+      if (product) {
+        const buyBtn = document.getElementById(`waBuyBtn-${productId}`);
+        if (buyBtn) {
+          buyBtn.href = buildWhatsAppPurchaseUrl(product, sizeStr);
         }
-        return;
       }
 
-      const waUrl = buildWhatsAppPurchaseUrl(product, size);
-      window.open(waUrl, '_blank');
+      showToastAlert(`Talla US ${sizeStr} seleccionada`);
     }
 
     /* ==============================================================
@@ -1203,12 +1272,7 @@
       const product = SNEAKERS_DATA.find(p => p.id === productId);
       if (!product) return;
 
-      const size = chosenSizes[productId];
-
-      if (!size) {
-        showToastAlert("⚠️ Selecciona tu talla US para agregar al carrito", "warning");
-        return;
-      }
+      const size = chosenSizes[productId] || "9";
 
       const existingItem = shoppingCart.find(it => it.id === product.id && it.size === size);
       if (existingItem) {
@@ -1227,6 +1291,8 @@
 
       refreshCartUI();
       showToastAlert(`¡${product.name} (US ${size}) agregado al carrito! 🔥`);
+      // Open drawer so the user immediately sees the action was successful
+      toggleCartDrawer(true);
     }
 
     function refreshCartUI() {
@@ -1235,6 +1301,7 @@
       const listContainer = document.getElementById('cartProductsList');
       const subtotalEl = document.getElementById('cartSubtotalValue');
       const grandTotalEl = document.getElementById('cartGrandTotal');
+      const checkoutBtn = document.getElementById('cartCheckoutWaBtn');
 
       const totalItems = shoppingCart.reduce((acc, it) => acc + it.quantity, 0);
       const totalAmount = shoppingCart.reduce((acc, it) => acc + (it.price * it.quantity), 0);
@@ -1254,6 +1321,9 @@
       subtotalEl.textContent = CAURE_CONFIG.formatPrice(totalAmount);
       grandTotalEl.textContent = CAURE_CONFIG.formatPrice(totalAmount);
 
+      // Update checkout WhatsApp link
+      checkoutBtn.href = buildCartWhatsAppUrl();
+
       if (shoppingCart.length === 0) {
         listContainer.innerHTML = `
           <div class="text-center py-16 space-y-3 font-mono">
@@ -1261,7 +1331,7 @@
               <i data-lucide="shopping-bag" class="w-6 h-6"></i>
             </div>
             <p class="text-gray-400 text-xs uppercase tracking-wider">Tu carrito está vacío</p>
-            <button onclick="toggleCartDrawer(false)" class="text-accent-acid text-xs uppercase underline font-bold">
+            <button onclick="toggleCartDrawer(false)" class="text-accent-acid text-xs uppercase underline font-bold cursor-pointer">
               Explorar Catálogo
             </button>
           </div>
@@ -1278,12 +1348,12 @@
                 <span class="text-white font-bold">${CAURE_CONFIG.formatPrice(item.price)}</span>
               </div>
               <div class="flex items-center gap-2 mt-2">
-                <button onclick="adjustCartQty(${idx}, -1)" class="w-5 h-5 bg-noir-850 border border-white/10 text-white flex items-center justify-center text-xs">-</button>
+                <button onclick="adjustCartQty(${idx}, -1)" class="w-5 h-5 bg-noir-850 border border-white/10 text-white flex items-center justify-center text-xs cursor-pointer hover:bg-accent-acid hover:text-black transition-colors">-</button>
                 <span class="text-xs font-bold px-1">${item.quantity}</span>
-                <button onclick="adjustCartQty(${idx}, 1)" class="w-5 h-5 bg-noir-850 border border-white/10 text-white flex items-center justify-center text-xs">+</button>
+                <button onclick="adjustCartQty(${idx}, 1)" class="w-5 h-5 bg-noir-850 border border-white/10 text-white flex items-center justify-center text-xs cursor-pointer hover:bg-accent-acid hover:text-black transition-colors">+</button>
               </div>
             </div>
-            <button onclick="deleteCartItem(${idx})" class="text-gray-500 hover:text-red-400 p-2" title="Quitar">
+            <button onclick="deleteCartItem(${idx})" class="text-gray-500 hover:text-red-400 p-2 cursor-pointer transition-colors" title="Quitar">
               <i data-lucide="trash-2" class="w-4 h-4"></i>
             </button>
           </div>
@@ -1328,7 +1398,7 @@
     }
 
     /* ==============================================================
-       QUICK VIEW MODAL
+       QUICK VIEW MODAL (CON BOTÓN DE WHATSAPP DIRECTO)
        ============================================================== */
     function openQuickModal(productId) {
       const product = SNEAKERS_DATA.find(p => p.id === productId);
@@ -1346,12 +1416,16 @@
       document.getElementById('quickDescription').textContent = product.description;
       document.getElementById('quickSelectedSizeLabel').textContent = `US ${quickActiveSize}`;
 
+      // Update buy button direct href
+      const quickBuyBtn = document.getElementById('quickBuyWaBtn');
+      quickBuyBtn.href = buildWhatsAppPurchaseUrl(product, quickActiveSize);
+
       const sizesContainer = document.getElementById('quickSizesContainer');
       sizesContainer.innerHTML = AVAILABLE_US_SIZES.map(sz => `
         <button 
           type="button"
           onclick="setQuickSize('${sz}')"
-          class="quick-sz-btn px-3 py-1.5 font-mono text-xs font-bold border transition-all ${
+          class="quick-sz-btn px-3 py-1.5 font-mono text-xs font-bold border transition-all cursor-pointer ${
             sz === quickActiveSize 
               ? 'bg-accent-acid text-black border-accent-acid' 
               : 'bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/50'
@@ -1371,14 +1445,22 @@
     function setQuickSize(sz) {
       quickActiveSize = sz;
       document.getElementById('quickSelectedSizeLabel').textContent = `US ${sz}`;
+      
       const btns = document.querySelectorAll('.quick-sz-btn');
       btns.forEach(b => {
         if (b.getAttribute('data-size') === sz) {
-          b.className = 'quick-sz-btn px-3 py-1.5 font-mono text-xs font-bold border transition-all bg-accent-acid text-black border-accent-acid';
+          b.className = 'quick-sz-btn px-3 py-1.5 font-mono text-xs font-bold border transition-all cursor-pointer bg-accent-acid text-black border-accent-acid';
         } else {
-          b.className = 'quick-sz-btn px-3 py-1.5 font-mono text-xs font-bold border transition-all bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/50';
+          b.className = 'quick-sz-btn px-3 py-1.5 font-mono text-xs font-bold border transition-all cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/50';
         }
       });
+
+      // Update link URL in modal
+      if (quickActiveProduct) {
+        document.getElementById('quickBuyWaBtn').href = buildWhatsAppPurchaseUrl(quickActiveProduct, sz);
+        // Also sync with main card
+        setProductSize(quickActiveProduct.id, sz);
+      }
     }
 
     function closeQuickModal() {
@@ -1386,6 +1468,40 @@
       modal.classList.add('hidden');
       modal.classList.remove('flex');
       document.body.classList.remove('overflow-hidden');
+    }
+
+    /* ==============================================================
+       GUÍA DE TALLAS MODAL
+       ============================================================== */
+    function openSizeGuideModal() {
+      const m = document.getElementById('sizeGuideModal');
+      m.classList.remove('hidden');
+      m.classList.add('flex');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeSizeGuideModal() {
+      const m = document.getElementById('sizeGuideModal');
+      m.classList.add('hidden');
+      m.classList.remove('flex');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    /* ==============================================================
+       FILTRADO RÁPIDO DESDE EL FOOTER
+       ============================================================== */
+    function quickFilterFromFooter(brandName) {
+      selectedBrandFilter = brandName;
+      const tabs = document.querySelectorAll('.filter-tab');
+      tabs.forEach(t => {
+        if (t.getAttribute('data-brand').toLowerCase() === brandName.toLowerCase()) {
+          t.className = 'filter-tab active-tab px-5 py-2.5 bg-accent-acid text-black font-black border border-accent-acid transition-all whitespace-nowrap cursor-pointer';
+        } else {
+          t.className = 'filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-noir-border hover:border-white/20 transition-all whitespace-nowrap cursor-pointer';
+        }
+      });
+      renderCatalogGrid();
+      document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth' });
     }
 
     /* ==============================================================
@@ -1413,12 +1529,11 @@
        CUENTA REGRESIVA DINÁMICA DE DROP EXCLUSIVO
        ============================================================== */
     function startCountdown() {
-      // 4 horas, 18 minutos, 42 segundos iniciales
       let totalSeconds = 4 * 3600 + 18 * 60 + 42;
 
       setInterval(() => {
         totalSeconds--;
-        if (totalSeconds < 0) totalSeconds = 12 * 3600; // Reset loop
+        if (totalSeconds < 0) totalSeconds = 12 * 3600;
 
         const h = Math.floor(totalSeconds / 3600);
         const m = Math.floor((totalSeconds % 3600) / 60);
@@ -1448,37 +1563,20 @@
     });
 
     /* ==============================================================
-       INICIALIZACIÓN DE LA APLICACIÓN
+       INICIALIZACIÓN Y EVENT LISTENERS ROBUSTOS
        ============================================================== */
     document.addEventListener('DOMContentLoaded', () => {
       // Año dinámico
       document.getElementById('currentYearDisplay').textContent = new Date().getFullYear();
-
-      // Enlaces globales de WhatsApp con mensaje cordial
-      const genericWaMessage = encodeURIComponent(`¡Hola! 👋 Vengo de la web de CAURE BRAND. Quisiera asesoría sobre el catálogo exclusivo y disponibilidad de tallas.`);
-      const baseWaUrl = `https://wa.me/${CAURE_CONFIG.phone}?text=${genericWaMessage}`;
-
-      const waDirectLinks = [
-        'navWhatsappDirect',
-        'mobileWhatsappDirect',
-        'heroAdvisorBtn',
-        'floatingWhatsappTrigger',
-        'footerWaDirect',
-        'footerWaGuide'
-      ];
-      waDirectLinks.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.href = baseWaUrl;
-      });
 
       // Pestañas de filtrado de marca
       const tabs = document.querySelectorAll('.filter-tab');
       tabs.forEach(tab => {
         tab.addEventListener('click', () => {
           tabs.forEach(t => {
-            t.className = 'filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-noir-border hover:border-white/20 transition-all whitespace-nowrap';
+            t.className = 'filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-noir-border hover:border-white/20 transition-all whitespace-nowrap cursor-pointer';
           });
-          tab.className = 'filter-tab active-tab px-5 py-2.5 bg-accent-acid text-black font-black border border-accent-acid transition-all whitespace-nowrap';
+          tab.className = 'filter-tab active-tab px-5 py-2.5 bg-accent-acid text-black font-black border border-accent-acid transition-all whitespace-nowrap cursor-pointer';
 
           selectedBrandFilter = tab.getAttribute('data-brand');
           renderCatalogGrid();
@@ -1519,30 +1617,27 @@
       document.getElementById('cartDrawerCloseBtn').addEventListener('click', () => toggleCartDrawer(false));
       document.getElementById('cartOverlayBackdrop').addEventListener('click', () => toggleCartDrawer(false));
 
-      // Checkout WhatsApp
-      document.getElementById('cartCheckoutWaBtn').addEventListener('click', () => {
-        if (shoppingCart.length === 0) {
-          showToastAlert("⚠️ Tu carrito está vacío", "warning");
-          return;
-        }
-        window.open(buildCartWhatsAppUrl(), '_blank');
-      });
-
       // Quick View Modal Eventos
       document.getElementById('quickModalCloseBtn').addEventListener('click', closeQuickModal);
       document.getElementById('quickModalBackdrop').addEventListener('click', closeQuickModal);
-
-      document.getElementById('quickBuyWaBtn').addEventListener('click', () => {
-        if (!quickActiveProduct) return;
-        const url = buildWhatsAppPurchaseUrl(quickActiveProduct, quickActiveSize);
-        window.open(url, '_blank');
-      });
 
       document.getElementById('quickAddCartBtn').addEventListener('click', () => {
         if (!quickActiveProduct) return;
         chosenSizes[quickActiveProduct.id] = quickActiveSize;
         triggerAddToCart(quickActiveProduct.id);
         closeQuickModal();
+      });
+
+      // Size Guide Backdrop click
+      document.getElementById('sizeGuideBackdrop').addEventListener('click', closeSizeGuideModal);
+
+      // Cerrar modales con tecla ESC
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeQuickModal();
+          closeSizeGuideModal();
+          toggleCartDrawer(false);
+        }
       });
 
       // Menú Móvil
