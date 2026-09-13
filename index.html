@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CAURE BRAND | Exclusive Sneaker Archive & Streetwear Culture</title>
-  <meta name="description" content="Tienda multimarca de tenis exclusivos y streetwear en CAURE BRAND. Nike, Jordan, Adidas, New Balance con envíos a todo el país y pedidos directos por WhatsApp." />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ccff00'><path d='M3.5 18.5 21 3M8 21h8M3 13h18M5 8h14'/></svg>" />
+  <title>CAURE BRAND — High-End Streetwear & Exclusive Sneaker Archive</title>
+  <meta name="description" content="CAURE BRAND — Curaduría exclusiva de tenis multimarca y cultura urbana. Jordan, Nike, New Balance y colaboraciones exclusivas con envíos a toda Colombia y pago contra entrega." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23CCFF00'><path d='M3 18 18 3h3v15H3z'/></svg>" />
 
-  <!-- Google Fonts: Syne, Space Grotesk, Inter -->
+  <!-- Google Fonts: Syne, Anton, Plus Jakarta Sans, Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -20,41 +20,45 @@
       theme: {
         extend: {
           colors: {
-            brand: {
-              black: '#08080a',
-              card: '#111116',
-              cardHover: '#16161d',
-              border: '#23232f',
-              volt: '#ccff00',
-              voltDark: '#a3cc00',
-              purple: '#8b5cf6',
-              orange: '#ff5500',
-              muted: '#8e8e9f'
+            noir: {
+              950: '#050507',
+              900: '#0a0a0d',
+              850: '#0f0f14',
+              800: '#14141b',
+              700: '#1c1c26',
+              border: '#22222e',
+              line: '#2e2e3d'
+            },
+            accent: {
+              acid: '#CCFF00',
+              acidHover: '#b8e600',
+              orange: '#FF5500',
+              violet: '#7928CA'
             }
           },
           fontFamily: {
             syne: ['Syne', 'sans-serif'],
-            space: ['"Space Grotesk"', 'sans-serif'],
+            anton: ['Anton', 'sans-serif'],
+            jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
             inter: ['Inter', 'sans-serif']
           },
           animation: {
-            'marquee': 'marquee 25s linear infinite',
-            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-            'float': 'float 5s ease-in-out infinite',
-            'glow': 'glow 2s ease-in-out infinite alternate'
+            'marquee-slow': 'marquee 30s linear infinite',
+            'pulse-glow': 'pulseGlow 2.5s infinite alternate',
+            'float-subtle': 'floatSubtle 6s ease-in-out infinite'
           },
           keyframes: {
             marquee: {
               '0%': { transform: 'translateX(0%)' },
               '100%': { transform: 'translateX(-50%)' }
             },
-            float: {
-              '0%, 100%': { transform: 'translateY(0px) rotate(-3deg)' },
-              '50%': { transform: 'translateY(-12px) rotate(1deg)' }
+            pulseGlow: {
+              '0%': { filter: 'drop-shadow(0 0 15px rgba(204, 255, 0, 0.2))' },
+              '100%': { filter: 'drop-shadow(0 0 35px rgba(204, 255, 0, 0.55))' }
             },
-            glow: {
-              '0%': { filter: 'drop-shadow(0 0 15px rgba(204, 255, 0, 0.25))' },
-              '100%': { filter: 'drop-shadow(0 0 35px rgba(204, 255, 0, 0.6))' }
+            floatSubtle: {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '50%': { transform: 'translateY(-10px) rotate(-1.5deg)' }
             }
           }
         }
@@ -66,136 +70,160 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
-    /* Custom Streetwear Scrollbar */
+    /* Estilos globales de alta gama */
     ::-webkit-scrollbar {
-      width: 7px;
-      height: 7px;
+      width: 6px;
     }
     ::-webkit-scrollbar-track {
-      background: #08080a;
+      background: #050507;
     }
     ::-webkit-scrollbar-thumb {
-      background: #23232f;
-      border-radius: 4px;
+      background: #22222e;
+      border-radius: 3px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #ccff00;
+      background: #CCFF00;
     }
 
-    /* Ambient noise & grid styling */
-    .bg-grid-pattern {
-      background-size: 36px 36px;
+    /* Patrón de grilla editorial sutil */
+    .bg-grid-minimal {
+      background-size: 40px 40px;
       background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
     }
-    
-    .glow-volt {
-      box-shadow: 0 0 25px -5px rgba(204, 255, 0, 0.4);
-    }
-    .glow-volt-hover:hover {
-      box-shadow: 0 0 30px 0px rgba(204, 255, 0, 0.35);
-    }
-    .text-stroke {
-      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
+
+    .editorial-outline {
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.25);
       color: transparent;
+    }
+
+    .editorial-outline-acid {
+      -webkit-text-stroke: 1px #CCFF00;
+      color: transparent;
+    }
+
+    /* Brillo de precisión */
+    .glow-acid {
+      box-shadow: 0 0 30px -5px rgba(204, 255, 0, 0.45);
+    }
+    .glow-acid-sm {
+      box-shadow: 0 0 15px -3px rgba(204, 255, 0, 0.3);
+    }
+
+    /* Glassmorphism de lujo */
+    .glass-panel {
+      background: rgba(15, 15, 20, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
     }
   </style>
 </head>
 
-<body class="bg-brand-black text-gray-100 font-inter antialiased selection:bg-brand-volt selection:text-black overflow-x-hidden min-h-screen">
+<body class="bg-noir-950 text-white font-jakarta antialiased selection:bg-accent-acid selection:text-black min-h-screen overflow-x-hidden">
 
   <!-- ============================================================ -->
-  <!-- 1. TOP TICKER / MARQUEE ANNOUNCEMENT BAR                     -->
+  <!-- 1. EDITORIAL MARQUEE TICKER                                  -->
   <!-- ============================================================ -->
-  <div class="relative bg-brand-volt text-black py-2 overflow-hidden z-50 font-space font-bold text-xs uppercase tracking-widest border-b border-black">
-    <div class="flex whitespace-nowrap animate-marquee">
-      <span class="mx-6 flex items-center gap-2">🔥 ENVIOS A TODO EL PAÍS // DROP ARCHIVE 2024</span>
-      <span class="mx-6 flex items-center gap-2">⚡ PAGO CONTRA ENTREGA & TRANSFERENCIAS</span>
-      <span class="mx-6 flex items-center gap-2">👟 100% CALIDAD GARANTIZADA G5 / ORIGINALES</span>
-      <span class="mx-6 flex items-center gap-2">💬 ATENCIÓN Y COMPRA DIRECTA POR WHATSAPP</span>
-      <span class="mx-6 flex items-center gap-2">🔥 ENVIOS A TODO EL PAÍS // DROP ARCHIVE 2024</span>
-      <span class="mx-6 flex items-center gap-2">⚡ PAGO CONTRA ENTREGA & TRANSFERENCIAS</span>
-      <span class="mx-6 flex items-center gap-2">👟 100% CALIDAD GARANTIZADA G5 / ORIGINALES</span>
-      <span class="mx-6 flex items-center gap-2">💬 ATENCIÓN Y COMPRA DIRECTA POR WHATSAPP</span>
+  <div class="relative bg-black border-b border-noir-border py-2.5 overflow-hidden z-50 text-[11px] font-mono tracking-widest uppercase">
+    <div class="flex whitespace-nowrap animate-marquee-slow font-semibold text-gray-300">
+      <span class="mx-6 flex items-center gap-2.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-accent-acid animate-ping"></span>
+        • ENVÍOS SEGUROS A TODA COLOMBIA
+      </span>
+      <span class="mx-6 text-white font-bold">• PAGOS CONTRA ENTREGA DISPONIBLES</span>
+      <span class="mx-6 text-accent-acid font-bold">• STOCK LIMITADO // CALIDAD G5 IMPORTADA</span>
+      <span class="mx-6">• CAURE BRAND ARCHIVE 2024</span>
+      <span class="mx-6 flex items-center gap-2.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-accent-acid animate-ping"></span>
+        • ENVÍOS SEGUROS A TODA COLOMBIA
+      </span>
+      <span class="mx-6 text-white font-bold">• PAGOS CONTRA ENTREGA DISPONIBLES</span>
+      <span class="mx-6 text-accent-acid font-bold">• STOCK LIMITADO // CALIDAD G5 IMPORTADA</span>
+      <span class="mx-6">• CAURE BRAND ARCHIVE 2024</span>
     </div>
   </div>
 
   <!-- ============================================================ -->
-  <!-- 2. NAVBAR (GLASSMORPHISM FIXED HEADER)                        -->
+  <!-- 2. MINIMALIST STICKY HEADER (SCROLL-DYNAMIC)                 -->
   <!-- ============================================================ -->
-  <header class="sticky top-0 z-40 backdrop-blur-xl bg-brand-black/85 border-b border-brand-border/70 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+  <header id="mainHeader" class="sticky top-0 z-40 transition-all duration-500 bg-noir-950/60 backdrop-blur-md border-b border-white/5 py-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
       
-      <!-- Brand Logo -->
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-lg bg-brand-volt flex items-center justify-center font-syne font-black text-black text-2xl transition-transform group-hover:scale-105 group-hover:rotate-3 shadow-[0_0_15px_rgba(204,255,0,0.5)]">
+      <!-- Logo Tipográfico Disruptivo -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div class="w-9 h-9 bg-accent-acid text-black flex items-center justify-center font-syne font-black text-xl rounded-none transition-transform group-hover:scale-105 group-hover:rotate-2 shadow-[0_0_15px_rgba(204,255,0,0.6)]">
           C
         </div>
         <div class="flex flex-col">
-          <span class="font-syne font-black text-xl tracking-tighter text-white leading-none group-hover:text-brand-volt transition-colors">
-            CAURE <span class="text-brand-volt">BRAND</span>
+          <span class="font-syne font-black text-xl sm:text-2xl tracking-tighter uppercase text-white leading-none">
+            CAURE <span class="text-accent-acid">BRAND</span>
           </span>
-          <span class="font-space text-[10px] tracking-widest text-brand-muted uppercase">Streetwear Archive</span>
+          <span class="text-[9px] font-mono tracking-[0.3em] text-gray-500 uppercase">Streetwear Archive</span>
         </div>
       </a>
 
-      <!-- Desktop Navigation Links -->
-      <nav class="hidden md:flex items-center space-x-8 font-space text-sm font-semibold tracking-wider uppercase">
-        <a href="#inicio" class="text-gray-300 hover:text-brand-volt transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-volt hover:after:w-full after:transition-all">
-          Inicio
-        </a>
-        <a href="#catalogo" class="text-gray-300 hover:text-brand-volt transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-volt hover:after:w-full after:transition-all">
-          Catálogo
-        </a>
-        <a href="#beneficios" class="text-gray-300 hover:text-brand-volt transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-volt hover:after:w-full after:transition-all">
-          Por Qué Elegirnos
-        </a>
-        <a href="#opiniones" class="text-gray-300 hover:text-brand-volt transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-volt hover:after:w-full after:transition-all">
-          Comunidad
-        </a>
-        <a href="#contacto" class="text-gray-300 hover:text-brand-volt transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-volt hover:after:w-full after:transition-all">
-          Contacto
-        </a>
+      <!-- Dynamic Drop Badge & Countdown (Centerpiece) -->
+      <div class="hidden lg:flex items-center gap-3 px-4 py-1.5 rounded-full bg-noir-900 border border-noir-border/80 shadow-inner">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-accent-orange animate-ping"></span>
+          <span class="text-[11px] font-mono uppercase tracking-wider text-gray-400 font-bold">🔥 Drop Exclusivo:</span>
+        </div>
+        <div class="font-mono text-xs font-bold text-accent-acid tracking-widest bg-black px-2.5 py-0.5 rounded border border-white/10" id="countdownTimer">
+          04h : 18m : 42s
+        </div>
+        <span class="text-[10px] font-mono uppercase tracking-widest text-accent-orange font-bold">12 Pares Restantes</span>
+      </div>
+
+      <!-- Navigation & Action Links -->
+      <nav class="hidden md:flex items-center space-x-7 font-mono text-xs uppercase tracking-wider font-semibold">
+        <a href="#inicio" class="text-gray-300 hover:text-accent-acid transition-colors">Inicio</a>
+        <a href="#catalogo" class="text-gray-300 hover:text-accent-acid transition-colors">Catálogo</a>
+        <a href="#comunidad" class="text-gray-300 hover:text-accent-acid transition-colors">Street Style</a>
+        <a href="#garantia" class="text-gray-300 hover:text-accent-acid transition-colors">Beneficios</a>
       </nav>
 
-      <!-- Right Action Icons -->
+      <!-- Right Actions: Cart & VIP Contact -->
       <div class="flex items-center gap-3 sm:gap-4">
-        
-        <!-- Quick WhatsApp Header Link -->
-        <a id="navWhatsappBtn" href="#" target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 hover:border-emerald-400 px-3.5 py-2 rounded-lg font-space text-xs font-bold uppercase tracking-wider transition-all">
-          <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
-          <span>WhatsApp VIP</span>
+        <a id="navWhatsappDirect" href="#" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded bg-white/5 hover:bg-white/10 border border-white/10 hover:border-accent-acid/50 text-xs font-mono tracking-wider text-gray-300 hover:text-white transition-all">
+          <i data-lucide="message-square" class="w-3.5 h-3.5 text-accent-acid"></i>
+          <span>Asesor VIP</span>
         </a>
 
-        <!-- Cart Button -->
-        <button id="openCartBtn" class="relative p-2.5 rounded-xl bg-brand-card hover:bg-brand-cardHover border border-brand-border text-white hover:text-brand-volt transition-all" aria-label="Abrir Carrito">
-          <i data-lucide="shopping-bag" class="w-5 h-5"></i>
-          <span id="cartCountBadge" class="absolute -top-1.5 -right-1.5 bg-brand-volt text-black font-space font-black text-[11px] w-5 h-5 rounded-full flex items-center justify-center scale-0 transition-transform duration-300">
+        <!-- Cart Trigger Button -->
+        <button id="cartDrawerOpenBtn" class="relative p-2.5 rounded bg-noir-900 hover:bg-noir-850 border border-noir-border text-white hover:text-accent-acid transition-all" aria-label="Ver Carrito">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+          <span id="cartCountPill" class="absolute -top-1.5 -right-1.5 bg-accent-acid text-black font-mono font-black text-[10px] w-4 h-4 rounded-full flex items-center justify-center scale-0 transition-transform">
             0
           </span>
         </button>
 
-        <!-- Mobile Menu Toggle Button -->
-        <button id="mobileMenuBtn" class="md:hidden p-2.5 rounded-xl bg-brand-card border border-brand-border text-white hover:text-brand-volt transition-colors" aria-label="Menu Móvil">
-          <i data-lucide="menu" id="menuIconOpen" class="w-6 h-6"></i>
-          <i data-lucide="x" id="menuIconClose" class="w-6 h-6 hidden"></i>
+        <!-- Mobile Menu Toggle -->
+        <button id="mobileNavToggle" class="md:hidden p-2.5 rounded bg-noir-900 border border-noir-border text-white hover:text-accent-acid transition-colors" aria-label="Menú">
+          <i data-lucide="menu" id="mobileMenuIconOpen" class="w-5 h-5"></i>
+          <i data-lucide="x" id="mobileMenuIconClose" class="w-5 h-5 hidden"></i>
         </button>
       </div>
 
     </div>
 
-    <!-- Mobile Drawer Navigation -->
-    <div id="mobileMenu" class="hidden md:hidden border-t border-brand-border bg-brand-black/95 px-6 py-6 transition-all">
-      <div class="flex flex-col space-y-4 font-space text-base font-bold uppercase tracking-wider">
-        <a href="#inicio" class="mobile-link text-gray-200 hover:text-brand-volt py-2 border-b border-white/5">Inicio</a>
-        <a href="#catalogo" class="mobile-link text-gray-200 hover:text-brand-volt py-2 border-b border-white/5">Catálogo de Tenis</a>
-        <a href="#beneficios" class="mobile-link text-gray-200 hover:text-brand-volt py-2 border-b border-white/5">Por Qué Elegirnos</a>
-        <a href="#opiniones" class="mobile-link text-gray-200 hover:text-brand-volt py-2 border-b border-white/5">Opiniones / Clientes</a>
-        <a href="#contacto" class="mobile-link text-gray-200 hover:text-brand-volt py-2 border-b border-white/5">Contacto</a>
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileDrawerMenu" class="hidden md:hidden border-t border-noir-border bg-noir-950/98 px-6 py-6 transition-all">
+      <div class="flex flex-col space-y-4 font-mono text-xs uppercase tracking-widest font-bold">
+        <!-- Mobile Drop Countdown -->
+        <div class="p-3 bg-noir-900 rounded border border-white/10 flex items-center justify-between mb-2">
+          <span class="text-accent-orange text-[10px]">🔥 PRÓXIMO DROP:</span>
+          <span class="font-mono text-accent-acid text-xs font-black" id="countdownTimerMobile">04h : 18m : 42s</span>
+        </div>
+
+        <a href="#inicio" class="mobile-nav-link text-gray-300 hover:text-accent-acid py-2 border-b border-white/5">Inicio</a>
+        <a href="#catalogo" class="mobile-nav-link text-gray-300 hover:text-accent-acid py-2 border-b border-white/5">Catálogo de Tenis</a>
+        <a href="#comunidad" class="mobile-nav-link text-gray-300 hover:text-accent-acid py-2 border-b border-white/5">Street Style / Reseñas</a>
+        <a href="#garantia" class="mobile-nav-link text-gray-300 hover:text-accent-acid py-2 border-b border-white/5">Garantía & Envíos</a>
+        
         <div class="pt-2">
-          <a id="mobileWhatsappBtn" href="#" target="_blank" class="w-full flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-black py-3 rounded-xl font-space font-black text-sm uppercase tracking-wider">
-            <i data-lucide="message-circle" class="w-5 h-5"></i>
+          <a id="mobileWhatsappDirect" href="#" target="_blank" class="w-full flex items-center justify-center gap-2 bg-accent-acid text-black py-3 rounded font-mono font-black text-xs uppercase tracking-wider shadow-lg">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
             Chatear por WhatsApp
           </a>
         </div>
@@ -204,115 +232,111 @@
   </header>
 
   <!-- ============================================================ -->
-  <!-- 3. HERO SECTION                                              -->
+  <!-- 3. IMMERSIVE ASYMMETRIC HERO SECTION                         -->
   <!-- ============================================================ -->
-  <section id="inicio" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-grid-pattern py-16 lg:py-24">
-    <!-- Ambient Radial Glows -->
-    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] sm:w-[900px] h-[500px] bg-brand-volt/10 blur-[150px] rounded-full pointer-events-none -z-10"></div>
-    <div class="absolute bottom-10 -right-20 w-[400px] h-[400px] bg-brand-purple/15 blur-[140px] rounded-full pointer-events-none -z-10"></div>
+  <section id="inicio" class="relative min-h-[92vh] flex items-center bg-grid-minimal py-12 lg:py-20 overflow-hidden border-b border-noir-border">
+    <!-- Ambient Lighting (Acid glow) -->
+    <div class="absolute top-1/4 -left-32 w-[550px] h-[550px] bg-accent-acid/10 rounded-full blur-[160px] pointer-events-none -z-10"></div>
+    <div class="absolute bottom-10 right-0 w-[500px] h-[500px] bg-accent-orange/10 rounded-full blur-[160px] pointer-events-none -z-10"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
         
-        <!-- Left Hero Copy -->
-        <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+        <!-- Left Hero Narrative (Asymmetrical brutalist layout) -->
+        <div class="lg:col-span-7 space-y-7 text-left">
           
-          <!-- Drop Badge -->
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-card border border-brand-volt/30 text-brand-volt font-space text-xs font-bold uppercase tracking-widest shadow-[0_0_15px_rgba(204,255,0,0.15)]">
-            <span class="w-2 h-2 rounded-full bg-brand-volt animate-ping"></span>
-            DROP ARCHIVE 2024 • EDICIÓN LIMITADA
+          <!-- Micro Label -->
+          <div class="inline-flex items-center gap-2.5 px-3 py-1 bg-noir-900 border border-white/10 text-gray-300 font-mono text-[11px] tracking-widest uppercase">
+            <span class="w-2 h-2 bg-accent-acid"></span>
+            <span>HIGH-END STREETWEAR ARCHIVE // EDICIÓN 2024</span>
           </div>
 
-          <!-- Main Title -->
-          <h1 class="font-syne font-black text-4xl sm:text-6xl xl:text-7xl uppercase tracking-tighter text-white leading-[0.95]">
-            EL ESTILO <br class="hidden sm:inline" />
-            <span class="text-brand-volt underline decoration-brand-purple decoration-wavy decoration-2">NO SE PIDE,</span><br />
-            SE RECLAMA.
-          </h1>
+          <!-- Monumental Headline -->
+          <div class="space-y-1">
+            <h1 class="font-syne font-black text-5xl sm:text-7xl xl:text-8xl tracking-tighter uppercase leading-[0.9] text-white">
+              CULTURE <br />
+              <span class="editorial-outline">OVER</span> <br />
+              <span class="text-accent-acid">HYPE.</span>
+            </h1>
+            <p class="font-inter text-gray-400 text-sm sm:text-base max-w-lg leading-relaxed pt-3">
+              No vendemos tenis ordinarios. Curamos las siluetas más buscadas de la escena global con verificación meticulosa, pago contra entrega en toda Colombia y empaque de colección.
+            </p>
+          </div>
 
-          <!-- Subtitle / Value Prop -->
-          <p class="font-inter text-gray-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
-            La curaduría definitiva de los tenis más codiciados de la cultura urbana. Nike, Jordan, Travis Scott, New Balance y Adidas con entrega inmediata y garantía total.
-          </p>
-
-          <!-- CTAs -->
-          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-            <a href="#catalogo" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-volt hover:bg-brand-voltDark text-black px-8 py-4 rounded-xl font-space font-black text-sm uppercase tracking-wider transition-all transform hover:-translate-y-1 glow-volt">
-              <span>Ver Catálogo</span>
-              <i data-lucide="arrow-down-right" class="w-5 h-5"></i>
+          <!-- Dual Contrasting CTAs -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+            <a href="#catalogo" class="inline-flex items-center justify-center gap-3 bg-accent-acid hover:bg-accent-acidHover text-black px-8 py-4 font-mono font-black text-xs uppercase tracking-widest transition-all transform hover:-translate-y-0.5 glow-acid">
+              <span>Explorar Catálogo</span>
+              <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
             </a>
 
-            <a id="heroWhatsappBtn" href="#" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-card hover:bg-brand-cardHover border border-brand-border hover:border-emerald-500/50 text-white hover:text-emerald-400 px-7 py-4 rounded-xl font-space font-bold text-sm uppercase tracking-wider transition-all">
-              <i data-lucide="message-circle" class="w-5 h-5 text-emerald-400"></i>
-              <span>Pedir por WhatsApp</span>
+            <a id="heroAdvisorBtn" href="#" target="_blank" class="inline-flex items-center justify-center gap-3 bg-noir-900 hover:bg-noir-850 border border-noir-border hover:border-white/30 text-white px-7 py-4 font-mono font-bold text-xs uppercase tracking-widest transition-all">
+              <i data-lucide="message-circle" class="w-4 h-4 text-accent-acid"></i>
+              <span>Hablar con Asesor</span>
             </a>
           </div>
 
-          <!-- Proof Metrics -->
-          <div class="pt-6 grid grid-cols-3 gap-4 border-t border-brand-border/60 max-w-lg mx-auto lg:mx-0 font-space text-left">
+          <!-- Proof Metrics Bar -->
+          <div class="pt-8 border-t border-noir-border grid grid-cols-3 gap-6 font-mono">
             <div>
-              <div class="text-xl sm:text-2xl font-black text-white font-syne">+3,500</div>
-              <div class="text-xs text-brand-muted uppercase">Pares Entregados</div>
+              <span class="block font-syne font-black text-2xl sm:text-3xl text-white">+3,500</span>
+              <span class="text-[10px] text-gray-400 tracking-wider uppercase">Pares Entregados</span>
             </div>
             <div>
-              <div class="text-xl sm:text-2xl font-black text-brand-volt font-syne">100%</div>
-              <div class="text-xs text-brand-muted uppercase">Garantía Total</div>
+              <span class="block font-syne font-black text-2xl sm:text-3xl text-accent-acid">100%</span>
+              <span class="text-[10px] text-gray-400 tracking-wider uppercase">Garantía G5 / Box</span>
             </div>
             <div>
-              <div class="text-xl sm:text-2xl font-black text-white font-syne">24/48h</div>
-              <div class="text-xs text-brand-muted uppercase">Envíos Rápidos</div>
+              <span class="block font-syne font-black text-2xl sm:text-3xl text-white">24/48h</span>
+              <span class="text-[10px] text-gray-400 tracking-wider uppercase">Despacho Nacional</span>
             </div>
           </div>
 
         </div>
 
-        <!-- Right Hero Visual (Interactive 3D Vibe Sneaker Card) -->
-        <div class="lg:col-span-5 flex justify-center">
-          <div class="relative w-full max-w-md">
+        <!-- Right Hero Showcase (Iconic Travis Scott Jordan 1 Visual) -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="relative w-full max-w-lg">
             
-            <!-- Glow backdrop circle -->
-            <div class="absolute inset-0 bg-gradient-to-tr from-brand-volt/20 via-brand-purple/25 to-brand-orange/20 rounded-3xl blur-2xl -z-10 animate-pulse-slow"></div>
+            <!-- Atmospheric backplate -->
+            <div class="absolute inset-0 bg-gradient-to-tr from-accent-acid/15 via-transparent to-accent-orange/15 rounded-none blur-2xl -z-10"></div>
 
-            <!-- Featured Card -->
-            <div class="bg-brand-card/90 backdrop-blur-md border border-brand-border hover:border-brand-volt/50 rounded-3xl p-6 transition-all duration-500 shadow-2xl relative group">
+            <!-- Showcase Box -->
+            <div class="bg-noir-900/90 border border-noir-border hover:border-accent-acid/40 p-6 relative transition-all duration-500 shadow-2xl group">
               
-              <!-- Floating Hot Tag -->
-              <div class="flex items-center justify-between mb-4">
-                <span class="bg-brand-orange/20 text-brand-orange border border-brand-orange/40 font-space font-bold text-xs uppercase px-3 py-1 rounded-full flex items-center gap-1.5">
-                  <i data-lucide="flame" class="w-3.5 h-3.5"></i> HYPE DROP EXCLUSIVO
+              <!-- Floating Top Labels -->
+              <div class="flex items-center justify-between border-b border-white/10 pb-3 mb-4">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 bg-accent-orange/20 border border-accent-orange/40 text-accent-orange text-[10px] font-mono font-bold uppercase tracking-wider">
+                    HOT DROP
+                  </span>
+                  <span class="text-[10px] font-mono text-gray-400 uppercase tracking-wider">REF. #001</span>
+                </div>
+                <span class="text-[10px] font-mono text-accent-acid font-bold uppercase tracking-widest">
+                  EDICIÓN LIMITADA
                 </span>
-                <span class="font-space text-xs text-brand-muted font-bold">EDICIÓN LIMITADA</span>
               </div>
 
-              <!-- Sneaker Hero Image with Hover Float -->
-              <div class="relative h-64 sm:h-72 w-full flex items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-b from-white/5 to-transparent p-4">
+              <!-- Main Hero Sneaker Image (With subtle float animation) -->
+              <div class="relative h-64 sm:h-80 w-full flex items-center justify-center overflow-hidden bg-black/40 border border-white/5 p-4">
                 <img 
                   src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=900&q=80" 
-                  alt="Travis Scott x Air Jordan 1 Low" 
-                  class="w-full h-full object-contain filter drop-shadow-[0_20px_25px_rgba(0,0,0,0.8)] transform group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500 animate-float"
+                  alt="Air Jordan 1 Low Travis Scott Reverse Mocha" 
+                  class="w-full h-full object-contain filter drop-shadow-[0_20px_25px_rgba(0,0,0,0.85)] animate-float-subtle group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
 
-              <!-- Product Info in Hero -->
-              <div class="mt-5 space-y-2">
-                <div class="flex items-center justify-between">
-                  <span class="text-brand-volt font-space text-xs font-bold tracking-widest uppercase">JORDAN / TRAVIS SCOTT</span>
-                  <div class="flex items-center gap-1 text-amber-400 text-xs font-space font-bold">
-                    <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i> 4.9 (128)
-                  </div>
+              <!-- Sneaker Technical Specs & Quick CTA -->
+              <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] font-mono text-accent-acid uppercase tracking-widest block font-bold">NIKE / JORDAN COLLAB</span>
+                  <h3 class="font-syne font-black text-xl text-white tracking-tight">AJ1 Low 'Reverse Mocha'</h3>
+                  <div class="font-mono text-sm text-gray-300 font-bold mt-0.5">$ 195.000 COP</div>
                 </div>
-                <h3 class="font-syne font-black text-2xl text-white tracking-tight">Air Jordan 1 Low 'Reverse Mocha'</h3>
                 
-                <div class="flex items-center justify-between pt-3 border-t border-brand-border/60">
-                  <div>
-                    <span class="text-xs text-brand-muted block font-space">Precio Especial</span>
-                    <span class="font-space font-black text-2xl text-white">$ 195.000 <span class="text-xs line-through text-brand-muted font-normal">$ 240.000</span></span>
-                  </div>
-                  
-                  <a href="#catalogo" class="bg-brand-volt text-black p-3 rounded-xl hover:bg-white transition-colors">
-                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                  </a>
-                </div>
+                <a href="#catalogo" class="p-3 bg-accent-acid text-black hover:bg-white transition-colors" title="Ver en Catálogo">
+                  <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
               </div>
 
             </div>
@@ -325,87 +349,85 @@
   </section>
 
   <!-- ============================================================ -->
-  <!-- 4. CATALOG & PRODUCT GRID SECTION                            -->
+  <!-- 4. CATALOG & INTERACTIVE BRAND TABS                          -->
   <!-- ============================================================ -->
-  <section id="catalogo" class="py-20 relative bg-brand-black border-t border-brand-border">
+  <section id="catalogo" class="py-24 bg-noir-950 relative border-b border-noir-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Section Header -->
+      <!-- Section Title & Subheading -->
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-        <div>
-          <div class="inline-flex items-center gap-2 text-brand-volt font-space text-xs font-bold uppercase tracking-widest mb-2">
-            <i data-lucide="sparkles" class="w-4 h-4"></i> SELECCIÓN EXCLUSIVA
+        <div class="space-y-2">
+          <div class="flex items-center gap-2 text-accent-acid font-mono text-xs font-bold uppercase tracking-widest">
+            <i data-lucide="layers" class="w-4 h-4"></i>
+            <span>CATÁLOGO MULTIMARCA EXCLUSIVO</span>
           </div>
-          <h2 class="font-syne font-black text-3xl sm:text-5xl uppercase tracking-tight text-white">
-            CATÁLOGO <span class="text-stroke">STREETWEAR</span>
+          <h2 class="font-syne font-black text-3xl sm:text-5xl uppercase tracking-tighter text-white">
+            SNEAKER <span class="editorial-outline">ARCHIVE</span>
           </h2>
-          <p class="text-gray-400 text-sm sm:text-base mt-2 font-inter max-w-xl">
-            Elige tu silueta favorita, selecciona tu talla exacta y haz clic en comprar para ser atendido al instante por WhatsApp.
+          <p class="text-gray-400 text-xs sm:text-sm font-inter max-w-xl">
+            Pasa el mouse sobre cualquier silueta para ver su ángulo alternativo. Selecciona tu talla US (7 a 11) y asegura tu par con atención inmediata por WhatsApp.
           </p>
         </div>
 
-        <!-- Live Search Bar -->
+        <!-- Search Input -->
         <div class="w-full md:w-80 relative">
           <div class="relative">
-            <i data-lucide="search" class="w-5 h-5 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+            <i data-lucide="search" class="w-4 h-4 text-gray-500 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
             <input 
               type="text" 
-              id="searchInput" 
-              placeholder="Buscar por modelo o marca..." 
-              class="w-full bg-brand-card border border-brand-border focus:border-brand-volt rounded-xl pl-11 pr-10 py-3 text-sm text-white placeholder-gray-500 font-inter outline-none transition-colors"
+              id="liveSearchField" 
+              placeholder="Buscar modelo o marca..." 
+              class="w-full bg-noir-900 border border-noir-border focus:border-accent-acid pl-10 pr-10 py-3 text-xs font-mono text-white placeholder-gray-500 outline-none transition-colors"
             />
-            <button id="clearSearchBtn" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white" title="Limpiar búsqueda">
+            <button id="clearSearchBtn" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white">
               <i data-lucide="x" class="w-4 h-4"></i>
             </button>
           </div>
         </div>
       </div>
 
-      <!-- Filter Buttons (Pill Navigation) -->
-      <div class="flex items-center gap-2.5 overflow-x-auto pb-4 scrollbar-none mb-10 font-space text-xs font-bold uppercase tracking-wider">
-        <button class="filter-btn active-filter px-5 py-2.5 rounded-full border border-brand-volt bg-brand-volt text-black transition-all whitespace-nowrap" data-filter="all">
-          Todos los Tenis
+      <!-- Instant Filter Tabs (Interactive without reload) -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 font-mono text-xs uppercase tracking-wider scrollbar-none">
+        <button class="filter-tab active-tab px-5 py-2.5 bg-accent-acid text-black font-black border border-accent-acid transition-all whitespace-nowrap" data-brand="all">
+          Todos los Pares
         </button>
-        <button class="filter-btn px-5 py-2.5 rounded-full border border-brand-border bg-brand-card hover:border-brand-volt/50 text-gray-300 hover:text-white transition-all whitespace-nowrap" data-filter="Nike">
+        <button class="filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-noir-border hover:border-white/20 transition-all whitespace-nowrap" data-brand="Nike">
           Nike
         </button>
-        <button class="filter-btn px-5 py-2.5 rounded-full border border-brand-border bg-brand-card hover:border-brand-volt/50 text-gray-300 hover:text-white transition-all whitespace-nowrap" data-filter="Jordan">
+        <button class="filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-noir-border hover:border-white/20 transition-all whitespace-nowrap" data-brand="Jordan">
           Jordan
         </button>
-        <button class="filter-btn px-5 py-2.5 rounded-full border border-brand-border bg-brand-card hover:border-brand-volt/50 text-gray-300 hover:text-white transition-all whitespace-nowrap" data-filter="Adidas">
+        <button class="filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-noir-border hover:border-white/20 transition-all whitespace-nowrap" data-brand="Adidas">
           Adidas
         </button>
-        <button class="filter-btn px-5 py-2.5 rounded-full border border-brand-border bg-brand-card hover:border-brand-volt/50 text-gray-300 hover:text-white transition-all whitespace-nowrap" data-filter="New Balance">
+        <button class="filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-noir-border hover:border-white/20 transition-all whitespace-nowrap" data-brand="New Balance">
           New Balance
-        </button>
-        <button class="filter-btn px-5 py-2.5 rounded-full border border-brand-border bg-brand-card hover:border-brand-volt/50 text-gray-300 hover:text-white transition-all whitespace-nowrap" data-filter="Collabs">
-          Colaboraciones Hype
         </button>
       </div>
 
-      <!-- Results Count Status -->
-      <div class="flex items-center justify-between text-xs font-space text-brand-muted uppercase mb-6 px-1">
-        <span id="productCountLabel">Cargando catálogo...</span>
-        <span class="flex items-center gap-1.5 text-emerald-400">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block animate-pulse"></span>
-          Stock en tiempo real
+      <!-- Results Indicator Bar -->
+      <div class="flex items-center justify-between text-xs font-mono text-gray-500 uppercase pb-6 border-b border-noir-border/60 mb-8">
+        <span id="catalogCountFeedback">Cargando colección...</span>
+        <span class="flex items-center gap-1.5 text-accent-acid font-bold">
+          <span class="w-2 h-2 rounded-full bg-accent-acid inline-block animate-pulse"></span>
+          Doble Ángulo al Hover Activado
         </span>
       </div>
 
       <!-- Dynamic Product Grid -->
-      <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-7">
-        <!-- Injected via JavaScript -->
+      <div id="catalogGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Injected dynamically via JS -->
       </div>
 
-      <!-- Empty state container if search finds 0 matches -->
-      <div id="emptyState" class="hidden text-center py-16 space-y-4">
-        <div class="w-16 h-16 rounded-full bg-brand-card border border-brand-border flex items-center justify-center mx-auto text-gray-500">
-          <i data-lucide="frown" class="w-8 h-8"></i>
+      <!-- Empty Search Fallback -->
+      <div id="noResultsBox" class="hidden text-center py-20 border border-dashed border-noir-border">
+        <div class="w-12 h-12 rounded-full bg-noir-900 border border-noir-border flex items-center justify-center mx-auto text-gray-500 mb-4">
+          <i data-lucide="package-x" class="w-6 h-6"></i>
         </div>
-        <h3 class="font-syne font-black text-xl text-white uppercase">No encontramos tenis con esa búsqueda</h3>
-        <p class="text-gray-400 text-sm max-w-md mx-auto">Prueba buscando otra marca o haz clic para restablecer los filtros.</p>
-        <button id="resetFiltersBtn" class="px-6 py-2.5 bg-brand-volt text-black font-space font-bold text-xs uppercase rounded-xl hover:bg-white transition-colors">
-          Restablecer Catálogo
+        <h3 class="font-syne font-black text-xl text-white uppercase">Sin coincidencias en el archivo</h3>
+        <p class="text-gray-400 text-xs font-mono mt-1 mb-4">Intenta con otra marca o limpia el buscador.</p>
+        <button id="resetSearchBtn" class="px-5 py-2.5 bg-accent-acid text-black font-mono font-bold text-xs uppercase">
+          Restablecer Filtros
         </button>
       </div>
 
@@ -413,65 +435,132 @@
   </section>
 
   <!-- ============================================================ -->
-  <!-- 5. STREETWEAR VALUE PROPOSITIONS / POR QUÉ ELEGIRNOS         -->
+  <!-- 5. SOCIAL PROOF / STREET STYLE ARCHIVE                       -->
   <!-- ============================================================ -->
-  <section id="beneficios" class="py-20 relative bg-brand-card/40 border-t border-brand-border">
+  <section id="comunidad" class="py-24 bg-noir-900 relative border-b border-noir-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-        <span class="text-brand-volt font-space text-xs font-bold uppercase tracking-widest">TRANSPARENCIA & SEGURIDAD</span>
-        <h2 class="font-syne font-black text-3xl sm:text-4xl uppercase tracking-tight text-white">
-          POR QUÉ COMPRAR EN <span class="text-brand-volt">CAURE BRAND</span>
-        </h2>
-        <p class="text-gray-400 text-sm sm:text-base font-inter">
-          Diseñado para que compres con total tranquilidad desde cualquier ciudad del país.
+      <div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-16 gap-6">
+        <div>
+          <span class="text-accent-acid font-mono text-xs font-bold uppercase tracking-widest block mb-1">LOCAL STREET STYLE</span>
+          <h2 class="font-syne font-black text-3xl sm:text-5xl uppercase tracking-tighter text-white">
+            LA CALLE <span class="editorial-outline">HABLA</span>
+          </h2>
+        </div>
+        <p class="text-gray-400 text-xs sm:text-sm font-mono max-w-md">
+          Clientes reales luciendo sus pares en Medellín, Bogotá, Cali y Barranquilla. Más de 3,500 pares asegurados con empaque doble caja.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Street Style Customer Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <!-- Card 1 -->
-        <div class="bg-brand-card p-7 rounded-2xl border border-brand-border hover:border-brand-volt/50 transition-all duration-300 group hover:-translate-y-1">
-          <div class="w-12 h-12 rounded-xl bg-brand-volt/10 border border-brand-volt/30 flex items-center justify-center text-brand-volt mb-5 group-hover:scale-110 transition-transform">
-            <i data-lucide="truck" class="w-6 h-6"></i>
+        <!-- Street Photo Card 1 -->
+        <div class="bg-noir-950 border border-noir-border p-4 flex flex-col justify-between group hover:border-accent-acid/40 transition-all">
+          <div class="relative aspect-[4/5] overflow-hidden bg-black mb-4">
+            <img 
+              src="https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=600&q=80" 
+              alt="Cliente luciendo Jordan 1 Lost & Found" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+              loading="lazy"
+            />
+            <span class="absolute top-3 left-3 bg-black/80 backdrop-blur px-2.5 py-1 text-[10px] font-mono text-accent-acid font-bold border border-white/10 uppercase">
+              Verificado
+            </span>
           </div>
-          <h3 class="font-syne font-bold text-lg text-white mb-2 uppercase">Envíos Rápidos y Seguros</h3>
-          <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
-            Despachos a todo el país con número de guía inmediato y empaque especial de doble caja que protege tu par.
-          </p>
+          <div class="space-y-2">
+            <div class="flex items-center justify-between text-xs font-mono">
+              <span class="text-white font-bold">@mateo.urban</span>
+              <span class="text-gray-500">Medellín</span>
+            </div>
+            <p class="text-xs text-gray-400 italic font-inter leading-relaxed">
+              "Llegaron en 2 días con caja intacta y cordones extra. El cuero y los detalles del Jordan 1 están a otro nivel. 100% recomendados."
+            </p>
+            <div class="text-[10px] font-mono text-accent-acid uppercase pt-1">
+              AJ1 Retro 'Lost & Found'
+            </div>
+          </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="bg-brand-card p-7 rounded-2xl border border-brand-border hover:border-brand-purple/50 transition-all duration-300 group hover:-translate-y-1">
-          <div class="w-12 h-12 rounded-xl bg-brand-purple/10 border border-brand-purple/30 flex items-center justify-center text-brand-purple mb-5 group-hover:scale-110 transition-transform">
-            <i data-lucide="shield-check" class="w-6 h-6"></i>
+        <!-- Street Photo Card 2 -->
+        <div class="bg-noir-950 border border-noir-border p-4 flex flex-col justify-between group hover:border-accent-acid/40 transition-all">
+          <div class="relative aspect-[4/5] overflow-hidden bg-black mb-4">
+            <img 
+              src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=600&q=80" 
+              alt="Streetwear outfit con New Balance 550" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+              loading="lazy"
+            />
+            <span class="absolute top-3 left-3 bg-black/80 backdrop-blur px-2.5 py-1 text-[10px] font-mono text-accent-acid font-bold border border-white/10 uppercase">
+              Verificado
+            </span>
           </div>
-          <h3 class="font-syne font-bold text-lg text-white mb-2 uppercase">Calidad Garantizada</h3>
-          <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
-            Revisión meticulosa de materiales, suelas, costuras y accesorios antes de cada despacho. Sin sorpresas.
-          </p>
+          <div class="space-y-2">
+            <div class="flex items-center justify-between text-xs font-mono">
+              <span class="text-white font-bold">@valeria.archive</span>
+              <span class="text-gray-500">Bogotá D.C.</span>
+            </div>
+            <p class="text-xs text-gray-400 italic font-inter leading-relaxed">
+              "La asesoría de tallas por WhatsApp fue clave para acertar en New Balance. La calidad G5 es idéntica a los originales de tienda."
+            </p>
+            <div class="text-[10px] font-mono text-accent-acid uppercase pt-1">
+              New Balance 550 White Green
+            </div>
+          </div>
         </div>
 
-        <!-- Card 3 -->
-        <div class="bg-brand-card p-7 rounded-2xl border border-brand-border hover:border-brand-orange/50 transition-all duration-300 group hover:-translate-y-1">
-          <div class="w-12 h-12 rounded-xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange mb-5 group-hover:scale-110 transition-transform">
-            <i data-lucide="banknote" class="w-6 h-6"></i>
+        <!-- Street Photo Card 3 -->
+        <div class="bg-noir-950 border border-noir-border p-4 flex flex-col justify-between group hover:border-accent-acid/40 transition-all">
+          <div class="relative aspect-[4/5] overflow-hidden bg-black mb-4">
+            <img 
+              src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=600&q=80" 
+              alt="Cliente luciendo Travis Scott x Jordan" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+              loading="lazy"
+            />
+            <span class="absolute top-3 left-3 bg-black/80 backdrop-blur px-2.5 py-1 text-[10px] font-mono text-accent-acid font-bold border border-white/10 uppercase">
+              Verificado
+            </span>
           </div>
-          <h3 class="font-syne font-bold text-lg text-white mb-2 uppercase">Pago Contra Entrega</h3>
-          <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
-            Paga en efectivo al recibir en la puerta de tu casa o mediante transferencias directas seguras (Nequi, Daviplata, Bancolombia).
-          </p>
+          <div class="space-y-2">
+            <div class="flex items-center justify-between text-xs font-mono">
+              <span class="text-white font-bold">@camilo_kicks</span>
+              <span class="text-gray-500">Cali</span>
+            </div>
+            <p class="text-xs text-gray-400 italic font-inter leading-relaxed">
+              "Pagué contra entrega en efectivo en la puerta de mi casa. Cero riesgos. Los Travis Scott Reverse Mocha son una obra de arte."
+            </p>
+            <div class="text-[10px] font-mono text-accent-acid uppercase pt-1">
+              Jordan 1 Low Travis Scott
+            </div>
+          </div>
         </div>
 
-        <!-- Card 4 -->
-        <div class="bg-brand-card p-7 rounded-2xl border border-brand-border hover:border-emerald-500/50 transition-all duration-300 group hover:-translate-y-1">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-5 group-hover:scale-110 transition-transform">
-            <i data-lucide="headset" class="w-6 h-6"></i>
+        <!-- Street Photo Card 4 -->
+        <div class="bg-noir-950 border border-noir-border p-4 flex flex-col justify-between group hover:border-accent-acid/40 transition-all">
+          <div class="relative aspect-[4/5] overflow-hidden bg-black mb-4">
+            <img 
+              src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=600&q=80" 
+              alt="Detalle de zapatillas en la calle" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+              loading="lazy"
+            />
+            <span class="absolute top-3 left-3 bg-black/80 backdrop-blur px-2.5 py-1 text-[10px] font-mono text-accent-acid font-bold border border-white/10 uppercase">
+              Verificado
+            </span>
           </div>
-          <h3 class="font-syne font-bold text-lg text-white mb-2 uppercase">Asesoría de Tallas 24/7</h3>
-          <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
-            ¿Dudas con tu talla en centímetros? Nuestro equipo te asesora por WhatsApp al instante para que aciertes en tu compra.
-          </p>
+          <div class="space-y-2">
+            <div class="flex items-center justify-between text-xs font-mono">
+              <span class="text-white font-bold">@santiago.snkrs</span>
+              <span class="text-gray-500">Barranquilla</span>
+            </div>
+            <p class="text-xs text-gray-400 italic font-inter leading-relaxed">
+              "Cuarto par que compro en CAURE BRAND. Son los únicos que responden de inmediato por WhatsApp con fotos reales del stock."
+            </p>
+            <div class="text-[10px] font-mono text-accent-acid uppercase pt-1">
+              AJ4 Retro 'Military Black'
+            </div>
+          </div>
         </div>
 
       </div>
@@ -480,101 +569,55 @@
   </section>
 
   <!-- ============================================================ -->
-  <!-- 6. STREET CRED / TESTIMONIOS DE LA COMUNIDAD                 -->
+  <!-- 6. VALUE PILLARS & GUARNTEE                                  -->
   <!-- ============================================================ -->
-  <section id="opiniones" class="py-20 bg-brand-black border-t border-brand-border">
+  <section id="garantia" class="py-20 bg-noir-950 border-b border-noir-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-12 gap-4">
-        <div>
-          <span class="text-brand-volt font-space text-xs font-bold uppercase tracking-widest">STREET CRED</span>
-          <h2 class="font-syne font-black text-3xl sm:text-4xl uppercase tracking-tight text-white">
-            LA COMUNIDAD <span class="text-stroke">CAURE</span>
-          </h2>
-        </div>
-        <p class="text-gray-400 text-sm font-space">
-          Más de 3,500 clientes calzando el verdadero estilo urbano.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <!-- Review 1 -->
-        <div class="bg-brand-card p-6 rounded-2xl border border-brand-border space-y-4">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-1 text-brand-volt">
-              <i data-lucide="star" class="w-4 h-4 fill-brand-volt"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-brand-volt"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-brand-volt"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-brand-volt"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-brand-volt"></i>
-            </div>
-            <span class="text-xs font-space text-brand-muted">Compra Verificada</span>
+        <!-- Pillar 1 -->
+        <div class="bg-noir-900 border border-noir-border p-6 space-y-3 hover:border-accent-acid/40 transition-colors">
+          <div class="w-10 h-10 bg-accent-acid/10 border border-accent-acid/30 text-accent-acid flex items-center justify-center">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
           </div>
-          <p class="text-gray-300 text-sm italic">
-            "Pedí los Travis Scott Reverse Mocha por WhatsApp y en menos de 10 minutos ya tenían listo mi despacho. Llegaron en 2 días a Medellín con caja intacta. Calidad 10/10 brutal."
+          <h3 class="font-syne font-bold text-base text-white uppercase">Calidad G5 Importada</h3>
+          <p class="text-xs text-gray-400 leading-relaxed font-inter">
+            Inspección exhaustiva de materiales, costuras y etiquetas antes de empacar. Cada par pasa control de calidad estricto.
           </p>
-          <div class="flex items-center gap-3 pt-2 border-t border-brand-border/60">
-            <div class="w-9 h-9 rounded-full bg-brand-volt/20 text-brand-volt font-syne font-bold flex items-center justify-center text-xs">
-              MS
-            </div>
-            <div>
-              <div class="text-white font-space font-bold text-xs">@mateo_sneakers</div>
-              <div class="text-brand-muted text-[11px]">Compró Jordan 1 Travis Scott</div>
-            </div>
-          </div>
         </div>
 
-        <!-- Review 2 -->
-        <div class="bg-brand-card p-6 rounded-2xl border border-brand-border space-y-4">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-1 text-brand-volt">
-              <i data-lucide="star" class="w-4 h-4 fill-brand-volt"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-brand-volt"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-brand-volt"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-brand-volt"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-brand-volt"></i>
-            </div>
-            <span class="text-xs font-space text-brand-muted">Compra Verificada</span>
+        <!-- Pillar 2 -->
+        <div class="bg-noir-900 border border-noir-border p-6 space-y-3 hover:border-accent-acid/40 transition-colors">
+          <div class="w-10 h-10 bg-accent-orange/10 border border-accent-orange/30 text-accent-orange flex items-center justify-center">
+            <i data-lucide="package" class="w-5 h-5"></i>
           </div>
-          <p class="text-gray-300 text-sm italic">
-            "Tenía dudas con mi talla para los New Balance 550 y la atención por WhatsApp fue super paciente, me mandaron fotos de la horma real y me quedó a la perfección. Recomendadísimos."
+          <h3 class="font-syne font-bold text-base text-white uppercase">Empaque Doble Caja</h3>
+          <p class="text-xs text-gray-400 leading-relaxed font-inter">
+            Protegemos la caja original de colección de tus tenis con una caja exterior reforzada para que llegue impecable a tu puerta.
           </p>
-          <div class="flex items-center gap-3 pt-2 border-t border-brand-border/60">
-            <div class="w-9 h-9 rounded-full bg-brand-purple/20 text-brand-purple font-syne font-bold flex items-center justify-center text-xs">
-              VR
-            </div>
-            <div>
-              <div class="text-white font-space font-bold text-xs">@valeria.street</div>
-              <div class="text-brand-muted text-[11px]">Compró New Balance 550</div>
-            </div>
-          </div>
         </div>
 
-        <!-- Review 3 -->
-        <div class="bg-brand-card p-6 rounded-2xl border border-brand-border space-y-4">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-1 text-brand-volt">
-              <i data-lucide="star" class="w-4 h-4 fill-brand-volt"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-brand-volt"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-brand-volt"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-brand-volt"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-brand-volt"></i>
-            </div>
-            <span class="text-xs font-space text-brand-muted">Compra Verificada</span>
+        <!-- Pillar 3 -->
+        <div class="bg-noir-900 border border-noir-border p-6 space-y-3 hover:border-accent-acid/40 transition-colors">
+          <div class="w-10 h-10 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center">
+            <i data-lucide="banknote" class="w-5 h-5"></i>
           </div>
-          <p class="text-gray-300 text-sm italic">
-            "El pago contra entrega me dio mucha seguridad para mi primera compra. Los Jordan 4 Military Black superaron mis expectativas, los detalles y el peso son exactos."
+          <h3 class="font-syne font-bold text-base text-white uppercase">Pago Contra Entrega</h3>
+          <p class="text-xs text-gray-400 leading-relaxed font-inter">
+            Paga en efectivo al recibir tu pedido en cualquier ciudad del país o transfiere mediante Nequi, Daviplata o Bancolombia.
           </p>
-          <div class="flex items-center gap-3 pt-2 border-t border-brand-border/60">
-            <div class="w-9 h-9 rounded-full bg-brand-orange/20 text-brand-orange font-syne font-bold flex items-center justify-center text-xs">
-              CK
-            </div>
-            <div>
-              <div class="text-white font-space font-bold text-xs">@camilo_kicks</div>
-              <div class="text-brand-muted text-[11px]">Compró Jordan 4 Military Black</div>
-            </div>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="bg-noir-900 border border-noir-border p-6 space-y-3 hover:border-accent-acid/40 transition-colors">
+          <div class="w-10 h-10 bg-accent-acid/10 border border-accent-acid/30 text-accent-acid flex items-center justify-center">
+            <i data-lucide="headset" class="w-5 h-5"></i>
           </div>
+          <h3 class="font-syne font-bold text-base text-white uppercase">Asesoría de Tallas 24/7</h3>
+          <p class="text-xs text-gray-400 leading-relaxed font-inter">
+            Si tienes dudas con tu medida en centímetros o equivalencia US/EU, te enviamos mediciones exactas por WhatsApp.
+          </p>
         </div>
 
       </div>
@@ -585,83 +628,78 @@
   <!-- ============================================================ -->
   <!-- 7. FOOTER                                                    -->
   <!-- ============================================================ -->
-  <footer id="contacto" class="bg-brand-black border-t border-brand-border pt-16 pb-12">
+  <footer class="bg-black pt-16 pb-12 font-mono">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-brand-border/60">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
         
-        <!-- Col 1: Brand Info -->
         <div class="lg:col-span-2 space-y-4">
           <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-lg bg-brand-volt flex items-center justify-center font-syne font-black text-black text-xl">
+            <div class="w-8 h-8 bg-accent-acid text-black flex items-center justify-center font-syne font-black text-lg">
               C
             </div>
-            <span class="font-syne font-black text-2xl tracking-tight text-white">
-              CAURE <span class="text-brand-volt">BRAND</span>
+            <span class="font-syne font-black text-xl tracking-tight text-white uppercase">
+              CAURE <span class="text-accent-acid">BRAND</span>
             </span>
           </div>
-          <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
-            Tienda multimarca líder en calzado urbano y streetwear exclusivo. Elevamos tu outfit diario con las siluetas más codiciadas del mercado internacional.
+          <p class="text-gray-400 text-xs leading-relaxed max-w-sm font-inter">
+            Firma especializada en calzado urbano de alta gama y cultura sneaker. Elevamos tu rotación diaria con las piezas más exclusivas del mundo.
           </p>
           <div class="flex items-center gap-3 pt-2">
-            <a href="https://instagram.com" target="_blank" class="w-10 h-10 rounded-xl bg-brand-card hover:bg-brand-volt hover:text-black border border-brand-border flex items-center justify-center text-gray-300 transition-colors" aria-label="Instagram">
-              <i data-lucide="instagram" class="w-5 h-5"></i>
+            <a href="https://instagram.com" target="_blank" class="w-9 h-9 bg-noir-900 hover:bg-accent-acid hover:text-black border border-noir-border flex items-center justify-center text-gray-400 transition-colors" aria-label="Instagram">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
             </a>
-            <a href="https://tiktok.com" target="_blank" class="w-10 h-10 rounded-xl bg-brand-card hover:bg-brand-volt hover:text-black border border-brand-border flex items-center justify-center text-gray-300 transition-colors" aria-label="TikTok">
-              <i data-lucide="video" class="w-5 h-5"></i>
+            <a href="https://tiktok.com" target="_blank" class="w-9 h-9 bg-noir-900 hover:bg-accent-acid hover:text-black border border-noir-border flex items-center justify-center text-gray-400 transition-colors" aria-label="TikTok">
+              <i data-lucide="video" class="w-4 h-4"></i>
             </a>
-            <a id="footerWhatsappSocial" href="#" target="_blank" class="w-10 h-10 rounded-xl bg-brand-card hover:bg-emerald-400 hover:text-black border border-brand-border flex items-center justify-center text-gray-300 transition-colors" aria-label="WhatsApp">
-              <i data-lucide="message-circle" class="w-5 h-5"></i>
+            <a id="footerWaDirect" href="#" target="_blank" class="w-9 h-9 bg-noir-900 hover:bg-emerald-400 hover:text-black border border-noir-border flex items-center justify-center text-gray-400 transition-colors" aria-label="WhatsApp">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
             </a>
           </div>
         </div>
 
-        <!-- Col 2: Marcas -->
-        <div class="space-y-3 font-space">
-          <h4 class="text-white text-xs font-black uppercase tracking-widest">Siluetas Populares</h4>
+        <div class="space-y-3">
+          <h4 class="text-white text-xs font-bold uppercase tracking-widest">Siluetas</h4>
           <ul class="space-y-2 text-xs text-gray-400">
-            <li><a href="#catalogo" class="hover:text-brand-volt transition-colors">Air Jordan 1 & 4 Retro</a></li>
-            <li><a href="#catalogo" class="hover:text-brand-volt transition-colors">Nike Dunk Low</a></li>
-            <li><a href="#catalogo" class="hover:text-brand-volt transition-colors">New Balance 550 & 9060</a></li>
-            <li><a href="#catalogo" class="hover:text-brand-volt transition-colors">Adidas Campus 00s</a></li>
-            <li><a href="#catalogo" class="hover:text-brand-volt transition-colors">Travis Scott Archive</a></li>
+            <li><a href="#catalogo" class="hover:text-accent-acid transition-colors">Air Jordan 1 & 4</a></li>
+            <li><a href="#catalogo" class="hover:text-accent-acid transition-colors">Nike Dunk Low</a></li>
+            <li><a href="#catalogo" class="hover:text-accent-acid transition-colors">New Balance 550 & 9060</a></li>
+            <li><a href="#catalogo" class="hover:text-accent-acid transition-colors">Adidas Campus 00s</a></li>
           </ul>
         </div>
 
-        <!-- Col 3: Servicio al Cliente -->
-        <div class="space-y-3 font-space">
-          <h4 class="text-white text-xs font-black uppercase tracking-widest">Atención & Envíos</h4>
+        <div class="space-y-3">
+          <h4 class="text-white text-xs font-bold uppercase tracking-widest">Atención</h4>
           <ul class="space-y-2 text-xs text-gray-400">
-            <li><a id="footerWhatsappGuide" href="#" target="_blank" class="hover:text-brand-volt transition-colors">Guía de Tallas (Asesoría WhatsApp)</a></li>
-            <li><a href="#beneficios" class="hover:text-brand-volt transition-colors">Políticas de Envío Nacional</a></li>
-            <li><a href="#beneficios" class="hover:text-brand-volt transition-colors">Garantía de Satisfacción</a></li>
-            <li><a href="#beneficios" class="hover:text-brand-volt transition-colors">Preguntas Frecuentes</a></li>
+            <li><a id="footerWaGuide" href="#" target="_blank" class="hover:text-accent-acid transition-colors">Guía de Tallas US / CM</a></li>
+            <li><a href="#garantia" class="hover:text-accent-acid transition-colors">Envíos a Todo el País</a></li>
+            <li><a href="#garantia" class="hover:text-accent-acid transition-colors">Políticas de Garantía</a></li>
+            <li><a href="#comunidad" class="hover:text-accent-acid transition-colors">Reseñas de Clientes</a></li>
           </ul>
         </div>
 
-        <!-- Col 4: Métodos de Pago y Horarios -->
-        <div class="space-y-3 font-space">
-          <h4 class="text-white text-xs font-black uppercase tracking-widest">Métodos de Pago</h4>
-          <p class="text-gray-400 text-xs leading-relaxed">
-            Pago Contra Entrega en efectivo, Nequi, Daviplata, Bancolombia y Tarjetas.
+        <div class="space-y-3">
+          <h4 class="text-white text-xs font-bold uppercase tracking-widest">Pagos & Envíos</h4>
+          <p class="text-xs text-gray-400 font-inter">
+            Aceptamos Efectivo Contra Entrega, Nequi, Daviplata, Bancolombia y Tarjetas.
           </p>
           <div class="pt-2">
-            <span class="inline-block px-3 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[11px] font-bold">
-              ● Atención WhatsApp: 9:00 AM - 10:00 PM
+            <span class="inline-block px-2.5 py-1 bg-noir-900 border border-white/10 text-accent-acid text-[10px] font-bold">
+              ⚡ Envíos asegurados por Servientrega, Envía e Interrapidísimo.
             </span>
           </div>
         </div>
 
       </div>
 
-      <!-- Bottom Credits -->
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-space text-brand-muted">
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-gray-500">
         <div>
-          © <span id="currentYear">2024</span> CAURE BRAND. Todos los derechos reservados.
+          © <span id="currentYearDisplay">2024</span> CAURE BRAND. Streetwear Architecture & Sneaker Archive.
         </div>
-        <div class="flex items-center gap-2">
-          <span>Hecho para la cultura Streetwear</span>
-          <span class="text-brand-volt font-bold">⚡</span>
+        <div class="flex items-center gap-2 text-accent-acid">
+          <span>HIGH-END ARCHIVE</span>
+          <span>//</span>
+          <span>COLOMBIA</span>
         </div>
       </div>
 
@@ -669,85 +707,76 @@
   </footer>
 
   <!-- ============================================================ -->
-  <!-- 8. FLOATING WHATSAPP BUTTON WITH RADAR PULSE                 -->
+  <!-- 8. FLOATING WHATSAPP BUTTON WITH SIMULATED NOTIFICATION      -->
   <!-- ============================================================ -->
   <div class="fixed bottom-6 right-6 z-40 flex items-center gap-3">
-    <!-- Popover message bubble -->
-    <div id="whatsappBubble" class="hidden sm:flex items-center gap-2 bg-brand-card/95 backdrop-blur-md border border-brand-border py-2 px-3.5 rounded-2xl shadow-xl transition-all">
-      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-      <span class="font-space text-xs text-white font-medium">¿Preguntas sobre una talla? Escríbenos</span>
+    <!-- Bubble with requested text -->
+    <div id="dynamicWaBubble" class="hidden sm:flex items-center gap-2.5 bg-noir-900/95 backdrop-blur-md border border-accent-acid/40 py-2 px-3.5 shadow-2xl rounded">
+      <span class="w-2 h-2 rounded-full bg-accent-acid animate-ping"></span>
+      <span class="font-mono text-xs text-white font-bold">¡Hola! ¿Dudas con tu talla? Escríbenos 👟</span>
     </div>
 
-    <!-- The Floating Button -->
+    <!-- Floating Trigger -->
     <a 
-      id="floatingWhatsappBtn" 
+      id="floatingWhatsappTrigger" 
       href="#" 
       target="_blank" 
-      class="relative w-14 h-14 rounded-full bg-gradient-to-tr from-emerald-600 to-emerald-400 flex items-center justify-center text-black shadow-[0_0_25px_rgba(16,185,129,0.5)] hover:scale-110 active:scale-95 transition-transform"
-      aria-label="Contactar por WhatsApp"
+      class="relative w-14 h-14 bg-accent-acid text-black flex items-center justify-center shadow-[0_0_25px_rgba(204,255,0,0.5)] hover:scale-105 active:scale-95 transition-transform"
+      aria-label="Atención por WhatsApp"
     >
-      <!-- Radar Pulse Rings -->
-      <span class="absolute inset-0 rounded-full bg-emerald-400 animate-ping opacity-30 pointer-events-none"></span>
-      
-      <!-- WhatsApp Icon -->
-      <i data-lucide="message-circle" class="w-7 h-7 text-white fill-white"></i>
-      
-      <!-- Online Badge -->
-      <span class="absolute top-0 right-0 w-3.5 h-3.5 bg-brand-volt rounded-full border-2 border-brand-black"></span>
+      <!-- Radar ring -->
+      <span class="absolute inset-0 bg-accent-acid animate-ping opacity-30 pointer-events-none"></span>
+      <i data-lucide="message-circle" class="w-7 h-7 fill-black"></i>
     </a>
   </div>
 
   <!-- ============================================================ -->
   <!-- 9. SHOPPING CART SLIDE-OVER DRAWER                           -->
   <!-- ============================================================ -->
-  <div id="cartDrawer" class="fixed inset-0 z-50 pointer-events-none overflow-hidden transition-opacity duration-300 opacity-0">
-    <!-- Dark Backdrop -->
-    <div id="cartBackdrop" class="absolute inset-0 bg-black/80 backdrop-blur-sm pointer-events-auto"></div>
+  <div id="cartSlideDrawer" class="fixed inset-0 z-50 pointer-events-none overflow-hidden transition-opacity duration-300 opacity-0">
+    <div id="cartOverlayBackdrop" class="absolute inset-0 bg-black/85 backdrop-blur-sm pointer-events-auto"></div>
 
     <div class="absolute inset-y-0 right-0 max-w-full flex pl-10">
-      <div id="cartContent" class="w-screen max-w-md bg-brand-card border-l border-brand-border p-6 shadow-2xl flex flex-col pointer-events-auto transform translate-x-full transition-transform duration-300">
+      <div id="cartDrawerPanel" class="w-screen max-w-md bg-noir-900 border-l border-noir-border p-6 shadow-2xl flex flex-col pointer-events-auto transform translate-x-full transition-transform duration-300">
         
-        <!-- Cart Header -->
-        <div class="flex items-center justify-between pb-5 border-b border-brand-border">
+        <div class="flex items-center justify-between pb-5 border-b border-noir-border">
           <div class="flex items-center gap-2">
-            <i data-lucide="shopping-bag" class="w-5 h-5 text-brand-volt"></i>
+            <i data-lucide="shopping-bag" class="w-5 h-5 text-accent-acid"></i>
             <h3 class="font-syne font-black text-xl text-white uppercase">Tu Carrito</h3>
-            <span id="cartItemTotalCount" class="text-xs font-space bg-brand-volt/10 text-brand-volt px-2 py-0.5 rounded-full font-bold">0</span>
+            <span id="cartDrawerTotalBadge" class="text-xs font-mono bg-accent-acid text-black px-2 py-0.5 font-bold">0</span>
           </div>
-          <button id="closeCartBtn" class="p-2 text-gray-400 hover:text-white rounded-lg hover:bg-white/5" aria-label="Cerrar Carrito">
+          <button id="cartDrawerCloseBtn" class="p-2 text-gray-400 hover:text-white" aria-label="Cerrar">
             <i data-lucide="x" class="w-5 h-5"></i>
           </button>
         </div>
 
-        <!-- Cart Items List Container -->
-        <div id="cartItemsContainer" class="flex-1 overflow-y-auto py-4 space-y-4">
-          <!-- Cart items injected via JavaScript -->
+        <div id="cartProductsList" class="flex-1 overflow-y-auto py-4 space-y-4">
+          <!-- Injected via JS -->
         </div>
 
-        <!-- Cart Footer / WhatsApp Checkout -->
-        <div id="cartFooter" class="pt-5 border-t border-brand-border space-y-4">
-          <div class="space-y-1.5 font-space">
-            <div class="flex justify-between text-xs text-gray-400">
+        <div class="pt-5 border-t border-noir-border space-y-4 font-mono">
+          <div class="space-y-1.5 text-xs">
+            <div class="flex justify-between text-gray-400">
               <span>Subtotal</span>
-              <span id="cartSubtotal">$ 0</span>
+              <span id="cartSubtotalValue">$ 0</span>
             </div>
-            <div class="flex justify-between text-xs text-emerald-400">
+            <div class="flex justify-between text-accent-acid">
               <span>Envío Nacional</span>
-              <span>¡GRATIS!</span>
+              <span>¡GRATIS HOY!</span>
             </div>
             <div class="flex justify-between text-base font-bold text-white pt-2 border-t border-white/5">
               <span>Total Estimado</span>
-              <span id="cartTotal" class="text-brand-volt text-lg font-black">$ 0</span>
+              <span id="cartGrandTotal" class="text-accent-acid font-black text-lg">$ 0</span>
             </div>
           </div>
 
-          <button id="checkoutWhatsappBtn" class="w-full py-4 bg-emerald-500 hover:bg-emerald-400 text-black font-space font-black text-sm uppercase tracking-wider rounded-xl flex items-center justify-center gap-2 shadow-lg transition-all">
-            <i data-lucide="message-circle" class="w-5 h-5 fill-black"></i>
-            Finalizar Pedido por WhatsApp
+          <button id="cartCheckoutWaBtn" class="w-full py-4 bg-accent-acid hover:bg-accent-acidHover text-black font-mono font-black text-xs uppercase tracking-widest flex items-center justify-center gap-2 transition-all">
+            <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+            Completar Pedido por WhatsApp
           </button>
 
-          <p class="text-[11px] text-center text-gray-400 font-space">
-            ⚡ Se abrirá WhatsApp con el resumen listo para coordinar pago y entrega.
+          <p class="text-[10px] text-center text-gray-400">
+            Coordinarás pago contra entrega o transferencia directamente con un asesor.
           </p>
         </div>
 
@@ -756,57 +785,51 @@
   </div>
 
   <!-- ============================================================ -->
-  <!-- 10. QUICK VIEW MODAL (DETALLES DEL PRODUCTO)                 -->
+  <!-- 10. QUICK VIEW MODAL                                         -->
   <!-- ============================================================ -->
-  <div id="quickViewModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
-    <!-- Backdrop -->
-    <div id="quickViewBackdrop" class="absolute inset-0 bg-black/85 backdrop-blur-md"></div>
+  <div id="quickModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+    <div id="quickModalBackdrop" class="absolute inset-0 bg-black/90 backdrop-blur-md"></div>
 
-    <!-- Modal Content -->
-    <div class="relative bg-brand-card border border-brand-border max-w-3xl w-full rounded-3xl p-6 sm:p-8 shadow-2xl z-10 max-h-[90vh] overflow-y-auto">
-      <button id="closeQuickViewBtn" class="absolute top-5 right-5 p-2 rounded-full bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white" aria-label="Cerrar">
+    <div class="relative bg-noir-900 border border-noir-border max-w-3xl w-full p-6 sm:p-8 shadow-2xl z-10 max-h-[90vh] overflow-y-auto">
+      <button id="quickModalCloseBtn" class="absolute top-5 right-5 p-2 bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white" aria-label="Cerrar">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <!-- Big Preview Image -->
-        <div class="bg-gradient-to-b from-white/5 to-transparent rounded-2xl p-6 flex items-center justify-center border border-white/5">
-          <img id="modalImage" src="" alt="Sneaker preview" class="w-full h-64 sm:h-80 object-contain drop-shadow-2xl" />
+        <div class="bg-black/60 p-4 border border-white/5 flex items-center justify-center relative">
+          <img id="quickImage" src="" alt="Sneaker preview" class="w-full h-64 sm:h-80 object-contain drop-shadow-2xl" />
         </div>
 
-        <!-- Details -->
         <div class="space-y-4">
           <div>
-            <span id="modalBrand" class="text-brand-volt font-space text-xs font-bold uppercase tracking-widest"></span>
-            <h3 id="modalName" class="font-syne font-black text-2xl text-white leading-tight mt-1"></h3>
+            <span id="quickBrand" class="text-accent-acid font-mono text-xs font-bold uppercase tracking-widest"></span>
+            <h3 id="quickName" class="font-syne font-black text-2xl text-white leading-tight mt-1 uppercase"></h3>
           </div>
 
-          <div class="flex items-center gap-3">
-            <span id="modalPrice" class="font-space font-black text-2xl text-white"></span>
-            <span id="modalOriginalPrice" class="font-space text-sm line-through text-brand-muted"></span>
-            <span id="modalBadge" class="bg-brand-volt/10 text-brand-volt border border-brand-volt/30 text-[10px] font-space font-bold px-2.5 py-0.5 rounded-full uppercase"></span>
+          <div class="flex items-center gap-3 font-mono">
+            <span id="quickPrice" class="font-black text-2xl text-white"></span>
+            <span id="quickOriginalPrice" class="text-xs line-through text-gray-500"></span>
+            <span id="quickBadge" class="bg-accent-orange/20 border border-accent-orange/40 text-accent-orange text-[10px] font-bold px-2 py-0.5 uppercase"></span>
           </div>
 
-          <p id="modalDescription" class="text-gray-400 text-xs sm:text-sm leading-relaxed font-inter"></p>
+          <p id="quickDescription" class="text-gray-400 text-xs leading-relaxed font-inter"></p>
 
-          <!-- Modal Size Selector -->
-          <div class="space-y-2 pt-2">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-space font-bold uppercase text-white">Selecciona tu Talla:</span>
-              <span class="text-[11px] text-brand-muted font-space">Horma Normal (EU / COL)</span>
+          <div class="space-y-2 pt-2 font-mono">
+            <div class="flex items-center justify-between text-xs">
+              <span class="text-white font-bold uppercase">Talla US:</span>
+              <span class="text-accent-acid" id="quickSelectedSizeLabel">Selecciona una</span>
             </div>
-            <div id="modalSizeContainer" class="flex flex-wrap gap-2">
-              <!-- Sizes injected dynamically -->
+            <div id="quickSizesContainer" class="flex flex-wrap gap-1.5">
+              <!-- Rendered dynamically -->
             </div>
           </div>
 
-          <!-- Action Buttons inside Modal -->
-          <div class="pt-4 flex flex-col sm:flex-row gap-3">
-            <button id="modalBuyWhatsappBtn" class="flex-1 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-black font-space font-black text-xs uppercase tracking-wider rounded-xl flex items-center justify-center gap-2 transition-all">
+          <div class="pt-4 flex flex-col sm:flex-row gap-3 font-mono text-xs">
+            <button id="quickBuyWaBtn" class="flex-1 py-3.5 bg-accent-acid hover:bg-accent-acidHover text-black font-black uppercase tracking-wider flex items-center justify-center gap-2">
               <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
-              Pedir por WhatsApp
+              Comprar Ahora
             </button>
-            <button id="modalAddToCartBtn" class="px-5 py-3.5 bg-brand-volt hover:bg-brand-voltDark text-black font-space font-black text-xs uppercase tracking-wider rounded-xl flex items-center justify-center gap-2 transition-all">
+            <button id="quickAddCartBtn" class="px-5 py-3.5 bg-noir-850 hover:bg-noir-800 border border-noir-border text-white font-bold uppercase tracking-wider flex items-center justify-center gap-2">
               <i data-lucide="shopping-bag" class="w-4 h-4"></i>
               Añadir
             </button>
@@ -817,320 +840,302 @@
   </div>
 
   <!-- ============================================================ -->
-  <!-- 11. TOAST NOTIFICATION POPUP                                 -->
+  <!-- 11. TOAST FEEDBACK ALERT                                     -->
   <!-- ============================================================ -->
-  <div id="toastNotification" class="fixed top-6 right-6 z-50 transform translate-y-[-150%] transition-transform duration-300 flex items-center gap-3 bg-brand-card/95 border border-brand-volt text-white px-5 py-3 rounded-2xl shadow-2xl font-space text-xs font-bold pointer-events-none">
-    <i data-lucide="check-circle" class="w-5 h-5 text-brand-volt"></i>
-    <span id="toastMessage">Acción realizada con éxito</span>
+  <div id="toastAlert" class="fixed top-6 right-6 z-50 transform translate-y-[-160%] transition-transform duration-300 flex items-center gap-3 bg-noir-900 border border-accent-acid text-white px-5 py-3.5 shadow-2xl font-mono text-xs font-bold pointer-events-none">
+    <i data-lucide="check" class="w-4 h-4 text-accent-acid"></i>
+    <span id="toastAlertText">Notificación</span>
   </div>
 
   <!-- ============================================================ -->
-  <!-- JAVASCRIPT: LOGIC, SNEAKER DATA & WHATSAPP GENERATION         -->
+  <!-- JAVASCRIPT: LOGIC, DUAL IMAGES & SPECIFIC WHATSAPP FLOW     -->
   <!-- ============================================================ -->
   <script>
     /* ==============================================================
-       CONFIGURACIÓN PRINCIPAL DE CAURE BRAND
-       * Cambia el número de teléfono con tu WhatsApp real (código de país sin signo +).
+       CONFIGURACIÓN MAESTRA DE CAURE BRAND
        ============================================================== */
-    const STORE_CONFIG = {
-      phone: "573001234567", // Tu número de WhatsApp internacional (Ej: 57 para Colombia + celular)
-      storeName: "CAURE BRAND",
-      currencySymbol: "$",
-      formatCurrency: (value) => `$ ${value.toLocaleString('es-CO')}`
+    const CAURE_CONFIG = {
+      phone: "573001234567", // Tu WhatsApp internacional sin '+' (Ej: 57 para Colombia + número)
+      brandName: "CAURE BRAND",
+      formatPrice: (amount) => `$ ${amount.toLocaleString('es-CO')} COP`
     };
 
-    /* Catálogo de Productos Streetwear (Imágenes verificadas en alta resolución) */
-    const SNEAKERS_CATALOG = [
+    /* Tallas US estándar solicitadas (7 al 11) */
+    const AVAILABLE_US_SIZES = ["7", "7.5", "8", "8.5", "9", "9.5", "10", "10.5", "11"];
+
+    /* Catálogo con Doble Perspectiva (Dual-Image Hover) */
+    const SNEAKERS_DATA = [
       {
         id: 1,
         name: "Air Jordan 1 Low 'Reverse Mocha'",
         brand: "Jordan",
-        category: "Collabs",
         price: 195000,
         originalPrice: 245000,
-        discount: "-20%",
-        image: "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=900&q=80",
-        sizes: [38, 39, 40, 41, 42, 43, 44],
-        badge: "HOT DROP",
-        description: "Colaboración icónica de Travis Scott con cuero suave premium, Swoosh invertido característico y amortiguación Air encapsulada."
+        tag: "HOT DROP",
+        imagePrimary: "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=900&q=80",
+        imageSecondary: "https://images.unsplash.com/photo-1597045566677-8cf032ed6634?auto=format&fit=crop&w=900&q=80",
+        description: "Colaboración Travis Scott x Cactus Jack con cuero nobuck marrón premium, Swoosh invertido off-white y caja conmemorativa."
       },
       {
         id: 2,
         name: "Air Jordan 4 Retro 'Military Black'",
         brand: "Jordan",
-        category: "Jordan",
         price: 210000,
         originalPrice: 260000,
-        discount: "-19%",
-        image: "https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?auto=format&fit=crop&w=900&q=80",
-        sizes: [39, 40, 41, 42, 43],
-        badge: "MÁS VENDIDO",
-        description: "Diseño clásico de 1989 con malla técnica lateral, gamuza gris en la puntera y la legendaria unidad de aire visible en el talón."
+        tag: "ÚLTIMOS PARES",
+        imagePrimary: "https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?auto=format&fit=crop&w=900&q=80",
+        imageSecondary: "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=900&q=80",
+        description: "Silueta legendaria con paneles laterales en red negra, puntera en gamuza gris ceniza y soporte alado icónico de 1989."
       },
       {
         id: 3,
         name: "Nike Dunk Low Retro 'Panda'",
         brand: "Nike",
-        category: "Nike",
         price: 165000,
         originalPrice: 200000,
-        discount: "-17%",
-        image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=900&q=80",
-        sizes: [36, 37, 38, 39, 40, 41, 42],
-        badge: "ESSENTIAL",
-        description: "El infaltable de la cultura urbana. Combinación blanco y negro en piel sintética resistente con suela de tracción duradera."
+        tag: "IMPORTADO G5",
+        imagePrimary: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=900&q=80",
+        imageSecondary: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=900&q=80",
+        description: "El clásico de blanco y negro más versátil del streetwear. Cuero suave con suela exterior de caucho de máxima durabilidad."
       },
       {
         id: 4,
         name: "New Balance 550 'White Green'",
         brand: "New Balance",
-        category: "New Balance",
         price: 180000,
         originalPrice: 220000,
-        discount: "-18%",
-        image: "https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=900&q=80",
-        sizes: [38, 39, 40, 41, 42, 43],
-        badge: "VINTAGE",
-        description: "El renacimiento del baloncesto retro de los 80s con detalles en verde bosque, cuero perforado y plantilla de confort diario."
+        tag: "IMPORTADO G5",
+        imagePrimary: "https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=900&q=80",
+        imageSecondary: "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=900&q=80",
+        description: "Estilo retro basketball de los años 80 con cuero perforado transpirable, detalles en verde botella y logo 'N' en relieve."
       },
       {
         id: 5,
         name: "Air Jordan 1 High OG 'Lost & Found'",
         brand: "Jordan",
-        category: "Jordan",
         price: 225000,
         originalPrice: 280000,
-        discount: "-20%",
-        image: "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=900&q=80",
-        sizes: [39, 40, 41, 42, 43, 44],
-        badge: "GRAIL",
-        description: "El colorway Chicago original con tratamiento vintage envejecido en el cuello, cuero agrietado de colección y caja retro."
+        tag: "ÚLTIMOS PARES",
+        imagePrimary: "https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?auto=format&fit=crop&w=900&q=80",
+        imageSecondary: "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?auto=format&fit=crop&w=900&q=80",
+        description: "Tributo al Chicago 1985 original con tratamiento de cuero craquelado vintage, lengüeta amarillenta y factura retro en la caja."
       },
       {
         id: 6,
         name: "Adidas Campus 00s 'Core Black'",
         brand: "Adidas",
-        category: "Adidas",
         price: 155000,
         originalPrice: 190000,
-        discount: "-18%",
-        image: "https://images.unsplash.com/photo-1518002171953-a080ee817e1f?auto=format&fit=crop&w=900&q=80",
-        sizes: [37, 38, 39, 40, 41, 42],
-        badge: "Y2K TREND",
-        description: "Silueta skater abullonada de principios de los 2000 con cordones extra anchos, lengüeta acolchada y exterior de gamuza premium."
+        tag: "HOT DROP",
+        imagePrimary: "https://images.unsplash.com/photo-1518002171953-a080ee817e1f?auto=format&fit=crop&w=900&q=80",
+        imageSecondary: "https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?auto=format&fit=crop&w=900&q=80",
+        description: "Silueta skater ancha inspirada en la cultura Y2K con exterior de ante grueso, cordones acolchados XXL y suela de caramelo."
       },
       {
         id: 7,
         name: "Nike Air Force 1 '07 'Triple White'",
         brand: "Nike",
-        category: "Nike",
         price: 150000,
         originalPrice: 185000,
-        discount: "-19%",
-        image: "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?auto=format&fit=crop&w=900&q=80",
-        sizes: [36, 37, 38, 39, 40, 41, 42, 43, 44],
-        badge: "CLÁSICO",
-        description: "El básico indispensable para cualquier fit. Totalmente blanco, suela de goma cosida y dubrae metálico 'AF1'."
+        tag: "IMPORTADO G5",
+        imagePrimary: "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?auto=format&fit=crop&w=900&q=80",
+        imageSecondary: "https://images.unsplash.com/photo-1595341888016-a392ef81b7de?auto=format&fit=crop&w=900&q=80",
+        description: "La silueta insustituible. Construcción en piel lisa totalmente blanca con cámara de aire Nike Air oculta y dubrae metálico."
       },
       {
         id: 8,
-        name: "Yeezy Boost 350 V2 'Onyx'",
-        brand: "Adidas",
-        category: "Collabs",
-        price: 190000,
-        originalPrice: 240000,
-        discount: "-21%",
-        image: "https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?auto=format&fit=crop&w=900&q=80",
-        sizes: [39, 40, 41, 42, 43],
-        badge: "ULTRA COMFORT",
-        description: "Tejido Primeknit monocromático negro con banda lateral translúcida y la icónica suela estriada con tecnología Boost completa."
-      },
-      {
-        id: 9,
         name: "New Balance 9060 'Rain Cloud'",
         brand: "New Balance",
-        category: "New Balance",
         price: 195000,
         originalPrice: 235000,
-        discount: "-17%",
-        image: "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=900&q=80",
-        sizes: [38, 39, 40, 41, 42, 43],
-        badge: "NUEVO DROP",
-        description: "Estética futurista con entresuela escultural ondulada de doble densidad ABZORB y SBS con malla transpirable y gamuza gris."
-      },
-      {
-        id: 10,
-        name: "Nike Air Max Plus TN 'Triple Black'",
-        brand: "Nike",
-        category: "Nike",
-        price: 185000,
-        originalPrice: 225000,
-        discount: "-18%",
-        image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80",
-        sizes: [39, 40, 41, 42, 43, 44],
-        badge: "UNDERGROUND",
-        description: "La leyenda 'Tuned Air' con jaula de TPU ondulada en degradé y cámara de aire segmentada para máxima tracción urbana."
+        tag: "HOT DROP",
+        imagePrimary: "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=900&q=80",
+        imageSecondary: "https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=900&q=80",
+        description: "Diseño futurista con silueta voluminosa, entresuela esculpida ABZORB de doble densidad y superposiciones de gamuza gris."
       }
     ];
 
-    /* Estado de la Aplicación */
-    let currentFilter = 'all';
-    let searchQuery = '';
-    let selectedSizes = {}; // { [productId]: size }
-    let cart = []; // [ { id, name, price, image, size, quantity } ]
-    let modalSelectedProduct = null;
-    let modalSelectedSize = null;
+    /* Estado de la aplicación */
+    let selectedBrandFilter = 'all';
+    let currentSearchTerm = '';
+    let chosenSizes = {}; // { [productId]: "US 9" }
+    let shoppingCart = [];
+    let quickActiveProduct = null;
+    let quickActiveSize = null;
 
     /* ==============================================================
-       GENERADOR DE MENSAJES Y ENLACES DINÁMICOS DE WHATSAPP
+       GENERADOR DE ENLACES DE WHATSAPP (MENSAJE EXACTO SOLICITADO)
+       "¡Hola! 👋 Vengo de la web de CAURE BRAND. Me interesa asegurar los tenis [Modelo] en talla [Talla]. ¿Me confirman disponibilidad y métodos de envío?"
        ============================================================== */
-    function getProductWhatsAppUrl(product, size) {
-      const sizeText = size ? `en talla ${size}` : "y consultar por las tallas disponibles";
-      const message = `¡Hola ${STORE_CONFIG.storeName}! 👋 Estoy interesado en comprar los tenis *${product.brand} - ${product.name}* ${sizeText}.\n\nPrecio: ${STORE_CONFIG.formatCurrency(product.price)}\n¿Tienen disponibilidad inmediata para envío?`;
-      return `https://wa.me/${STORE_CONFIG.phone}?text=${encodeURIComponent(message)}`;
+    function buildWhatsAppPurchaseUrl(product, size) {
+      const modelText = `${product.brand} ${product.name}`;
+      const sizeText = size ? `US ${size}` : "por confirmar";
+      
+      const message = `¡Hola! 👋 Vengo de la web de CAURE BRAND. Me interesa asegurar los tenis ${modelText} en talla ${sizeText}. ¿Me confirman disponibilidad y métodos de envío?`;
+      
+      return `https://wa.me/${CAURE_CONFIG.phone}?text=${encodeURIComponent(message)}`;
     }
 
-    function getCartWhatsAppUrl() {
-      if (cart.length === 0) return '#';
-      let itemsList = cart.map((item, idx) => 
-        `${idx + 1}. *${item.name}* | Talla: *${item.size}* | Cantidad: ${item.quantity} | ${STORE_CONFIG.formatCurrency(item.price * item.quantity)}`
+    function buildCartWhatsAppUrl() {
+      if (shoppingCart.length === 0) return '#';
+      let itemsList = shoppingCart.map((it, i) => 
+        `${i + 1}. *${it.name}* | Talla: *US ${it.size}* | Cantidad: ${it.quantity} | ${CAURE_CONFIG.formatPrice(it.price * it.quantity)}`
       ).join('\n');
 
-      const total = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+      const total = shoppingCart.reduce((s, it) => s + (it.price * it.quantity), 0);
 
-      const message = `¡Hola ${STORE_CONFIG.storeName}! 🔥 Deseo confirmar el siguiente pedido desde la página web:\n\n${itemsList}\n\n*TOTAL: ${STORE_CONFIG.formatCurrency(total)}*\n\n¿Cuáles son los métodos de pago disponibles y cómo coordinamos el envío? ¡Gracias!`;
-      return `https://wa.me/${STORE_CONFIG.phone}?text=${encodeURIComponent(message)}`;
+      const message = `¡Hola! 👋 Vengo de la web de CAURE BRAND. Deseo confirmar y asegurar el siguiente pedido:\n\n${itemsList}\n\n*TOTAL: ${CAURE_CONFIG.formatPrice(total)}*\n\n¿Me confirman disponibilidad para despacho y pago contra entrega?`;
+      return `https://wa.me/${CAURE_CONFIG.phone}?text=${encodeURIComponent(message)}`;
     }
 
     /* ==============================================================
-       RENDERIZADO DEL CATÁLOGO DE PRODUCTOS
+       RENDERIZADO DEL CATÁLOGO (DUAL-IMAGE HOVER & US SIZE SELECTOR)
        ============================================================== */
-    function renderCatalog() {
-      const grid = document.getElementById('productGrid');
-      const emptyState = document.getElementById('emptyState');
-      const countLabel = document.getElementById('productCountLabel');
+    function renderCatalogGrid() {
+      const grid = document.getElementById('catalogGrid');
+      const noResults = document.getElementById('noResultsBox');
+      const countFeedback = document.getElementById('catalogCountFeedback');
 
-      // Filtrado por categoría y buscador
-      const filtered = SNEAKERS_CATALOG.filter(item => {
-        const matchesCategory = (currentFilter === 'all') 
+      const filtered = SNEAKERS_DATA.filter(item => {
+        const matchesBrand = (selectedBrandFilter === 'all') 
           ? true 
-          : (currentFilter === 'Collabs') ? item.category === 'Collabs' : item.brand.toLowerCase() === currentFilter.toLowerCase();
-        
-        const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                              item.brand.toLowerCase().includes(searchQuery.toLowerCase());
-        return matchesCategory && matchesSearch;
+          : item.brand.toLowerCase() === selectedBrandFilter.toLowerCase();
+
+        const matchesQuery = item.name.toLowerCase().includes(currentSearchTerm.toLowerCase()) || 
+                             item.brand.toLowerCase().includes(currentSearchTerm.toLowerCase());
+        return matchesBrand && matchesQuery;
       });
 
-      countLabel.textContent = `Mostrando ${filtered.length} de ${SNEAKERS_CATALOG.length} modelos disponibles`;
+      countFeedback.textContent = `Mostrando ${filtered.length} de ${SNEAKERS_DATA.length} modelos curados`;
 
       if (filtered.length === 0) {
         grid.innerHTML = '';
-        emptyState.classList.remove('hidden');
+        noResults.classList.remove('hidden');
         return;
       } else {
-        emptyState.classList.add('hidden');
+        noResults.classList.add('hidden');
       }
 
       grid.innerHTML = filtered.map(item => {
-        const activeSize = selectedSizes[item.id] || null;
+        const activeSize = chosenSizes[item.id] || null;
 
         return `
-          <div class="product-card group bg-brand-card hover:bg-brand-cardHover border border-brand-border hover:border-brand-volt/40 rounded-2xl p-4 sm:p-5 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 shadow-lg relative" data-id="${item.id}">
+          <div class="product-card group bg-noir-900 border border-noir-border hover:border-accent-acid/50 p-4 sm:p-5 flex flex-col justify-between transition-all duration-300 relative shadow-xl hover:-translate-y-1">
             
-            <!-- Image & Badges Container -->
-            <div class="relative w-full aspect-square rounded-xl bg-gradient-to-b from-white/5 to-transparent overflow-hidden mb-4 p-4 flex items-center justify-center border border-white/5">
+            <!-- DUAL IMAGE PERSPECTIVE CONTAINER -->
+            <div class="relative w-full aspect-square bg-black overflow-hidden mb-4 border border-white/5 flex items-center justify-center p-3 cursor-pointer" onclick="openQuickModal(${item.id})">
               
-              <!-- Badge -->
-              <span class="absolute top-3 left-3 bg-brand-volt text-black font-space font-black text-[10px] px-2.5 py-1 rounded-md uppercase tracking-wider z-10">
-                ${item.badge}
+              <!-- Tag Pill -->
+              <span class="absolute top-3 left-3 z-20 px-2 py-0.5 text-[9px] font-mono font-black tracking-widest uppercase ${
+                item.tag === 'ÚLTIMOS PARES' 
+                  ? 'bg-accent-orange text-black' 
+                  : item.tag === 'HOT DROP' 
+                    ? 'bg-accent-acid text-black' 
+                    : 'bg-white/10 text-white border border-white/20'
+              }">
+                ${item.tag}
               </span>
 
-              <!-- Discount pill -->
-              <span class="absolute top-3 right-3 bg-brand-orange/20 border border-brand-orange/40 text-brand-orange font-space font-bold text-[10px] px-2 py-0.5 rounded uppercase z-10">
-                ${item.discount}
-              </span>
-
-              <!-- Sneaker Photo -->
-              <img 
-                src="${item.image}" 
-                alt="${item.name}" 
-                loading="lazy" 
-                class="w-full h-full object-contain filter drop-shadow-[0_15px_15px_rgba(0,0,0,0.7)] group-hover:scale-105 group-hover:rotate-2 transition-transform duration-500"
-              />
-
-              <!-- Quick View Eye Button Overlay -->
+              <!-- Quick View Eye Action -->
               <button 
-                onclick="openQuickView(${item.id})"
-                class="absolute bottom-3 right-3 w-9 h-9 rounded-xl bg-brand-black/80 hover:bg-brand-volt text-white hover:text-black border border-white/10 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 z-10"
+                type="button"
+                onclick="event.stopPropagation(); openQuickModal(${item.id})" 
+                class="absolute top-3 right-3 z-20 w-8 h-8 bg-noir-950/80 hover:bg-accent-acid hover:text-black border border-white/10 text-white flex items-center justify-center transition-all opacity-0 group-hover:opacity-100"
                 title="Vista Rápida"
               >
                 <i data-lucide="eye" class="w-4 h-4"></i>
               </button>
+
+              <!-- Primary Angle Image (Default) -->
+              <img 
+                src="${item.imagePrimary}" 
+                alt="${item.name} - Vista Principal" 
+                loading="lazy"
+                class="absolute inset-0 w-full h-full object-contain p-4 filter drop-shadow-[0_15px_15px_rgba(0,0,0,0.85)] transition-opacity duration-500 opacity-100 group-hover:opacity-0"
+              />
+
+              <!-- Secondary Angle Image (Revealed on Hover) -->
+              <img 
+                src="${item.imageSecondary}" 
+                alt="${item.name} - Ángulo Alternativo" 
+                loading="lazy"
+                class="absolute inset-0 w-full h-full object-contain p-4 filter drop-shadow-[0_15px_15px_rgba(0,0,0,0.85)] transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:scale-105"
+              />
+
+              <div class="absolute bottom-2 left-2 z-10 text-[8px] font-mono text-gray-500 uppercase tracking-widest group-hover:text-accent-acid transition-colors">
+                Hover: Ángulo 2
+              </div>
             </div>
 
-            <!-- Product Data -->
+            <!-- Product Info -->
             <div class="space-y-3 flex-1 flex flex-col justify-between">
+              
               <div>
-                <span class="text-brand-volt font-space text-xs font-bold uppercase tracking-wider">${item.brand}</span>
-                <h3 class="font-syne font-black text-lg text-white group-hover:text-brand-volt transition-colors leading-snug line-clamp-1">
+                <div class="flex items-center justify-between text-[10px] font-mono text-gray-400 uppercase tracking-widest">
+                  <span>${item.brand}</span>
+                  <span class="text-accent-acid font-bold">STOCK CONFIRMADO</span>
+                </div>
+                <h3 class="font-syne font-black text-base text-white uppercase group-hover:text-accent-acid transition-colors mt-0.5 line-clamp-1">
                   ${item.name}
                 </h3>
               </div>
 
-              <!-- Price Box -->
-              <div class="flex items-baseline gap-2 pt-1">
-                <span class="font-space font-black text-xl text-white">
-                  ${STORE_CONFIG.formatCurrency(item.price)}
+              <!-- Price -->
+              <div class="flex items-baseline gap-2 font-mono">
+                <span class="font-black text-lg text-white">
+                  ${CAURE_CONFIG.formatPrice(item.price)}
                 </span>
-                <span class="font-space text-xs line-through text-brand-muted">
-                  ${STORE_CONFIG.formatCurrency(item.originalPrice)}
+                <span class="text-xs line-through text-gray-500">
+                  ${CAURE_CONFIG.formatPrice(item.originalPrice)}
                 </span>
               </div>
 
-              <!-- Interactive Size Selector -->
-              <div class="pt-2 border-t border-brand-border/60">
-                <div class="flex items-center justify-between text-[11px] font-space text-brand-muted mb-1.5">
-                  <span class="uppercase">Talla (EU/COL):</span>
-                  <span class="text-brand-volt font-bold" id="sizeFeedback-${item.id}">
-                    ${activeSize ? `Talla: ${activeSize}` : 'Elige talla'}
+              <!-- Quick US Size Selector (US 7 to 11) -->
+              <div class="pt-2 border-t border-noir-border/80">
+                <div class="flex items-center justify-between text-[10px] font-mono text-gray-400 mb-1.5 uppercase">
+                  <span>Talla US:</span>
+                  <span class="text-accent-acid font-bold" id="sizeLabelFeedback-${item.id}">
+                    ${activeSize ? `US ${activeSize}` : 'Elige tu talla'}
                   </span>
                 </div>
-                
-                <div class="grid grid-cols-5 sm:grid-cols-7 gap-1.5" id="sizeContainer-${item.id}">
-                  ${item.sizes.map(size => {
-                    const isSelected = activeSize === size;
+
+                <div class="grid grid-cols-5 gap-1" id="sizeGrid-${item.id}">
+                  ${AVAILABLE_US_SIZES.map(sz => {
+                    const isSelected = activeSize === sz;
                     return `
                       <button 
                         type="button"
-                        onclick="selectSize(${item.id}, ${size})"
-                        class="py-1 text-center font-space text-xs font-bold rounded-lg border transition-all ${
+                        onclick="setProductSize(${item.id}, '${sz}')"
+                        class="py-1 font-mono text-[11px] font-bold border transition-all text-center ${
                           isSelected 
-                            ? 'bg-brand-volt text-black border-brand-volt shadow-[0_0_10px_rgba(204,255,0,0.5)]' 
-                            : 'bg-white/5 border-white/10 text-gray-300 hover:border-brand-volt/50 hover:text-white'
+                            ? 'bg-accent-acid text-black border-accent-acid font-black shadow-[0_0_8px_rgba(204,255,0,0.5)]' 
+                            : 'bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white'
                         }"
                       >
-                        ${size}
+                        ${sz}
                       </button>
                     `;
                   }).join('')}
                 </div>
               </div>
 
-              <!-- Action Buttons (WhatsApp & Add to Cart) -->
-              <div class="pt-3 grid grid-cols-1 gap-2">
-                <!-- Direct WhatsApp Button with Dynamic Pre-filled message -->
+              <!-- Action CTAs -->
+              <div class="pt-3 grid grid-cols-1 gap-2 font-mono text-xs">
+                <!-- Direct Purchase via WhatsApp with specified message -->
                 <button 
-                  onclick="handleWhatsAppOrder(${item.id})"
-                  class="w-full py-3 bg-emerald-500 hover:bg-emerald-400 text-black font-space font-black text-xs uppercase tracking-wider rounded-xl flex items-center justify-center gap-2 transition-all transform active:scale-95 shadow-md"
+                  type="button"
+                  onclick="triggerWhatsAppBuy(${item.id})"
+                  class="w-full py-3 bg-accent-acid hover:bg-accent-acidHover text-black font-black uppercase tracking-wider flex items-center justify-center gap-2 transition-all transform active:scale-95 glow-acid-sm"
                 >
                   <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
-                  Pedir por WhatsApp
+                  Comprar Ahora
                 </button>
 
-                <!-- Add to Cart Button -->
+                <!-- Add to cart -->
                 <button 
-                  onclick="handleAddToCart(${item.id})"
-                  class="w-full py-2.5 bg-brand-card hover:bg-brand-cardHover border border-brand-border hover:border-brand-volt/50 text-gray-300 hover:text-brand-volt font-space font-bold text-xs uppercase tracking-wider rounded-xl flex items-center justify-center gap-2 transition-colors"
+                  type="button"
+                  onclick="triggerAddToCart(${item.id})"
+                  class="w-full py-2 bg-noir-950 hover:bg-noir-850 border border-noir-border hover:border-white/30 text-gray-300 hover:text-accent-acid font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-colors text-[11px]"
                 >
                   <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
                   Añadir al Carrito
@@ -1138,153 +1143,147 @@
               </div>
 
             </div>
+
           </div>
         `;
       }).join('');
 
-      // Refresh Lucide icons dynamically for rendered products
       lucide.createIcons();
     }
 
     /* ==============================================================
-       INTERACTIVIDAD: SELECCIÓN DE TALLA
+       SELECCIÓN INTERACTIVA DE TALLAS US
        ============================================================== */
-    function selectSize(productId, size) {
-      selectedSizes[productId] = size;
-      
-      // Update badge label
-      const feedback = document.getElementById(`sizeFeedback-${productId}`);
-      if (feedback) feedback.textContent = `Talla: ${size}`;
+    function setProductSize(productId, sizeStr) {
+      chosenSizes[productId] = sizeStr;
 
-      // Update active styling of buttons
-      const container = document.getElementById(`sizeContainer-${productId}`);
+      const label = document.getElementById(`sizeLabelFeedback-${productId}`);
+      if (label) label.textContent = `US ${sizeStr}`;
+
+      const container = document.getElementById(`sizeGrid-${productId}`);
       if (container) {
-        const buttons = container.querySelectorAll('button');
-        buttons.forEach(btn => {
-          if (parseInt(btn.textContent.trim()) === size) {
-            btn.className = 'py-1 text-center font-space text-xs font-bold rounded-lg border transition-all bg-brand-volt text-black border-brand-volt shadow-[0_0_10px_rgba(204,255,0,0.5)]';
+        const btns = container.querySelectorAll('button');
+        btns.forEach(b => {
+          if (b.textContent.trim() === sizeStr) {
+            b.className = 'py-1 font-mono text-[11px] font-bold border transition-all text-center bg-accent-acid text-black border-accent-acid font-black shadow-[0_0_8px_rgba(204,255,0,0.5)]';
           } else {
-            btn.className = 'py-1 text-center font-space text-xs font-bold rounded-lg border transition-all bg-white/5 border-white/10 text-gray-300 hover:border-brand-volt/50 hover:text-white';
+            b.className = 'py-1 font-mono text-[11px] font-bold border transition-all text-center bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white';
           }
         });
       }
     }
 
     /* ==============================================================
-       ORDENAR DIRECTAMENTE POR WHATSAPP
+       DISPARADOR DE COMPRA POR WHATSAPP (VALIDACIÓN DE TALLA)
        ============================================================== */
-    function handleWhatsAppOrder(productId) {
-      const product = SNEAKERS_CATALOG.find(p => p.id === productId);
+    function triggerWhatsAppBuy(productId) {
+      const product = SNEAKERS_DATA.find(p => p.id === productId);
       if (!product) return;
 
-      const size = selectedSizes[productId];
+      const size = chosenSizes[productId];
 
       if (!size) {
-        showToast("⚠️ Por favor selecciona tu talla antes de pedir", "warning");
-        // Highlight sizes briefly
-        const container = document.getElementById(`sizeContainer-${productId}`);
+        showToastAlert("⚠️ Por favor selecciona tu talla US antes de comprar", "warning");
+        const container = document.getElementById(`sizeGrid-${productId}`);
         if (container) {
-          container.classList.add('ring-2', 'ring-brand-orange', 'rounded-lg', 'p-1');
-          setTimeout(() => {
-            container.classList.remove('ring-2', 'ring-brand-orange', 'p-1');
-          }, 1500);
+          container.classList.add('ring-2', 'ring-accent-orange', 'p-1');
+          setTimeout(() => container.classList.remove('ring-2', 'ring-accent-orange', 'p-1'), 1600);
         }
         return;
       }
 
-      const url = getProductWhatsAppUrl(product, size);
-      window.open(url, '_blank');
+      const waUrl = buildWhatsAppPurchaseUrl(product, size);
+      window.open(waUrl, '_blank');
     }
 
     /* ==============================================================
-       AÑADIR AL CARRITO
+       GESTOR DE CARRITO DE COMPRAS
        ============================================================== */
-    function handleAddToCart(productId) {
-      const product = SNEAKERS_CATALOG.find(p => p.id === productId);
+    function triggerAddToCart(productId) {
+      const product = SNEAKERS_DATA.find(p => p.id === productId);
       if (!product) return;
 
-      const size = selectedSizes[productId];
+      const size = chosenSizes[productId];
 
       if (!size) {
-        showToast("⚠️ Selecciona tu talla para agregar al carrito", "warning");
+        showToastAlert("⚠️ Selecciona tu talla US para agregar al carrito", "warning");
         return;
       }
 
-      // Check if item with same size already exists
-      const existing = cart.find(item => item.id === product.id && item.size === size);
-      if (existing) {
-        existing.quantity += 1;
+      const existingItem = shoppingCart.find(it => it.id === product.id && it.size === size);
+      if (existingItem) {
+        existingItem.quantity += 1;
       } else {
-        cart.push({
+        shoppingCart.push({
           id: product.id,
           name: product.name,
           brand: product.brand,
           price: product.price,
-          image: product.image,
+          image: product.imagePrimary,
           size: size,
           quantity: 1
         });
       }
 
-      updateCartUI();
-      showToast(`¡Agregado al carrito: Talla ${size}! 🔥`);
+      refreshCartUI();
+      showToastAlert(`¡${product.name} (US ${size}) agregado al carrito! 🔥`);
     }
 
-    function updateCartUI() {
-      const countBadge = document.getElementById('cartCountBadge');
-      const itemTotalCount = document.getElementById('cartItemTotalCount');
-      const itemsContainer = document.getElementById('cartItemsContainer');
-      const subtotalEl = document.getElementById('cartSubtotal');
-      const totalEl = document.getElementById('cartTotal');
+    function refreshCartUI() {
+      const badgePill = document.getElementById('cartCountPill');
+      const drawerBadge = document.getElementById('cartDrawerTotalBadge');
+      const listContainer = document.getElementById('cartProductsList');
+      const subtotalEl = document.getElementById('cartSubtotalValue');
+      const grandTotalEl = document.getElementById('cartGrandTotal');
 
-      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-      const totalCost = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+      const totalItems = shoppingCart.reduce((acc, it) => acc + it.quantity, 0);
+      const totalAmount = shoppingCart.reduce((acc, it) => acc + (it.price * it.quantity), 0);
 
-      // Badge count
-      countBadge.textContent = totalItems;
+      // Pill animation
+      badgePill.textContent = totalItems;
+      drawerBadge.textContent = totalItems;
+
       if (totalItems > 0) {
-        countBadge.classList.remove('scale-0');
-        countBadge.classList.add('scale-100');
+        badgePill.classList.remove('scale-0');
+        badgePill.classList.add('scale-100');
       } else {
-        countBadge.classList.remove('scale-100');
-        countBadge.classList.add('scale-0');
+        badgePill.classList.remove('scale-100');
+        badgePill.classList.add('scale-0');
       }
 
-      itemTotalCount.textContent = totalItems;
-      subtotalEl.textContent = STORE_CONFIG.formatCurrency(totalCost);
-      totalEl.textContent = STORE_CONFIG.formatCurrency(totalCost);
+      subtotalEl.textContent = CAURE_CONFIG.formatPrice(totalAmount);
+      grandTotalEl.textContent = CAURE_CONFIG.formatPrice(totalAmount);
 
-      if (cart.length === 0) {
-        itemsContainer.innerHTML = `
-          <div class="text-center py-12 space-y-3">
-            <div class="w-12 h-12 rounded-full bg-brand-black border border-brand-border flex items-center justify-center mx-auto text-gray-500">
+      if (shoppingCart.length === 0) {
+        listContainer.innerHTML = `
+          <div class="text-center py-16 space-y-3 font-mono">
+            <div class="w-12 h-12 rounded-full bg-noir-950 border border-noir-border flex items-center justify-center mx-auto text-gray-600">
               <i data-lucide="shopping-bag" class="w-6 h-6"></i>
             </div>
-            <p class="text-gray-400 font-space text-sm">Tu carrito está vacío actualmente</p>
-            <button onclick="toggleCart(false)" class="text-brand-volt font-space text-xs font-bold uppercase underline">
+            <p class="text-gray-400 text-xs uppercase tracking-wider">Tu carrito está vacío</p>
+            <button onclick="toggleCartDrawer(false)" class="text-accent-acid text-xs uppercase underline font-bold">
               Explorar Catálogo
             </button>
           </div>
         `;
       } else {
-        itemsContainer.innerHTML = cart.map((item, index) => `
-          <div class="flex items-center gap-3 bg-brand-black/60 p-3 rounded-xl border border-brand-border/70">
-            <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-contain rounded-lg bg-white/5 p-1 border border-white/5" />
+        listContainer.innerHTML = shoppingCart.map((item, idx) => `
+          <div class="flex items-center gap-3 bg-noir-950 p-3 border border-noir-border font-mono">
+            <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-contain bg-black p-1 border border-white/5" />
             <div class="flex-1 min-w-0">
-              <h4 class="font-syne font-bold text-sm text-white truncate">${item.name}</h4>
-              <div class="flex items-center gap-2 text-xs font-space text-brand-muted mt-0.5">
-                <span>Talla: <strong class="text-brand-volt">${item.size}</strong></span>
+              <h4 class="font-syne font-bold text-xs text-white uppercase truncate">${item.name}</h4>
+              <div class="flex items-center gap-2 text-[11px] text-gray-400 mt-1">
+                <span>Talla: <strong class="text-accent-acid">US ${item.size}</strong></span>
                 <span>•</span>
-                <span class="text-white font-bold">${STORE_CONFIG.formatCurrency(item.price)}</span>
+                <span class="text-white font-bold">${CAURE_CONFIG.formatPrice(item.price)}</span>
               </div>
-              <!-- Quantity Stepper -->
               <div class="flex items-center gap-2 mt-2">
-                <button onclick="changeQuantity(${index}, -1)" class="w-6 h-6 rounded bg-brand-card hover:bg-brand-volt hover:text-black text-white flex items-center justify-center text-xs transition-colors">-</button>
-                <span class="font-space text-xs font-bold px-1">${item.quantity}</span>
-                <button onclick="changeQuantity(${index}, 1)" class="w-6 h-6 rounded bg-brand-card hover:bg-brand-volt hover:text-black text-white flex items-center justify-center text-xs transition-colors">+</button>
+                <button onclick="adjustCartQty(${idx}, -1)" class="w-5 h-5 bg-noir-850 border border-white/10 text-white flex items-center justify-center text-xs">-</button>
+                <span class="text-xs font-bold px-1">${item.quantity}</span>
+                <button onclick="adjustCartQty(${idx}, 1)" class="w-5 h-5 bg-noir-850 border border-white/10 text-white flex items-center justify-center text-xs">+</button>
               </div>
             </div>
-            <button onclick="removeFromCart(${index})" class="text-gray-400 hover:text-red-400 p-1.5 transition-colors" title="Eliminar">
+            <button onclick="deleteCartItem(${idx})" class="text-gray-500 hover:text-red-400 p-2" title="Quitar">
               <i data-lucide="trash-2" class="w-4 h-4"></i>
             </button>
           </div>
@@ -1294,36 +1293,36 @@
       lucide.createIcons();
     }
 
-    function changeQuantity(index, delta) {
-      if (!cart[index]) return;
-      cart[index].quantity += delta;
-      if (cart[index].quantity <= 0) {
-        cart.splice(index, 1);
+    function adjustCartQty(index, amount) {
+      if (!shoppingCart[index]) return;
+      shoppingCart[index].quantity += amount;
+      if (shoppingCart[index].quantity <= 0) {
+        shoppingCart.splice(index, 1);
       }
-      updateCartUI();
+      refreshCartUI();
     }
 
-    function removeFromCart(index) {
-      cart.splice(index, 1);
-      updateCartUI();
-      showToast("Producto eliminado del carrito");
+    function deleteCartItem(index) {
+      shoppingCart.splice(index, 1);
+      refreshCartUI();
+      showToastAlert("Producto retirado del carrito");
     }
 
-    function toggleCart(open) {
-      const drawer = document.getElementById('cartDrawer');
-      const content = document.getElementById('cartContent');
+    function toggleCartDrawer(open) {
+      const drawer = document.getElementById('cartSlideDrawer');
+      const panel = document.getElementById('cartDrawerPanel');
 
       if (open) {
         drawer.classList.remove('opacity-0', 'pointer-events-none');
         drawer.classList.add('opacity-100');
-        content.classList.remove('translate-x-full');
-        content.classList.add('translate-x-0');
+        panel.classList.remove('translate-x-full');
+        panel.classList.add('translate-x-0');
         document.body.classList.add('overflow-hidden');
       } else {
         drawer.classList.remove('opacity-100');
         drawer.classList.add('opacity-0', 'pointer-events-none');
-        content.classList.remove('translate-x-0');
-        content.classList.add('translate-x-full');
+        panel.classList.remove('translate-x-0');
+        panel.classList.add('translate-x-full');
         document.body.classList.remove('overflow-hidden');
       }
     }
@@ -1331,214 +1330,252 @@
     /* ==============================================================
        QUICK VIEW MODAL
        ============================================================== */
-    function openQuickView(productId) {
-      const product = SNEAKERS_CATALOG.find(p => p.id === productId);
+    function openQuickModal(productId) {
+      const product = SNEAKERS_DATA.find(p => p.id === productId);
       if (!product) return;
 
-      modalSelectedProduct = product;
-      modalSelectedSize = selectedSizes[productId] || product.sizes[0];
+      quickActiveProduct = product;
+      quickActiveSize = chosenSizes[productId] || "9";
 
-      document.getElementById('modalImage').src = product.image;
-      document.getElementById('modalBrand').textContent = product.brand;
-      document.getElementById('modalName').textContent = product.name;
-      document.getElementById('modalPrice').textContent = STORE_CONFIG.formatCurrency(product.price);
-      document.getElementById('modalOriginalPrice').textContent = STORE_CONFIG.formatCurrency(product.originalPrice);
-      document.getElementById('modalBadge').textContent = product.badge;
-      document.getElementById('modalDescription').textContent = product.description;
+      document.getElementById('quickImage').src = product.imagePrimary;
+      document.getElementById('quickBrand').textContent = product.brand;
+      document.getElementById('quickName').textContent = product.name;
+      document.getElementById('quickPrice').textContent = CAURE_CONFIG.formatPrice(product.price);
+      document.getElementById('quickOriginalPrice').textContent = CAURE_CONFIG.formatPrice(product.originalPrice);
+      document.getElementById('quickBadge').textContent = product.tag;
+      document.getElementById('quickDescription').textContent = product.description;
+      document.getElementById('quickSelectedSizeLabel').textContent = `US ${quickActiveSize}`;
 
-      // Render size pills in modal
-      const sizeContainer = document.getElementById('modalSizeContainer');
-      sizeContainer.innerHTML = product.sizes.map(s => `
+      const sizesContainer = document.getElementById('quickSizesContainer');
+      sizesContainer.innerHTML = AVAILABLE_US_SIZES.map(sz => `
         <button 
-          onclick="selectModalSize(${s})" 
-          class="modal-size-btn px-3.5 py-1.5 font-space text-xs font-bold rounded-lg border transition-all ${
-            s === modalSelectedSize 
-              ? 'bg-brand-volt text-black border-brand-volt shadow-md' 
-              : 'bg-white/5 border-white/10 text-gray-300 hover:border-brand-volt/50'
+          type="button"
+          onclick="setQuickSize('${sz}')"
+          class="quick-sz-btn px-3 py-1.5 font-mono text-xs font-bold border transition-all ${
+            sz === quickActiveSize 
+              ? 'bg-accent-acid text-black border-accent-acid' 
+              : 'bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/50'
           }"
-          data-size="${s}"
+          data-size="${sz}"
         >
-          ${s}
+          US ${sz}
         </button>
       `).join('');
 
-      const modal = document.getElementById('quickViewModal');
+      const modal = document.getElementById('quickModal');
       modal.classList.remove('hidden');
       modal.classList.add('flex');
       document.body.classList.add('overflow-hidden');
     }
 
-    function selectModalSize(size) {
-      modalSelectedSize = size;
-      const buttons = document.querySelectorAll('.modal-size-btn');
-      buttons.forEach(btn => {
-        if (parseInt(btn.getAttribute('data-size')) === size) {
-          btn.className = 'modal-size-btn px-3.5 py-1.5 font-space text-xs font-bold rounded-lg border transition-all bg-brand-volt text-black border-brand-volt shadow-md';
+    function setQuickSize(sz) {
+      quickActiveSize = sz;
+      document.getElementById('quickSelectedSizeLabel').textContent = `US ${sz}`;
+      const btns = document.querySelectorAll('.quick-sz-btn');
+      btns.forEach(b => {
+        if (b.getAttribute('data-size') === sz) {
+          b.className = 'quick-sz-btn px-3 py-1.5 font-mono text-xs font-bold border transition-all bg-accent-acid text-black border-accent-acid';
         } else {
-          btn.className = 'modal-size-btn px-3.5 py-1.5 font-space text-xs font-bold rounded-lg border transition-all bg-white/5 border-white/10 text-gray-300 hover:border-brand-volt/50';
+          b.className = 'quick-sz-btn px-3 py-1.5 font-mono text-xs font-bold border transition-all bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/50';
         }
       });
     }
 
-    function closeQuickView() {
-      const modal = document.getElementById('quickViewModal');
+    function closeQuickModal() {
+      const modal = document.getElementById('quickModal');
       modal.classList.add('hidden');
       modal.classList.remove('flex');
       document.body.classList.remove('overflow-hidden');
     }
 
     /* ==============================================================
-       TOAST NOTIFICATIONS
+       TOAST FEEDBACK
        ============================================================== */
-    let toastTimeout = null;
-    function showToast(message, type = "success") {
-      const toast = document.getElementById('toastNotification');
-      const msgEl = document.getElementById('toastMessage');
-      
-      msgEl.textContent = message;
+    let toastTimer = null;
+    function showToastAlert(msg, type = "success") {
+      const toast = document.getElementById('toastAlert');
+      const text = document.getElementById('toastAlertText');
+      text.textContent = msg;
 
       if (type === "warning") {
-        toast.className = 'fixed top-6 right-6 z-50 transform translate-y-0 transition-transform duration-300 flex items-center gap-3 bg-brand-card/95 border border-brand-orange text-brand-orange px-5 py-3 rounded-2xl shadow-2xl font-space text-xs font-bold';
+        toast.className = 'fixed top-6 right-6 z-50 transform translate-y-0 transition-transform duration-300 flex items-center gap-3 bg-noir-900 border border-accent-orange text-accent-orange px-5 py-3.5 shadow-2xl font-mono text-xs font-bold';
       } else {
-        toast.className = 'fixed top-6 right-6 z-50 transform translate-y-0 transition-transform duration-300 flex items-center gap-3 bg-brand-card/95 border border-brand-volt text-white px-5 py-3 rounded-2xl shadow-2xl font-space text-xs font-bold';
+        toast.className = 'fixed top-6 right-6 z-50 transform translate-y-0 transition-transform duration-300 flex items-center gap-3 bg-noir-900 border border-accent-acid text-white px-5 py-3.5 shadow-2xl font-mono text-xs font-bold';
       }
 
-      if (toastTimeout) clearTimeout(toastTimeout);
-      toastTimeout = setTimeout(() => {
-        toast.classList.add('translate-y-[-150%]');
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.add('translate-y-[-160%]');
       }, 3000);
     }
 
     /* ==============================================================
-       INICIALIZACIÓN DE EVENTOS Y BOTONES GLOBALES
+       CUENTA REGRESIVA DINÁMICA DE DROP EXCLUSIVO
+       ============================================================== */
+    function startCountdown() {
+      // 4 horas, 18 minutos, 42 segundos iniciales
+      let totalSeconds = 4 * 3600 + 18 * 60 + 42;
+
+      setInterval(() => {
+        totalSeconds--;
+        if (totalSeconds < 0) totalSeconds = 12 * 3600; // Reset loop
+
+        const h = Math.floor(totalSeconds / 3600);
+        const m = Math.floor((totalSeconds % 3600) / 60);
+        const s = totalSeconds % 60;
+
+        const formatted = `${String(h).padStart(2, '0')}h : ${String(m).padStart(2, '0')}m : ${String(s).padStart(2, '0')}s`;
+
+        const deskTimer = document.getElementById('countdownTimer');
+        const mobTimer = document.getElementById('countdownTimerMobile');
+        if (deskTimer) deskTimer.textContent = formatted;
+        if (mobTimer) mobTimer.textContent = formatted;
+      }, 1000);
+    }
+
+    /* ==============================================================
+       DETECCIÓN DE SCROLL PARA EL HEADER STICKY
+       ============================================================== */
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('mainHeader');
+      if (window.scrollY > 40) {
+        header.classList.add('bg-noir-950/95', 'shadow-2xl', 'border-white/10');
+        header.classList.remove('bg-noir-950/60', 'border-white/5');
+      } else {
+        header.classList.add('bg-noir-950/60', 'border-white/5');
+        header.classList.remove('bg-noir-950/95', 'shadow-2xl', 'border-white/10');
+      }
+    });
+
+    /* ==============================================================
+       INICIALIZACIÓN DE LA APLICACIÓN
        ============================================================== */
     document.addEventListener('DOMContentLoaded', () => {
-      // Set Copyright Year
-      document.getElementById('currentYear').textContent = new Date().getFullYear();
+      // Año dinámico
+      document.getElementById('currentYearDisplay').textContent = new Date().getFullYear();
 
-      // Set Global Static WhatsApp Links with default greeting
-      const defaultGreeting = encodeURIComponent(`¡Hola ${STORE_CONFIG.storeName}! 👋 Quisiera recibir asesoría sobre su catálogo de tenis exclusivos.`);
-      const defaultWaUrl = `https://wa.me/${STORE_CONFIG.phone}?text=${defaultGreeting}`;
+      // Enlaces globales de WhatsApp con mensaje cordial
+      const genericWaMessage = encodeURIComponent(`¡Hola! 👋 Vengo de la web de CAURE BRAND. Quisiera asesoría sobre el catálogo exclusivo y disponibilidad de tallas.`);
+      const baseWaUrl = `https://wa.me/${CAURE_CONFIG.phone}?text=${genericWaMessage}`;
 
-      const waElements = [
-        'navWhatsappBtn',
-        'mobileWhatsappBtn',
-        'heroWhatsappBtn',
-        'floatingWhatsappBtn',
-        'footerWhatsappSocial',
-        'footerWhatsappGuide'
+      const waDirectLinks = [
+        'navWhatsappDirect',
+        'mobileWhatsappDirect',
+        'heroAdvisorBtn',
+        'floatingWhatsappTrigger',
+        'footerWaDirect',
+        'footerWaGuide'
       ];
-      waElements.forEach(id => {
+      waDirectLinks.forEach(id => {
         const el = document.getElementById(id);
-        if (el) el.href = defaultWaUrl;
+        if (el) el.href = baseWaUrl;
       });
 
-      // Filter Buttons
-      const filterBtns = document.querySelectorAll('.filter-btn');
-      filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          filterBtns.forEach(b => {
-            b.classList.remove('bg-brand-volt', 'text-black', 'border-brand-volt');
-            b.classList.add('bg-brand-card', 'text-gray-300', 'border-brand-border');
+      // Pestañas de filtrado de marca
+      const tabs = document.querySelectorAll('.filter-tab');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => {
+            t.className = 'filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-noir-border hover:border-white/20 transition-all whitespace-nowrap';
           });
-          btn.classList.add('bg-brand-volt', 'text-black', 'border-brand-volt');
-          btn.classList.remove('bg-brand-card', 'text-gray-300', 'border-brand-border');
-          
-          currentFilter = btn.getAttribute('data-filter');
-          renderCatalog();
+          tab.className = 'filter-tab active-tab px-5 py-2.5 bg-accent-acid text-black font-black border border-accent-acid transition-all whitespace-nowrap';
+
+          selectedBrandFilter = tab.getAttribute('data-brand');
+          renderCatalogGrid();
         });
       });
 
-      // Search Input
-      const searchInput = document.getElementById('searchInput');
-      const clearSearchBtn = document.getElementById('clearSearchBtn');
+      // Buscador predictivo en tiempo real
+      const searchInput = document.getElementById('liveSearchField');
+      const clearBtn = document.getElementById('clearSearchBtn');
 
       searchInput.addEventListener('input', (e) => {
-        searchQuery = e.target.value.trim();
-        if (searchQuery.length > 0) {
-          clearSearchBtn.classList.remove('hidden');
+        currentSearchTerm = e.target.value.trim();
+        if (currentSearchTerm.length > 0) {
+          clearBtn.classList.remove('hidden');
         } else {
-          clearSearchBtn.classList.add('hidden');
+          clearBtn.classList.add('hidden');
         }
-        renderCatalog();
+        renderCatalogGrid();
       });
 
-      clearSearchBtn.addEventListener('click', () => {
+      clearBtn.addEventListener('click', () => {
         searchInput.value = '';
-        searchQuery = '';
-        clearSearchBtn.classList.add('hidden');
-        renderCatalog();
+        currentSearchTerm = '';
+        clearBtn.classList.add('hidden');
+        renderCatalogGrid();
       });
 
-      document.getElementById('resetFiltersBtn').addEventListener('click', () => {
-        searchQuery = '';
+      document.getElementById('resetSearchBtn').addEventListener('click', () => {
         searchInput.value = '';
-        currentFilter = 'all';
-        clearSearchBtn.classList.add('hidden');
-        filterBtns[0].click();
+        currentSearchTerm = '';
+        selectedBrandFilter = 'all';
+        clearBtn.classList.add('hidden');
+        tabs[0].click();
       });
 
-      // Cart Drawer Trigger
-      document.getElementById('openCartBtn').addEventListener('click', () => toggleCart(true));
-      document.getElementById('closeCartBtn').addEventListener('click', () => toggleCart(false));
-      document.getElementById('cartBackdrop').addEventListener('click', () => toggleCart(false));
+      // Carrito Drawer Eventos
+      document.getElementById('cartDrawerOpenBtn').addEventListener('click', () => toggleCartDrawer(true));
+      document.getElementById('cartDrawerCloseBtn').addEventListener('click', () => toggleCartDrawer(false));
+      document.getElementById('cartOverlayBackdrop').addEventListener('click', () => toggleCartDrawer(false));
 
       // Checkout WhatsApp
-      document.getElementById('checkoutWhatsappBtn').addEventListener('click', () => {
-        if (cart.length === 0) {
-          showToast("⚠️ Agrega al menos un par al carrito", "warning");
+      document.getElementById('cartCheckoutWaBtn').addEventListener('click', () => {
+        if (shoppingCart.length === 0) {
+          showToastAlert("⚠️ Tu carrito está vacío", "warning");
           return;
         }
-        window.open(getCartWhatsAppUrl(), '_blank');
+        window.open(buildCartWhatsAppUrl(), '_blank');
       });
 
-      // Quick View Modal
-      document.getElementById('closeQuickViewBtn').addEventListener('click', closeQuickView);
-      document.getElementById('quickViewBackdrop').addEventListener('click', closeQuickView);
+      // Quick View Modal Eventos
+      document.getElementById('quickModalCloseBtn').addEventListener('click', closeQuickModal);
+      document.getElementById('quickModalBackdrop').addEventListener('click', closeQuickModal);
 
-      document.getElementById('modalBuyWhatsappBtn').addEventListener('click', () => {
-        if (!modalSelectedProduct) return;
-        const url = getProductWhatsAppUrl(modalSelectedProduct, modalSelectedSize);
+      document.getElementById('quickBuyWaBtn').addEventListener('click', () => {
+        if (!quickActiveProduct) return;
+        const url = buildWhatsAppPurchaseUrl(quickActiveProduct, quickActiveSize);
         window.open(url, '_blank');
       });
 
-      document.getElementById('modalAddToCartBtn').addEventListener('click', () => {
-        if (!modalSelectedProduct) return;
-        selectedSizes[modalSelectedProduct.id] = modalSelectedSize;
-        handleAddToCart(modalSelectedProduct.id);
-        closeQuickView();
+      document.getElementById('quickAddCartBtn').addEventListener('click', () => {
+        if (!quickActiveProduct) return;
+        chosenSizes[quickActiveProduct.id] = quickActiveSize;
+        triggerAddToCart(quickActiveProduct.id);
+        closeQuickModal();
       });
 
-      // Mobile Menu
-      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-      const mobileMenu = document.getElementById('mobileMenu');
-      const menuIconOpen = document.getElementById('menuIconOpen');
-      const menuIconClose = document.getElementById('menuIconClose');
+      // Menú Móvil
+      const mobileToggle = document.getElementById('mobileNavToggle');
+      const mobileDrawer = document.getElementById('mobileDrawerMenu');
+      const iconOpen = document.getElementById('mobileMenuIconOpen');
+      const iconClose = document.getElementById('mobileMenuIconClose');
 
-      mobileMenuBtn.addEventListener('click', () => {
-        const isClosed = mobileMenu.classList.contains('hidden');
-        if (isClosed) {
-          mobileMenu.classList.remove('hidden');
-          menuIconOpen.classList.add('hidden');
-          menuIconClose.classList.remove('hidden');
+      mobileToggle.addEventListener('click', () => {
+        const isHidden = mobileDrawer.classList.contains('hidden');
+        if (isHidden) {
+          mobileDrawer.classList.remove('hidden');
+          iconOpen.classList.add('hidden');
+          iconClose.classList.remove('hidden');
         } else {
-          mobileMenu.classList.add('hidden');
-          menuIconOpen.classList.remove('hidden');
-          menuIconClose.classList.add('hidden');
+          mobileDrawer.classList.add('hidden');
+          iconOpen.classList.remove('hidden');
+          iconClose.classList.add('hidden');
         }
       });
 
-      document.querySelectorAll('.mobile-link').forEach(link => {
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
         link.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden');
-          menuIconOpen.classList.remove('hidden');
-          menuIconClose.classList.add('hidden');
+          mobileDrawer.classList.add('hidden');
+          iconOpen.classList.remove('hidden');
+          iconClose.classList.add('hidden');
         });
       });
 
-      // Initial Catalog Render
-      renderCatalog();
-      updateCartUI();
+      // Iniciar cuenta regresiva y catálogo
+      startCountdown();
+      renderCatalogGrid();
+      refreshCartUI();
     });
   </script>
 </body>
