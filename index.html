@@ -4,8 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CAURE BRAND — High-End Streetwear & Exclusive Sneaker Archive</title>
-  <meta name="description" content="CAURE BRAND — Curaduría exclusiva de tenis multimarca y cultura urbana. Jordan, Nike, New Balance y colaboraciones exclusivas con envíos a toda Colombia y pago contra entrega." />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23CCFF00'><path d='M3 18 18 3h3v15H3z'/></svg>" />
+  <meta name="description" content="CAURE BRAND — Curaduría exclusiva de tenis multimarca y cultura urbana. Jordan, Nike, New Balance y colaboraciones exclusivas. Pedidos al WhatsApp 300 883 1730." />
+  
+  <!-- Favicon con el logotipo oficial del halcón -->
+  <link rel="icon" type="image/png" href="logo-white.png" />
+  <link rel="apple-touch-icon" href="logo-white.png" />
 
   <!-- Google Fonts: Syne, Anton, Plus Jakarta Sans, Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,19 +24,18 @@
         extend: {
           colors: {
             noir: {
-              950: '#050507',
-              900: '#0a0a0d',
-              850: '#0f0f14',
-              800: '#14141b',
-              700: '#1c1c26',
-              border: '#22222e',
-              line: '#2e2e3d'
+              950: '#000000',
+              900: '#080808',
+              850: '#111111',
+              800: '#181818',
+              700: '#242424',
+              border: '#222222',
+              line: '#2e2e2e'
             },
             accent: {
-              acid: '#CCFF00',
-              acidHover: '#b8e600',
-              orange: '#FF5500',
-              violet: '#7928CA'
+              acid: '#CCFF00',       // Verde hiper
+              acidHover: '#b8e600',  // Verde hiper hover
+              hyper: '#CCFF00'
             }
           },
           fontFamily: {
@@ -53,8 +55,8 @@
               '100%': { transform: 'translateX(-50%)' }
             },
             pulseGlow: {
-              '0%': { filter: 'drop-shadow(0 0 15px rgba(204, 255, 0, 0.2))' },
-              '100%': { filter: 'drop-shadow(0 0 35px rgba(204, 255, 0, 0.55))' }
+              '0%': { filter: 'drop-shadow(0 0 15px rgba(204, 255, 0, 0.25))' },
+              '100%': { filter: 'drop-shadow(0 0 35px rgba(204, 255, 0, 0.6))' }
             },
             floatSubtle: {
               '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
@@ -70,15 +72,15 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
-    /* Estilos globales de alta gama */
+    /* Estilos globales de alta gama - Monocromático B&W con Verde Hiper */
     ::-webkit-scrollbar {
       width: 6px;
     }
     ::-webkit-scrollbar-track {
-      background: #050507;
+      background: #000000;
     }
     ::-webkit-scrollbar-thumb {
-      background: #22222e;
+      background: #222222;
       border-radius: 3px;
     }
     ::-webkit-scrollbar-thumb:hover {
@@ -94,7 +96,7 @@
     }
 
     .editorial-outline {
-      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.25);
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
       color: transparent;
     }
 
@@ -103,24 +105,17 @@
       color: transparent;
     }
 
-    /* Brillo de precisión */
+    /* Brillo de precisión Verde Hiper */
     .glow-acid {
-      box-shadow: 0 0 30px -5px rgba(204, 255, 0, 0.45);
+      box-shadow: 0 0 30px -5px rgba(204, 255, 0, 0.5);
     }
     .glow-acid-sm {
-      box-shadow: 0 0 15px -3px rgba(204, 255, 0, 0.3);
-    }
-
-    /* Glassmorphism de lujo */
-    .glass-panel {
-      background: rgba(15, 15, 20, 0.75);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 0 15px -3px rgba(204, 255, 0, 0.35);
     }
   </style>
 </head>
 
-<body class="bg-noir-950 text-white font-jakarta antialiased selection:bg-accent-acid selection:text-black min-h-screen overflow-x-hidden">
+<body class="bg-black text-white font-jakarta antialiased selection:bg-accent-acid selection:text-black min-h-screen overflow-x-hidden">
 
   <!-- ============================================================ -->
   <!-- 1. EDITORIAL MARQUEE TICKER                                  -->
@@ -129,50 +124,60 @@
     <div class="flex whitespace-nowrap animate-marquee-slow font-semibold text-gray-300">
       <span class="mx-6 flex items-center gap-2.5">
         <span class="w-1.5 h-1.5 rounded-full bg-accent-acid animate-ping"></span>
-        • ENVÍOS SEGUROS A TODA COLOMBIA
+        • PEDIDOS WHATSAPP: 300 883 1730
       </span>
-      <span class="mx-6 text-white font-bold">• PAGOS CONTRA ENTREGA DISPONIBLES</span>
-      <span class="mx-6 text-accent-acid font-bold">• STOCK LIMITADO // CALIDAD G5 IMPORTADA</span>
-      <span class="mx-6">• CAURE BRAND ARCHIVE 2024</span>
+      <span class="mx-6 text-white font-bold">• ENVÍOS SEGUROS A TODA COLOMBIA</span>
+      <span class="mx-6 text-accent-acid font-bold">• PAGOS CONTRA ENTREGA DISPONIBLES</span>
+      <span class="mx-6 text-gray-400">• STOCK LIMITADO // CALIDAD G5 IMPORTADA</span>
       <span class="mx-6 flex items-center gap-2.5">
         <span class="w-1.5 h-1.5 rounded-full bg-accent-acid animate-ping"></span>
-        • ENVÍOS SEGUROS A TODA COLOMBIA
+        • PEDIDOS WHATSAPP: 300 883 1730
       </span>
-      <span class="mx-6 text-white font-bold">• PAGOS CONTRA ENTREGA DISPONIBLES</span>
-      <span class="mx-6 text-accent-acid font-bold">• STOCK LIMITADO // CALIDAD G5 IMPORTADA</span>
-      <span class="mx-6">• CAURE BRAND ARCHIVE 2024</span>
+      <span class="mx-6 text-white font-bold">• ENVÍOS SEGUROS A TODA COLOMBIA</span>
+      <span class="mx-6 text-accent-acid font-bold">• PAGOS CONTRA ENTREGA DISPONIBLES</span>
+      <span class="mx-6 text-gray-400">• CAURE BRAND ARCHIVE 2024</span>
     </div>
   </div>
 
   <!-- ============================================================ -->
-  <!-- 2. MINIMALIST STICKY HEADER (SCROLL-DYNAMIC)                 -->
+  <!-- 2. MINIMALIST STICKY HEADER CON LOGO OFICIAL PROFESIONAL    -->
   <!-- ============================================================ -->
-  <header id="mainHeader" class="sticky top-0 z-40 transition-all duration-500 bg-noir-950/60 backdrop-blur-md border-b border-white/5 py-4">
+  <header id="mainHeader" class="sticky top-0 z-40 transition-all duration-500 bg-black/80 backdrop-blur-md border-b border-white/10 py-3.5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
       
-      <!-- Logo Tipográfico Disruptivo -->
-      <a href="#inicio" class="flex items-center gap-3.5 group">
-        <div class="w-9 h-9 bg-accent-acid text-black flex items-center justify-center font-syne font-black text-xl rounded-none transition-transform group-hover:scale-105 group-hover:rotate-2 shadow-[0_0_15px_rgba(204,255,0,0.6)]">
-          C
+      <!-- LOGO OFICIAL CAURE BRAND CON HALCÓN INTEGRADO PROFESIONALMENTE -->
+      <a href="#inicio" class="flex items-center gap-3.5 group cursor-pointer" title="CAURE BRAND Inicio">
+        <div class="relative w-11 h-11 bg-black border border-white/20 p-1 flex items-center justify-center transition-all duration-300 group-hover:border-accent-acid group-hover:scale-105 group-hover:shadow-[0_0_15px_rgba(204,255,0,0.5)]">
+          <img 
+            src="logo-white.png" 
+            onerror="this.onerror=null; this.src='logotipo sin fondo.png'; this.style.filter='invert(1)';" 
+            alt="CAURE BRAND Halcón Logo" 
+            class="w-full h-full object-contain filter brightness-110 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] group-hover:drop-shadow-[0_0_10px_rgba(204,255,0,0.8)] transition-all" 
+          />
         </div>
         <div class="flex flex-col">
-          <span class="font-syne font-black text-xl sm:text-2xl tracking-tighter uppercase text-white leading-none">
-            CAURE <span class="text-accent-acid">BRAND</span>
-          </span>
-          <span class="text-[9px] font-mono tracking-[0.3em] text-gray-500 uppercase">Streetwear Archive</span>
+          <div class="flex items-center gap-1.5 leading-none">
+            <span class="font-syne font-black text-xl sm:text-2xl tracking-tighter uppercase text-white">
+              CAURE
+            </span>
+            <span class="font-syne font-black text-xl sm:text-2xl tracking-tighter uppercase text-accent-acid">
+              BRAND
+            </span>
+          </div>
+          <span class="text-[9px] font-mono tracking-[0.25em] text-gray-400 uppercase font-semibold mt-1">Sneakers • 300 883 1730</span>
         </div>
       </a>
 
       <!-- Dynamic Drop Badge & Countdown (Clickable: Scrolls to Catalog) -->
-      <a href="#catalogo" class="hidden lg:flex items-center gap-3 px-4 py-1.5 rounded-full bg-noir-900 border border-noir-border/80 shadow-inner hover:border-accent-acid/40 transition-all cursor-pointer group" title="Ver Drop Exclusivo">
+      <a href="#catalogo" class="hidden lg:flex items-center gap-3 px-4 py-1.5 rounded-full bg-noir-900 border border-white/10 shadow-inner hover:border-accent-acid/60 transition-all cursor-pointer group" title="Ver Drop Exclusivo">
         <div class="flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-accent-orange animate-ping"></span>
-          <span class="text-[11px] font-mono uppercase tracking-wider text-gray-400 font-bold group-hover:text-white transition-colors">🔥 Drop Exclusivo:</span>
+          <span class="w-2 h-2 rounded-full bg-accent-acid animate-ping"></span>
+          <span class="text-[11px] font-mono uppercase tracking-wider text-gray-300 font-bold group-hover:text-white transition-colors">🔥 Drop Activo:</span>
         </div>
-        <div class="font-mono text-xs font-bold text-accent-acid tracking-widest bg-black px-2.5 py-0.5 rounded border border-white/10" id="countdownTimer">
+        <div class="font-mono text-xs font-bold text-accent-acid tracking-widest bg-black px-2.5 py-0.5 rounded border border-white/15" id="countdownTimer">
           04h : 18m : 42s
         </div>
-        <span class="text-[10px] font-mono uppercase tracking-widest text-accent-orange font-bold">12 Pares Restantes</span>
+        <span class="text-[10px] font-mono uppercase tracking-widest text-white bg-white/10 px-2 py-0.5 border border-white/20 font-bold">12 Pares Restantes</span>
       </a>
 
       <!-- Navigation & Action Links -->
@@ -185,14 +190,14 @@
 
       <!-- Right Actions: Cart & VIP Contact -->
       <div class="flex items-center gap-3 sm:gap-4">
-        <!-- Direct Functional WhatsApp Link -->
-        <a id="navWhatsappDirect" href="https://wa.me/573001234567?text=%C2%A1Hola!%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Quisiera%20asesor%C3%ADa%20sobre%20el%20cat%C3%A1logo%20exclusivo%20y%20disponibilidad%20de%20tallas." target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded bg-white/5 hover:bg-white/10 border border-white/10 hover:border-accent-acid/50 text-xs font-mono tracking-wider text-gray-300 hover:text-white transition-all cursor-pointer">
+        <!-- Direct Functional WhatsApp Link con número 3008831730 -->
+        <a id="navWhatsappDirect" href="https://wa.me/573008831730?text=%C2%A1Hola!%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Quisiera%20asesor%C3%ADa%20sobre%20el%20cat%C3%A1logo%20exclusivo%20y%20disponibilidad%20de%20tallas." target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 bg-black hover:bg-noir-850 border border-white/15 hover:border-accent-acid text-xs font-mono tracking-wider text-gray-300 hover:text-white transition-all cursor-pointer">
           <i data-lucide="message-square" class="w-3.5 h-3.5 text-accent-acid"></i>
-          <span>Asesor VIP</span>
+          <span>WhatsApp 300 883 1730</span>
         </a>
 
         <!-- Cart Trigger Button -->
-        <button id="cartDrawerOpenBtn" class="relative p-2.5 rounded bg-noir-900 hover:bg-noir-850 border border-noir-border text-white hover:text-accent-acid transition-all cursor-pointer" aria-label="Ver Carrito">
+        <button id="cartDrawerOpenBtn" class="relative p-2.5 bg-noir-900 hover:bg-noir-850 border border-white/15 hover:border-accent-acid text-white hover:text-accent-acid transition-all cursor-pointer" aria-label="Ver Carrito">
           <i data-lucide="shopping-bag" class="w-4 h-4"></i>
           <span id="cartCountPill" class="absolute -top-1.5 -right-1.5 bg-accent-acid text-black font-mono font-black text-[10px] w-4 h-4 rounded-full flex items-center justify-center scale-0 transition-transform">
             0
@@ -200,7 +205,7 @@
         </button>
 
         <!-- Mobile Menu Toggle -->
-        <button id="mobileNavToggle" class="md:hidden p-2.5 rounded bg-noir-900 border border-noir-border text-white hover:text-accent-acid transition-colors cursor-pointer" aria-label="Menú">
+        <button id="mobileNavToggle" class="md:hidden p-2.5 bg-noir-900 border border-white/15 text-white hover:text-accent-acid transition-colors cursor-pointer" aria-label="Menú">
           <i data-lucide="menu" id="mobileMenuIconOpen" class="w-5 h-5"></i>
           <i data-lucide="x" id="mobileMenuIconClose" class="w-5 h-5 hidden"></i>
         </button>
@@ -209,11 +214,23 @@
     </div>
 
     <!-- Mobile Drawer Menu -->
-    <div id="mobileDrawerMenu" class="hidden md:hidden border-t border-noir-border bg-noir-950/98 px-6 py-6 transition-all">
+    <div id="mobileDrawerMenu" class="hidden md:hidden border-t border-noir-border bg-black/98 px-6 py-6 transition-all">
       <div class="flex flex-col space-y-4 font-mono text-xs uppercase tracking-widest font-bold">
+        
+        <!-- Mobile Logo Header -->
+        <div class="flex items-center gap-3 pb-3 border-b border-white/10 mb-2">
+          <div class="w-9 h-9 bg-black border border-white/20 p-1 flex items-center justify-center">
+            <img src="logo-white.png" onerror="this.onerror=null; this.src='logotipo sin fondo.png'; this.style.filter='invert(1)';" alt="CAURE BRAND" class="w-full h-full object-contain filter brightness-110" />
+          </div>
+          <div>
+            <span class="font-syne font-black text-lg tracking-tight uppercase text-white block leading-none">CAURE <span class="text-accent-acid">BRAND</span></span>
+            <span class="text-[9px] font-mono text-gray-400 uppercase tracking-widest">Sneakers Colombia</span>
+          </div>
+        </div>
+
         <!-- Mobile Drop Countdown -->
         <a href="#catalogo" class="p-3 bg-noir-900 rounded border border-white/10 flex items-center justify-between mb-2">
-          <span class="text-accent-orange text-[10px]">🔥 PRÓXIMO DROP:</span>
+          <span class="text-gray-300 text-[10px]">🔥 DROP ACTIVO:</span>
           <span class="font-mono text-accent-acid text-xs font-black" id="countdownTimerMobile">04h : 18m : 42s</span>
         </a>
 
@@ -223,9 +240,9 @@
         <a href="#garantia" class="mobile-nav-link text-gray-300 hover:text-accent-acid py-2 border-b border-white/5">Garantía & Envíos</a>
         
         <div class="pt-2">
-          <a id="mobileWhatsappDirect" href="https://wa.me/573001234567?text=%C2%A1Hola!%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Quisiera%20asesor%C3%ADa%20sobre%20el%20cat%C3%A1logo%20exclusivo%20y%20disponibilidad%20de%20tallas." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 bg-accent-acid text-black py-3 rounded font-mono font-black text-xs uppercase tracking-wider shadow-lg cursor-pointer">
+          <a id="mobileWhatsappDirect" href="https://wa.me/573008831730?text=%C2%A1Hola!%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Quisiera%20asesor%C3%ADa%20sobre%20el%20cat%C3%A1logo%20exclusivo%20y%20disponibilidad%20de%20tallas." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 bg-accent-acid text-black py-3 rounded font-mono font-black text-xs uppercase tracking-wider shadow-lg cursor-pointer">
             <i data-lucide="message-circle" class="w-4 h-4"></i>
-            Chatear por WhatsApp
+            Pedir al 300 883 1730
           </a>
         </div>
       </div>
@@ -233,12 +250,17 @@
   </header>
 
   <!-- ============================================================ -->
-  <!-- 3. IMMERSIVE ASYMMETRIC HERO SECTION                         -->
+  <!-- 3. IMMERSIVE ASYMMETRIC HERO SECTION CON MARCA DE AGUA       -->
   <!-- ============================================================ -->
   <section id="inicio" class="relative min-h-[92vh] flex items-center bg-grid-minimal py-12 lg:py-20 overflow-hidden border-b border-noir-border">
-    <!-- Ambient Lighting (Acid glow) -->
+    <!-- Ambient Lighting (Acid glow + Monochrome Soft Light) -->
     <div class="absolute top-1/4 -left-32 w-[550px] h-[550px] bg-accent-acid/10 rounded-full blur-[160px] pointer-events-none -z-10"></div>
-    <div class="absolute bottom-10 right-0 w-[500px] h-[500px] bg-accent-orange/10 rounded-full blur-[160px] pointer-events-none -z-10"></div>
+    <div class="absolute bottom-10 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-[160px] pointer-events-none -z-10"></div>
+
+    <!-- SILUETA DE HALCÓN DE ALTA GAMA EN MARCA DE AGUA DE FONDO -->
+    <div class="absolute right-[-4%] top-1/2 -translate-y-1/2 w-[580px] h-[580px] pointer-events-none select-none opacity-[0.035] filter brightness-150 hidden lg:block -z-10">
+      <img src="logo-white.png" onerror="this.onerror=null; this.src='logotipo sin fondo.png'; this.style.filter='invert(1)';" alt="" class="w-full h-full object-contain transform -rotate-12" />
+    </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -246,13 +268,13 @@
         <!-- Left Hero Narrative (Asymmetrical brutalist layout) -->
         <div class="lg:col-span-7 space-y-7 text-left">
           
-          <!-- Micro Label -->
-          <div class="inline-flex items-center gap-2.5 px-3 py-1 bg-noir-900 border border-white/10 text-gray-300 font-mono text-[11px] tracking-widest uppercase">
-            <span class="w-2 h-2 bg-accent-acid"></span>
-            <span>HIGH-END STREETWEAR ARCHIVE // EDICIÓN 2024</span>
+          <!-- Micro Label con Halcón Icono -->
+          <div class="inline-flex items-center gap-2.5 px-3 py-1 bg-noir-900 border border-white/15 text-gray-300 font-mono text-[11px] tracking-widest uppercase">
+            <img src="logo-white.png" onerror="this.onerror=null; this.src='logotipo sin fondo.png'; this.style.filter='invert(1)';" alt="" class="w-3.5 h-3.5 object-contain" />
+            <span>STREETWEAR SNEAKER ARCHIVE // PEDIDOS: 300 883 1730</span>
           </div>
 
-          <!-- Monumental Headline -->
+          <!-- Monumental Headline (B&W + Hyper Green) -->
           <div class="space-y-1">
             <h1 class="font-syne font-black text-5xl sm:text-7xl xl:text-8xl tracking-tighter uppercase leading-[0.9] text-white">
               CULTURE <br />
@@ -271,13 +293,13 @@
               <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
             </a>
 
-            <a id="heroAdvisorBtn" href="https://wa.me/573001234567?text=%C2%A1Hola!%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Quisiera%20asesor%C3%ADa%20sobre%20el%20cat%C3%A1logo%20exclusivo%20y%20disponibilidad%20de%20tallas." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-noir-900 hover:bg-noir-850 border border-noir-border hover:border-white/30 text-white px-7 py-4 font-mono font-bold text-xs uppercase tracking-widest transition-all cursor-pointer">
+            <a id="heroAdvisorBtn" href="https://wa.me/573008831730?text=%C2%A1Hola!%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Quisiera%20asesor%C3%ADa%20sobre%20el%20cat%C3%A1logo%20exclusivo%20y%20disponibilidad%20de%20tallas." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-black hover:bg-noir-850 border border-white/20 hover:border-white text-white px-7 py-4 font-mono font-bold text-xs uppercase tracking-widest transition-all cursor-pointer">
               <i data-lucide="message-circle" class="w-4 h-4 text-accent-acid"></i>
-              <span>Hablar con Asesor</span>
+              <span>Pedir al 300 883 1730</span>
             </a>
           </div>
 
-          <!-- Proof Metrics Bar -->
+          <!-- Proof Metrics Bar (Crisp B&W + Hyper Green) -->
           <div class="pt-8 border-t border-noir-border grid grid-cols-3 gap-6 font-mono">
             <div>
               <span class="block font-syne font-black text-2xl sm:text-3xl text-white">+3,500</span>
@@ -295,31 +317,31 @@
 
         </div>
 
-        <!-- Right Hero Showcase (Iconic Travis Scott Jordan 1 Visual - Clickable to open Modal) -->
+        <!-- Right Hero Showcase (Travis Scott Jordan 1 Visual - Clickable to open Modal) -->
         <div class="lg:col-span-5 relative flex justify-center">
           <div class="relative w-full max-w-lg">
             
             <!-- Atmospheric backplate -->
-            <div class="absolute inset-0 bg-gradient-to-tr from-accent-acid/15 via-transparent to-accent-orange/15 rounded-none blur-2xl -z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-tr from-accent-acid/15 via-transparent to-white/5 rounded-none blur-2xl -z-10"></div>
 
             <!-- Showcase Box -->
-            <div onclick="openQuickModal(1)" class="bg-noir-900/90 border border-noir-border hover:border-accent-acid/40 p-6 relative transition-all duration-500 shadow-2xl group cursor-pointer" title="Ver Detalles de AJ1 Reverse Mocha">
+            <div onclick="openQuickModal(1)" class="bg-noir-900 border border-white/15 hover:border-accent-acid/60 p-6 relative transition-all duration-500 shadow-2xl group cursor-pointer" title="Ver Detalles de AJ1 Reverse Mocha">
               
               <!-- Floating Top Labels -->
               <div class="flex items-center justify-between border-b border-white/10 pb-3 mb-4">
                 <div class="flex items-center gap-2">
-                  <span class="px-2 py-0.5 bg-accent-orange/20 border border-accent-orange/40 text-accent-orange text-[10px] font-mono font-bold uppercase tracking-wider">
+                  <span class="px-2.5 py-0.5 bg-accent-acid text-black text-[10px] font-mono font-black uppercase tracking-wider shadow-[0_0_8px_rgba(204,255,0,0.4)]">
                     HOT DROP
                   </span>
                   <span class="text-[10px] font-mono text-gray-400 uppercase tracking-wider">REF. #001</span>
                 </div>
-                <span class="text-[10px] font-mono text-accent-acid font-bold uppercase tracking-widest">
+                <span class="text-[10px] font-mono text-white border border-white/20 px-2 py-0.5 font-bold uppercase tracking-widest">
                   EDICIÓN LIMITADA
                 </span>
               </div>
 
               <!-- Main Hero Sneaker Image (With subtle float animation) -->
-              <div class="relative h-64 sm:h-80 w-full flex items-center justify-center overflow-hidden bg-black/40 border border-white/5 p-4">
+              <div class="relative h-64 sm:h-80 w-full flex items-center justify-center overflow-hidden bg-black border border-white/5 p-4">
                 <img 
                   src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=900&q=80" 
                   alt="Air Jordan 1 Low Travis Scott Reverse Mocha" 
@@ -332,10 +354,10 @@
                 <div>
                   <span class="text-[10px] font-mono text-accent-acid uppercase tracking-widest block font-bold">NIKE / JORDAN COLLAB</span>
                   <h3 class="font-syne font-black text-xl text-white tracking-tight">AJ1 Low 'Reverse Mocha'</h3>
-                  <div class="font-mono text-sm text-gray-300 font-bold mt-0.5">$ 195.000 COP</div>
+                  <div class="font-mono text-sm text-gray-200 font-bold mt-0.5">$ 195.000 COP</div>
                 </div>
                 
-                <button type="button" class="p-3 bg-accent-acid text-black group-hover:bg-white transition-colors" aria-label="Abrir vista rápida">
+                <button type="button" class="p-3 bg-accent-acid text-black group-hover:bg-white transition-colors cursor-pointer" aria-label="Abrir vista rápida">
                   <i data-lucide="arrow-right" class="w-5 h-5"></i>
                 </button>
               </div>
@@ -352,7 +374,7 @@
   <!-- ============================================================ -->
   <!-- 4. CATALOG & INTERACTIVE BRAND TABS                          -->
   <!-- ============================================================ -->
-  <section id="catalogo" class="py-24 bg-noir-950 relative border-b border-noir-border">
+  <section id="catalogo" class="py-24 bg-black relative border-b border-noir-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Title & Subheading -->
@@ -366,19 +388,19 @@
             SNEAKER <span class="editorial-outline">ARCHIVE</span>
           </h2>
           <p class="text-gray-400 text-xs sm:text-sm font-inter max-w-xl">
-            Pasa el mouse sobre cualquier silueta para ver su ángulo alternativo. Selecciona tu talla US (7 a 11) y pulsa "Comprar Ahora" para pedir directamente por WhatsApp.
+            Pasa el mouse sobre cualquier silueta para ver su ángulo alternativo. Selecciona tu talla US (7 a 11) y pulsa "Comprar Ahora" para pedir al <strong class="text-accent-acid">300 883 1730</strong> por WhatsApp.
           </p>
         </div>
 
-        <!-- Search Input -->
+        <!-- Search Input (Crisp B&W) -->
         <div class="w-full md:w-80 relative">
           <div class="relative">
-            <i data-lucide="search" class="w-4 h-4 text-gray-500 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+            <i data-lucide="search" class="w-4 h-4 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
             <input 
               type="text" 
               id="liveSearchField" 
               placeholder="Buscar modelo o marca..." 
-              class="w-full bg-noir-900 border border-noir-border focus:border-accent-acid pl-10 pr-10 py-3 text-xs font-mono text-white placeholder-gray-500 outline-none transition-colors"
+              class="w-full bg-noir-900 border border-white/15 focus:border-accent-acid pl-10 pr-10 py-3 text-xs font-mono text-white placeholder-gray-500 outline-none transition-colors"
             />
             <button id="clearSearchBtn" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white cursor-pointer" title="Limpiar búsqueda">
               <i data-lucide="x" class="w-4 h-4"></i>
@@ -389,40 +411,983 @@
 
       <!-- Instant Filter Tabs (Interactive without reload) -->
       <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 font-mono text-xs uppercase tracking-wider scrollbar-none">
-        <button class="filter-tab active-tab px-5 py-2.5 bg-accent-acid text-black font-black border border-accent-acid transition-all whitespace-nowrap cursor-pointer" data-brand="all">
+        <button class="filter-tab active-tab px-5 py-2.5 bg-accent-acid text-black font-black border border-accent-acid transition-all whitespace-nowrap cursor-pointer shadow-[0_0_12px_rgba(204,255,0,0.4)]" data-brand="all">
           Todos los Pares
         </button>
-        <button class="filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-noir-border hover:border-white/20 transition-all whitespace-nowrap cursor-pointer" data-brand="Nike">
+        <button class="filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-white/10 hover:border-white/30 transition-all whitespace-nowrap cursor-pointer" data-brand="Nike">
           Nike
         </button>
-        <button class="filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-noir-border hover:border-white/20 transition-all whitespace-nowrap cursor-pointer" data-brand="Jordan">
+        <button class="filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-white/10 hover:border-white/30 transition-all whitespace-nowrap cursor-pointer" data-brand="Jordan">
           Jordan
         </button>
-        <button class="filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-noir-border hover:border-white/20 transition-all whitespace-nowrap cursor-pointer" data-brand="Adidas">
+        <button class="filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-white/10 hover:border-white/30 transition-all whitespace-nowrap cursor-pointer" data-brand="Adidas">
           Adidas
         </button>
-        <button class="filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-noir-border hover:border-white/20 transition-all whitespace-nowrap cursor-pointer" data-brand="New Balance">
+        <button class="filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-white/10 hover:border-white/30 transition-all whitespace-nowrap cursor-pointer" data-brand="New Balance">
           New Balance
         </button>
       </div>
 
       <!-- Results Indicator Bar -->
-      <div class="flex items-center justify-between text-xs font-mono text-gray-500 uppercase pb-6 border-b border-noir-border/60 mb-8">
-        <span id="catalogCountFeedback">Cargando colección...</span>
+      <div class="flex items-center justify-between text-xs font-mono text-gray-400 uppercase pb-6 border-b border-noir-border mb-8">
+        <span id="catalogCountFeedback">Mostrando 8 de 8 modelos curados</span>
         <button onclick="openSizeGuideModal()" class="text-accent-acid hover:underline font-bold flex items-center gap-1 cursor-pointer">
           <i data-lucide="ruler" class="w-3.5 h-3.5"></i>
           <span>Ver Guía de Tallas (US / CM)</span>
         </button>
       </div>
 
-      <!-- Dynamic Product Grid -->
+      <!-- Dynamic Product Grid (Pre-rendered for instantaneous loading and 100% functionality) -->
       <div id="catalogGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        <!-- Injected dynamically via JS with dual image hover and functional buttons -->
+
+          <div class="product-card group bg-noir-900 border border-noir-border hover:border-accent-acid/50 p-4 sm:p-5 flex flex-col justify-between transition-all duration-300 relative shadow-2xl hover:-translate-y-1" data-brand="Jordan" data-name="Air Jordan 1 Low 'Reverse Mocha'">
+            
+            <!-- DUAL IMAGE PERSPECTIVE CONTAINER -->
+            <div class="relative w-full aspect-square bg-black overflow-hidden mb-4 border border-white/5 flex items-center justify-center p-3 cursor-pointer" onclick="openQuickModal(1)" title="Click para ver detalles">
+              
+              <!-- Tag Pill (B&W or Hyper Green) -->
+              <span class="absolute top-3 left-3 z-20 px-2.5 py-0.5 text-[9px] font-mono tracking-widest uppercase bg-accent-acid text-black font-black shadow-[0_0_10px_rgba(204,255,0,0.5)]">
+                HOT DROP
+              </span>
+
+              <!-- Quick View Eye Action -->
+              <button 
+                type="button"
+                onclick="event.stopPropagation(); openQuickModal(1)" 
+                class="absolute top-3 right-3 z-20 w-8 h-8 bg-noir-950/80 hover:bg-accent-acid hover:text-black border border-white/10 text-white flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 cursor-pointer"
+                title="Vista Rápida"
+              >
+                <i data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+
+              <!-- Primary Angle Image (Default) -->
+              <img 
+                src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=900&q=80" 
+                alt="Air Jordan 1 Low 'Reverse Mocha' - Vista Principal" 
+                loading="lazy"
+                class="absolute inset-0 w-full h-full object-contain p-4 filter drop-shadow-[0_15px_15px_rgba(0,0,0,0.85)] transition-opacity duration-500 opacity-100 group-hover:opacity-0"
+              />
+
+              <!-- Secondary Angle Image (Revealed on Hover) -->
+              <img 
+                src="https://images.unsplash.com/photo-1597045566677-8cf032ed6634?auto=format&fit=crop&w=900&q=80" 
+                alt="Air Jordan 1 Low 'Reverse Mocha' - Ángulo Alternativo" 
+                loading="lazy"
+                class="absolute inset-0 w-full h-full object-contain p-4 filter drop-shadow-[0_15px_15px_rgba(0,0,0,0.85)] transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:scale-105"
+              />
+
+              <div class="absolute bottom-2 left-2 z-10 text-[8px] font-mono text-gray-500 uppercase tracking-widest group-hover:text-accent-acid transition-colors">
+                Hover: Ángulo 2
+              </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="space-y-3 flex-1 flex flex-col justify-between">
+              
+              <div>
+                <div class="flex items-center justify-between text-[10px] font-mono text-gray-400 uppercase tracking-widest">
+                  <span class="text-white font-bold">Jordan</span>
+                  <span class="text-accent-acid font-bold flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-accent-acid animate-pulse"></span>
+                    STOCK CONFIRMADO
+                  </span>
+                </div>
+                <h3 onclick="openQuickModal(1)" class="font-syne font-black text-base text-white uppercase group-hover:text-accent-acid transition-colors mt-0.5 line-clamp-1 cursor-pointer">
+                  Air Jordan 1 Low 'Reverse Mocha'
+                </h3>
+              </div>
+
+              <!-- Price (Crisp B&W) -->
+              <div class="flex items-baseline gap-2 font-mono">
+                <span class="font-black text-lg text-white">
+                  $ 195.000 COP
+                </span>
+                <span class="text-xs line-through text-gray-500">
+                  $ 245.000 COP
+                </span>
+              </div>
+
+              <!-- Quick US Size Selector (US 7 to 11) -->
+              <div class="pt-2 border-t border-noir-border/80">
+                <div class="flex items-center justify-between text-[10px] font-mono text-gray-400 mb-1.5 uppercase">
+                  <span>Talla US:</span>
+                  <span class="text-accent-acid font-bold" id="sizeLabelFeedback-1">
+                    US 9
+                  </span>
+                </div>
+
+                <div class="grid grid-cols-5 gap-1" id="sizeGrid-1">
+                  <button type="button" onclick="setProductSize(1, '7')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">7</button>
+                  <button type="button" onclick="setProductSize(1, '7.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">7.5</button>
+                  <button type="button" onclick="setProductSize(1, '8')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">8</button>
+                  <button type="button" onclick="setProductSize(1, '8.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">8.5</button>
+                  <button type="button" onclick="setProductSize(1, '9')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-accent-acid text-black border-accent-acid font-black shadow-[0_0_8px_rgba(204,255,0,0.5)]">9</button>
+                  <button type="button" onclick="setProductSize(1, '9.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">9.5</button>
+                  <button type="button" onclick="setProductSize(1, '10')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">10</button>
+                  <button type="button" onclick="setProductSize(1, '10.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">10.5</button>
+                  <button type="button" onclick="setProductSize(1, '11')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">11</button>
+                </div>
+              </div>
+
+              <!-- Action CTAs: Direct functional WhatsApp Link & Add to Cart -->
+              <div class="pt-3 grid grid-cols-1 gap-2 font-mono text-xs">
+                <!-- Direct Functional WhatsApp Link con mensaje preconfigurado al 3008831730 -->
+                <a 
+                  id="waBuyBtn-1"
+                  href="https://wa.me/573008831730?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Me%20interesa%20asegurar%20los%20tenis%20Jordan%20Air%20Jordan%201%20Low%20%27Reverse%20Mocha%27%20en%20talla%20US%209.%20%C2%BFMe%20confirman%20disponibilidad%20y%20m%C3%A9todos%20de%20env%C3%ADo%3F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full py-3 bg-accent-acid hover:bg-accent-acidHover text-black font-black uppercase tracking-wider flex items-center justify-center gap-2 transition-all transform active:scale-95 glow-acid-sm cursor-pointer"
+                >
+                  <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+                  <span>Comprar Ahora</span>
+                </a>
+
+                <!-- Functional Add to Cart (Black & White Style) -->
+                <button 
+                  type="button"
+                  onclick="triggerAddToCart(1)"
+                  class="w-full py-2 bg-black hover:bg-noir-850 border border-white/15 hover:border-white text-white hover:text-accent-acid font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all text-[11px] cursor-pointer"
+                >
+                  <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                  <span>Añadir al Carrito</span>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="product-card group bg-noir-900 border border-noir-border hover:border-accent-acid/50 p-4 sm:p-5 flex flex-col justify-between transition-all duration-300 relative shadow-2xl hover:-translate-y-1" data-brand="Jordan" data-name="Air Jordan 4 Retro 'Military Black'">
+            
+            <!-- DUAL IMAGE PERSPECTIVE CONTAINER -->
+            <div class="relative w-full aspect-square bg-black overflow-hidden mb-4 border border-white/5 flex items-center justify-center p-3 cursor-pointer" onclick="openQuickModal(2)" title="Click para ver detalles">
+              
+              <!-- Tag Pill (B&W or Hyper Green) -->
+              <span class="absolute top-3 left-3 z-20 px-2.5 py-0.5 text-[9px] font-mono tracking-widest uppercase bg-white text-black font-black">
+                ÚLTIMOS PARES
+              </span>
+
+              <!-- Quick View Eye Action -->
+              <button 
+                type="button"
+                onclick="event.stopPropagation(); openQuickModal(2)" 
+                class="absolute top-3 right-3 z-20 w-8 h-8 bg-noir-950/80 hover:bg-accent-acid hover:text-black border border-white/10 text-white flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 cursor-pointer"
+                title="Vista Rápida"
+              >
+                <i data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+
+              <!-- Primary Angle Image (Default) -->
+              <img 
+                src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?auto=format&fit=crop&w=900&q=80" 
+                alt="Air Jordan 4 Retro 'Military Black' - Vista Principal" 
+                loading="lazy"
+                class="absolute inset-0 w-full h-full object-contain p-4 filter drop-shadow-[0_15px_15px_rgba(0,0,0,0.85)] transition-opacity duration-500 opacity-100 group-hover:opacity-0"
+              />
+
+              <!-- Secondary Angle Image (Revealed on Hover) -->
+              <img 
+                src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=900&q=80" 
+                alt="Air Jordan 4 Retro 'Military Black' - Ángulo Alternativo" 
+                loading="lazy"
+                class="absolute inset-0 w-full h-full object-contain p-4 filter drop-shadow-[0_15px_15px_rgba(0,0,0,0.85)] transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:scale-105"
+              />
+
+              <div class="absolute bottom-2 left-2 z-10 text-[8px] font-mono text-gray-500 uppercase tracking-widest group-hover:text-accent-acid transition-colors">
+                Hover: Ángulo 2
+              </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="space-y-3 flex-1 flex flex-col justify-between">
+              
+              <div>
+                <div class="flex items-center justify-between text-[10px] font-mono text-gray-400 uppercase tracking-widest">
+                  <span class="text-white font-bold">Jordan</span>
+                  <span class="text-accent-acid font-bold flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-accent-acid animate-pulse"></span>
+                    STOCK CONFIRMADO
+                  </span>
+                </div>
+                <h3 onclick="openQuickModal(2)" class="font-syne font-black text-base text-white uppercase group-hover:text-accent-acid transition-colors mt-0.5 line-clamp-1 cursor-pointer">
+                  Air Jordan 4 Retro 'Military Black'
+                </h3>
+              </div>
+
+              <!-- Price (Crisp B&W) -->
+              <div class="flex items-baseline gap-2 font-mono">
+                <span class="font-black text-lg text-white">
+                  $ 210.000 COP
+                </span>
+                <span class="text-xs line-through text-gray-500">
+                  $ 260.000 COP
+                </span>
+              </div>
+
+              <!-- Quick US Size Selector (US 7 to 11) -->
+              <div class="pt-2 border-t border-noir-border/80">
+                <div class="flex items-center justify-between text-[10px] font-mono text-gray-400 mb-1.5 uppercase">
+                  <span>Talla US:</span>
+                  <span class="text-accent-acid font-bold" id="sizeLabelFeedback-2">
+                    US 9
+                  </span>
+                </div>
+
+                <div class="grid grid-cols-5 gap-1" id="sizeGrid-2">
+                  <button type="button" onclick="setProductSize(2, '7')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">7</button>
+                  <button type="button" onclick="setProductSize(2, '7.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">7.5</button>
+                  <button type="button" onclick="setProductSize(2, '8')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">8</button>
+                  <button type="button" onclick="setProductSize(2, '8.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">8.5</button>
+                  <button type="button" onclick="setProductSize(2, '9')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-accent-acid text-black border-accent-acid font-black shadow-[0_0_8px_rgba(204,255,0,0.5)]">9</button>
+                  <button type="button" onclick="setProductSize(2, '9.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">9.5</button>
+                  <button type="button" onclick="setProductSize(2, '10')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">10</button>
+                  <button type="button" onclick="setProductSize(2, '10.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">10.5</button>
+                  <button type="button" onclick="setProductSize(2, '11')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">11</button>
+                </div>
+              </div>
+
+              <!-- Action CTAs: Direct functional WhatsApp Link & Add to Cart -->
+              <div class="pt-3 grid grid-cols-1 gap-2 font-mono text-xs">
+                <!-- Direct Functional WhatsApp Link con mensaje preconfigurado al 3008831730 -->
+                <a 
+                  id="waBuyBtn-2"
+                  href="https://wa.me/573008831730?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Me%20interesa%20asegurar%20los%20tenis%20Jordan%20Air%20Jordan%204%20Retro%20%27Military%20Black%27%20en%20talla%20US%209.%20%C2%BFMe%20confirman%20disponibilidad%20y%20m%C3%A9todos%20de%20env%C3%ADo%3F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full py-3 bg-accent-acid hover:bg-accent-acidHover text-black font-black uppercase tracking-wider flex items-center justify-center gap-2 transition-all transform active:scale-95 glow-acid-sm cursor-pointer"
+                >
+                  <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+                  <span>Comprar Ahora</span>
+                </a>
+
+                <!-- Functional Add to Cart (Black & White Style) -->
+                <button 
+                  type="button"
+                  onclick="triggerAddToCart(2)"
+                  class="w-full py-2 bg-black hover:bg-noir-850 border border-white/15 hover:border-white text-white hover:text-accent-acid font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all text-[11px] cursor-pointer"
+                >
+                  <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                  <span>Añadir al Carrito</span>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="product-card group bg-noir-900 border border-noir-border hover:border-accent-acid/50 p-4 sm:p-5 flex flex-col justify-between transition-all duration-300 relative shadow-2xl hover:-translate-y-1" data-brand="Nike" data-name="Nike Dunk Low Retro 'Panda'">
+            
+            <!-- DUAL IMAGE PERSPECTIVE CONTAINER -->
+            <div class="relative w-full aspect-square bg-black overflow-hidden mb-4 border border-white/5 flex items-center justify-center p-3 cursor-pointer" onclick="openQuickModal(3)" title="Click para ver detalles">
+              
+              <!-- Tag Pill (B&W or Hyper Green) -->
+              <span class="absolute top-3 left-3 z-20 px-2.5 py-0.5 text-[9px] font-mono tracking-widest uppercase bg-black text-white border border-white/30 font-bold">
+                IMPORTADO G5
+              </span>
+
+              <!-- Quick View Eye Action -->
+              <button 
+                type="button"
+                onclick="event.stopPropagation(); openQuickModal(3)" 
+                class="absolute top-3 right-3 z-20 w-8 h-8 bg-noir-950/80 hover:bg-accent-acid hover:text-black border border-white/10 text-white flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 cursor-pointer"
+                title="Vista Rápida"
+              >
+                <i data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+
+              <!-- Primary Angle Image (Default) -->
+              <img 
+                src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=900&q=80" 
+                alt="Nike Dunk Low Retro 'Panda' - Vista Principal" 
+                loading="lazy"
+                class="absolute inset-0 w-full h-full object-contain p-4 filter drop-shadow-[0_15px_15px_rgba(0,0,0,0.85)] transition-opacity duration-500 opacity-100 group-hover:opacity-0"
+              />
+
+              <!-- Secondary Angle Image (Revealed on Hover) -->
+              <img 
+                src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=900&q=80" 
+                alt="Nike Dunk Low Retro 'Panda' - Ángulo Alternativo" 
+                loading="lazy"
+                class="absolute inset-0 w-full h-full object-contain p-4 filter drop-shadow-[0_15px_15px_rgba(0,0,0,0.85)] transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:scale-105"
+              />
+
+              <div class="absolute bottom-2 left-2 z-10 text-[8px] font-mono text-gray-500 uppercase tracking-widest group-hover:text-accent-acid transition-colors">
+                Hover: Ángulo 2
+              </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="space-y-3 flex-1 flex flex-col justify-between">
+              
+              <div>
+                <div class="flex items-center justify-between text-[10px] font-mono text-gray-400 uppercase tracking-widest">
+                  <span class="text-white font-bold">Nike</span>
+                  <span class="text-accent-acid font-bold flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-accent-acid animate-pulse"></span>
+                    STOCK CONFIRMADO
+                  </span>
+                </div>
+                <h3 onclick="openQuickModal(3)" class="font-syne font-black text-base text-white uppercase group-hover:text-accent-acid transition-colors mt-0.5 line-clamp-1 cursor-pointer">
+                  Nike Dunk Low Retro 'Panda'
+                </h3>
+              </div>
+
+              <!-- Price (Crisp B&W) -->
+              <div class="flex items-baseline gap-2 font-mono">
+                <span class="font-black text-lg text-white">
+                  $ 165.000 COP
+                </span>
+                <span class="text-xs line-through text-gray-500">
+                  $ 200.000 COP
+                </span>
+              </div>
+
+              <!-- Quick US Size Selector (US 7 to 11) -->
+              <div class="pt-2 border-t border-noir-border/80">
+                <div class="flex items-center justify-between text-[10px] font-mono text-gray-400 mb-1.5 uppercase">
+                  <span>Talla US:</span>
+                  <span class="text-accent-acid font-bold" id="sizeLabelFeedback-3">
+                    US 9
+                  </span>
+                </div>
+
+                <div class="grid grid-cols-5 gap-1" id="sizeGrid-3">
+                  <button type="button" onclick="setProductSize(3, '7')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">7</button>
+                  <button type="button" onclick="setProductSize(3, '7.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">7.5</button>
+                  <button type="button" onclick="setProductSize(3, '8')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">8</button>
+                  <button type="button" onclick="setProductSize(3, '8.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">8.5</button>
+                  <button type="button" onclick="setProductSize(3, '9')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-accent-acid text-black border-accent-acid font-black shadow-[0_0_8px_rgba(204,255,0,0.5)]">9</button>
+                  <button type="button" onclick="setProductSize(3, '9.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">9.5</button>
+                  <button type="button" onclick="setProductSize(3, '10')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">10</button>
+                  <button type="button" onclick="setProductSize(3, '10.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">10.5</button>
+                  <button type="button" onclick="setProductSize(3, '11')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">11</button>
+                </div>
+              </div>
+
+              <!-- Action CTAs: Direct functional WhatsApp Link & Add to Cart -->
+              <div class="pt-3 grid grid-cols-1 gap-2 font-mono text-xs">
+                <!-- Direct Functional WhatsApp Link con mensaje preconfigurado al 3008831730 -->
+                <a 
+                  id="waBuyBtn-3"
+                  href="https://wa.me/573008831730?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Me%20interesa%20asegurar%20los%20tenis%20Nike%20Nike%20Dunk%20Low%20Retro%20%27Panda%27%20en%20talla%20US%209.%20%C2%BFMe%20confirman%20disponibilidad%20y%20m%C3%A9todos%20de%20env%C3%ADo%3F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full py-3 bg-accent-acid hover:bg-accent-acidHover text-black font-black uppercase tracking-wider flex items-center justify-center gap-2 transition-all transform active:scale-95 glow-acid-sm cursor-pointer"
+                >
+                  <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+                  <span>Comprar Ahora</span>
+                </a>
+
+                <!-- Functional Add to Cart (Black & White Style) -->
+                <button 
+                  type="button"
+                  onclick="triggerAddToCart(3)"
+                  class="w-full py-2 bg-black hover:bg-noir-850 border border-white/15 hover:border-white text-white hover:text-accent-acid font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all text-[11px] cursor-pointer"
+                >
+                  <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                  <span>Añadir al Carrito</span>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="product-card group bg-noir-900 border border-noir-border hover:border-accent-acid/50 p-4 sm:p-5 flex flex-col justify-between transition-all duration-300 relative shadow-2xl hover:-translate-y-1" data-brand="New Balance" data-name="New Balance 550 'White Green'">
+            
+            <!-- DUAL IMAGE PERSPECTIVE CONTAINER -->
+            <div class="relative w-full aspect-square bg-black overflow-hidden mb-4 border border-white/5 flex items-center justify-center p-3 cursor-pointer" onclick="openQuickModal(4)" title="Click para ver detalles">
+              
+              <!-- Tag Pill (B&W or Hyper Green) -->
+              <span class="absolute top-3 left-3 z-20 px-2.5 py-0.5 text-[9px] font-mono tracking-widest uppercase bg-black text-white border border-white/30 font-bold">
+                IMPORTADO G5
+              </span>
+
+              <!-- Quick View Eye Action -->
+              <button 
+                type="button"
+                onclick="event.stopPropagation(); openQuickModal(4)" 
+                class="absolute top-3 right-3 z-20 w-8 h-8 bg-noir-950/80 hover:bg-accent-acid hover:text-black border border-white/10 text-white flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 cursor-pointer"
+                title="Vista Rápida"
+              >
+                <i data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+
+              <!-- Primary Angle Image (Default) -->
+              <img 
+                src="https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=900&q=80" 
+                alt="New Balance 550 'White Green' - Vista Principal" 
+                loading="lazy"
+                class="absolute inset-0 w-full h-full object-contain p-4 filter drop-shadow-[0_15px_15px_rgba(0,0,0,0.85)] transition-opacity duration-500 opacity-100 group-hover:opacity-0"
+              />
+
+              <!-- Secondary Angle Image (Revealed on Hover) -->
+              <img 
+                src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=900&q=80" 
+                alt="New Balance 550 'White Green' - Ángulo Alternativo" 
+                loading="lazy"
+                class="absolute inset-0 w-full h-full object-contain p-4 filter drop-shadow-[0_15px_15px_rgba(0,0,0,0.85)] transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:scale-105"
+              />
+
+              <div class="absolute bottom-2 left-2 z-10 text-[8px] font-mono text-gray-500 uppercase tracking-widest group-hover:text-accent-acid transition-colors">
+                Hover: Ángulo 2
+              </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="space-y-3 flex-1 flex flex-col justify-between">
+              
+              <div>
+                <div class="flex items-center justify-between text-[10px] font-mono text-gray-400 uppercase tracking-widest">
+                  <span class="text-white font-bold">New Balance</span>
+                  <span class="text-accent-acid font-bold flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-accent-acid animate-pulse"></span>
+                    STOCK CONFIRMADO
+                  </span>
+                </div>
+                <h3 onclick="openQuickModal(4)" class="font-syne font-black text-base text-white uppercase group-hover:text-accent-acid transition-colors mt-0.5 line-clamp-1 cursor-pointer">
+                  New Balance 550 'White Green'
+                </h3>
+              </div>
+
+              <!-- Price (Crisp B&W) -->
+              <div class="flex items-baseline gap-2 font-mono">
+                <span class="font-black text-lg text-white">
+                  $ 180.000 COP
+                </span>
+                <span class="text-xs line-through text-gray-500">
+                  $ 220.000 COP
+                </span>
+              </div>
+
+              <!-- Quick US Size Selector (US 7 to 11) -->
+              <div class="pt-2 border-t border-noir-border/80">
+                <div class="flex items-center justify-between text-[10px] font-mono text-gray-400 mb-1.5 uppercase">
+                  <span>Talla US:</span>
+                  <span class="text-accent-acid font-bold" id="sizeLabelFeedback-4">
+                    US 9
+                  </span>
+                </div>
+
+                <div class="grid grid-cols-5 gap-1" id="sizeGrid-4">
+                  <button type="button" onclick="setProductSize(4, '7')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">7</button>
+                  <button type="button" onclick="setProductSize(4, '7.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">7.5</button>
+                  <button type="button" onclick="setProductSize(4, '8')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">8</button>
+                  <button type="button" onclick="setProductSize(4, '8.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">8.5</button>
+                  <button type="button" onclick="setProductSize(4, '9')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-accent-acid text-black border-accent-acid font-black shadow-[0_0_8px_rgba(204,255,0,0.5)]">9</button>
+                  <button type="button" onclick="setProductSize(4, '9.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">9.5</button>
+                  <button type="button" onclick="setProductSize(4, '10')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">10</button>
+                  <button type="button" onclick="setProductSize(4, '10.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">10.5</button>
+                  <button type="button" onclick="setProductSize(4, '11')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">11</button>
+                </div>
+              </div>
+
+              <!-- Action CTAs: Direct functional WhatsApp Link & Add to Cart -->
+              <div class="pt-3 grid grid-cols-1 gap-2 font-mono text-xs">
+                <!-- Direct Functional WhatsApp Link con mensaje preconfigurado al 3008831730 -->
+                <a 
+                  id="waBuyBtn-4"
+                  href="https://wa.me/573008831730?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Me%20interesa%20asegurar%20los%20tenis%20New%20Balance%20New%20Balance%20550%20%27White%20Green%27%20en%20talla%20US%209.%20%C2%BFMe%20confirman%20disponibilidad%20y%20m%C3%A9todos%20de%20env%C3%ADo%3F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full py-3 bg-accent-acid hover:bg-accent-acidHover text-black font-black uppercase tracking-wider flex items-center justify-center gap-2 transition-all transform active:scale-95 glow-acid-sm cursor-pointer"
+                >
+                  <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+                  <span>Comprar Ahora</span>
+                </a>
+
+                <!-- Functional Add to Cart (Black & White Style) -->
+                <button 
+                  type="button"
+                  onclick="triggerAddToCart(4)"
+                  class="w-full py-2 bg-black hover:bg-noir-850 border border-white/15 hover:border-white text-white hover:text-accent-acid font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all text-[11px] cursor-pointer"
+                >
+                  <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                  <span>Añadir al Carrito</span>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="product-card group bg-noir-900 border border-noir-border hover:border-accent-acid/50 p-4 sm:p-5 flex flex-col justify-between transition-all duration-300 relative shadow-2xl hover:-translate-y-1" data-brand="Jordan" data-name="Air Jordan 1 High OG 'Lost & Found'">
+            
+            <!-- DUAL IMAGE PERSPECTIVE CONTAINER -->
+            <div class="relative w-full aspect-square bg-black overflow-hidden mb-4 border border-white/5 flex items-center justify-center p-3 cursor-pointer" onclick="openQuickModal(5)" title="Click para ver detalles">
+              
+              <!-- Tag Pill (B&W or Hyper Green) -->
+              <span class="absolute top-3 left-3 z-20 px-2.5 py-0.5 text-[9px] font-mono tracking-widest uppercase bg-white text-black font-black">
+                ÚLTIMOS PARES
+              </span>
+
+              <!-- Quick View Eye Action -->
+              <button 
+                type="button"
+                onclick="event.stopPropagation(); openQuickModal(5)" 
+                class="absolute top-3 right-3 z-20 w-8 h-8 bg-noir-950/80 hover:bg-accent-acid hover:text-black border border-white/10 text-white flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 cursor-pointer"
+                title="Vista Rápida"
+              >
+                <i data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+
+              <!-- Primary Angle Image (Default) -->
+              <img 
+                src="https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?auto=format&fit=crop&w=900&q=80" 
+                alt="Air Jordan 1 High OG 'Lost & Found' - Vista Principal" 
+                loading="lazy"
+                class="absolute inset-0 w-full h-full object-contain p-4 filter drop-shadow-[0_15px_15px_rgba(0,0,0,0.85)] transition-opacity duration-500 opacity-100 group-hover:opacity-0"
+              />
+
+              <!-- Secondary Angle Image (Revealed on Hover) -->
+              <img 
+                src="https://images.unsplash.com/photo-1512374382149-233c42b6a83b?auto=format&fit=crop&w=900&q=80" 
+                alt="Air Jordan 1 High OG 'Lost & Found' - Ángulo Alternativo" 
+                loading="lazy"
+                class="absolute inset-0 w-full h-full object-contain p-4 filter drop-shadow-[0_15px_15px_rgba(0,0,0,0.85)] transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:scale-105"
+              />
+
+              <div class="absolute bottom-2 left-2 z-10 text-[8px] font-mono text-gray-500 uppercase tracking-widest group-hover:text-accent-acid transition-colors">
+                Hover: Ángulo 2
+              </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="space-y-3 flex-1 flex flex-col justify-between">
+              
+              <div>
+                <div class="flex items-center justify-between text-[10px] font-mono text-gray-400 uppercase tracking-widest">
+                  <span class="text-white font-bold">Jordan</span>
+                  <span class="text-accent-acid font-bold flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-accent-acid animate-pulse"></span>
+                    STOCK CONFIRMADO
+                  </span>
+                </div>
+                <h3 onclick="openQuickModal(5)" class="font-syne font-black text-base text-white uppercase group-hover:text-accent-acid transition-colors mt-0.5 line-clamp-1 cursor-pointer">
+                  Air Jordan 1 High OG 'Lost & Found'
+                </h3>
+              </div>
+
+              <!-- Price (Crisp B&W) -->
+              <div class="flex items-baseline gap-2 font-mono">
+                <span class="font-black text-lg text-white">
+                  $ 225.000 COP
+                </span>
+                <span class="text-xs line-through text-gray-500">
+                  $ 280.000 COP
+                </span>
+              </div>
+
+              <!-- Quick US Size Selector (US 7 to 11) -->
+              <div class="pt-2 border-t border-noir-border/80">
+                <div class="flex items-center justify-between text-[10px] font-mono text-gray-400 mb-1.5 uppercase">
+                  <span>Talla US:</span>
+                  <span class="text-accent-acid font-bold" id="sizeLabelFeedback-5">
+                    US 9
+                  </span>
+                </div>
+
+                <div class="grid grid-cols-5 gap-1" id="sizeGrid-5">
+                  <button type="button" onclick="setProductSize(5, '7')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">7</button>
+                  <button type="button" onclick="setProductSize(5, '7.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">7.5</button>
+                  <button type="button" onclick="setProductSize(5, '8')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">8</button>
+                  <button type="button" onclick="setProductSize(5, '8.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">8.5</button>
+                  <button type="button" onclick="setProductSize(5, '9')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-accent-acid text-black border-accent-acid font-black shadow-[0_0_8px_rgba(204,255,0,0.5)]">9</button>
+                  <button type="button" onclick="setProductSize(5, '9.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">9.5</button>
+                  <button type="button" onclick="setProductSize(5, '10')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">10</button>
+                  <button type="button" onclick="setProductSize(5, '10.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">10.5</button>
+                  <button type="button" onclick="setProductSize(5, '11')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">11</button>
+                </div>
+              </div>
+
+              <!-- Action CTAs: Direct functional WhatsApp Link & Add to Cart -->
+              <div class="pt-3 grid grid-cols-1 gap-2 font-mono text-xs">
+                <!-- Direct Functional WhatsApp Link con mensaje preconfigurado al 3008831730 -->
+                <a 
+                  id="waBuyBtn-5"
+                  href="https://wa.me/573008831730?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Me%20interesa%20asegurar%20los%20tenis%20Jordan%20Air%20Jordan%201%20High%20OG%20%27Lost%20%26%20Found%27%20en%20talla%20US%209.%20%C2%BFMe%20confirman%20disponibilidad%20y%20m%C3%A9todos%20de%20env%C3%ADo%3F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full py-3 bg-accent-acid hover:bg-accent-acidHover text-black font-black uppercase tracking-wider flex items-center justify-center gap-2 transition-all transform active:scale-95 glow-acid-sm cursor-pointer"
+                >
+                  <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+                  <span>Comprar Ahora</span>
+                </a>
+
+                <!-- Functional Add to Cart (Black & White Style) -->
+                <button 
+                  type="button"
+                  onclick="triggerAddToCart(5)"
+                  class="w-full py-2 bg-black hover:bg-noir-850 border border-white/15 hover:border-white text-white hover:text-accent-acid font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all text-[11px] cursor-pointer"
+                >
+                  <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                  <span>Añadir al Carrito</span>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="product-card group bg-noir-900 border border-noir-border hover:border-accent-acid/50 p-4 sm:p-5 flex flex-col justify-between transition-all duration-300 relative shadow-2xl hover:-translate-y-1" data-brand="Adidas" data-name="Adidas Campus 00s 'Core Black'">
+            
+            <!-- DUAL IMAGE PERSPECTIVE CONTAINER -->
+            <div class="relative w-full aspect-square bg-black overflow-hidden mb-4 border border-white/5 flex items-center justify-center p-3 cursor-pointer" onclick="openQuickModal(6)" title="Click para ver detalles">
+              
+              <!-- Tag Pill (B&W or Hyper Green) -->
+              <span class="absolute top-3 left-3 z-20 px-2.5 py-0.5 text-[9px] font-mono tracking-widest uppercase bg-accent-acid text-black font-black shadow-[0_0_10px_rgba(204,255,0,0.5)]">
+                HOT DROP
+              </span>
+
+              <!-- Quick View Eye Action -->
+              <button 
+                type="button"
+                onclick="event.stopPropagation(); openQuickModal(6)" 
+                class="absolute top-3 right-3 z-20 w-8 h-8 bg-noir-950/80 hover:bg-accent-acid hover:text-black border border-white/10 text-white flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 cursor-pointer"
+                title="Vista Rápida"
+              >
+                <i data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+
+              <!-- Primary Angle Image (Default) -->
+              <img 
+                src="https://images.unsplash.com/photo-1518002171953-a080ee817e1f?auto=format&fit=crop&w=900&q=80" 
+                alt="Adidas Campus 00s 'Core Black' - Vista Principal" 
+                loading="lazy"
+                class="absolute inset-0 w-full h-full object-contain p-4 filter drop-shadow-[0_15px_15px_rgba(0,0,0,0.85)] transition-opacity duration-500 opacity-100 group-hover:opacity-0"
+              />
+
+              <!-- Secondary Angle Image (Revealed on Hover) -->
+              <img 
+                src="https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?auto=format&fit=crop&w=900&q=80" 
+                alt="Adidas Campus 00s 'Core Black' - Ángulo Alternativo" 
+                loading="lazy"
+                class="absolute inset-0 w-full h-full object-contain p-4 filter drop-shadow-[0_15px_15px_rgba(0,0,0,0.85)] transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:scale-105"
+              />
+
+              <div class="absolute bottom-2 left-2 z-10 text-[8px] font-mono text-gray-500 uppercase tracking-widest group-hover:text-accent-acid transition-colors">
+                Hover: Ángulo 2
+              </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="space-y-3 flex-1 flex flex-col justify-between">
+              
+              <div>
+                <div class="flex items-center justify-between text-[10px] font-mono text-gray-400 uppercase tracking-widest">
+                  <span class="text-white font-bold">Adidas</span>
+                  <span class="text-accent-acid font-bold flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-accent-acid animate-pulse"></span>
+                    STOCK CONFIRMADO
+                  </span>
+                </div>
+                <h3 onclick="openQuickModal(6)" class="font-syne font-black text-base text-white uppercase group-hover:text-accent-acid transition-colors mt-0.5 line-clamp-1 cursor-pointer">
+                  Adidas Campus 00s 'Core Black'
+                </h3>
+              </div>
+
+              <!-- Price (Crisp B&W) -->
+              <div class="flex items-baseline gap-2 font-mono">
+                <span class="font-black text-lg text-white">
+                  $ 155.000 COP
+                </span>
+                <span class="text-xs line-through text-gray-500">
+                  $ 190.000 COP
+                </span>
+              </div>
+
+              <!-- Quick US Size Selector (US 7 to 11) -->
+              <div class="pt-2 border-t border-noir-border/80">
+                <div class="flex items-center justify-between text-[10px] font-mono text-gray-400 mb-1.5 uppercase">
+                  <span>Talla US:</span>
+                  <span class="text-accent-acid font-bold" id="sizeLabelFeedback-6">
+                    US 9
+                  </span>
+                </div>
+
+                <div class="grid grid-cols-5 gap-1" id="sizeGrid-6">
+                  <button type="button" onclick="setProductSize(6, '7')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">7</button>
+                  <button type="button" onclick="setProductSize(6, '7.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">7.5</button>
+                  <button type="button" onclick="setProductSize(6, '8')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">8</button>
+                  <button type="button" onclick="setProductSize(6, '8.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">8.5</button>
+                  <button type="button" onclick="setProductSize(6, '9')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-accent-acid text-black border-accent-acid font-black shadow-[0_0_8px_rgba(204,255,0,0.5)]">9</button>
+                  <button type="button" onclick="setProductSize(6, '9.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">9.5</button>
+                  <button type="button" onclick="setProductSize(6, '10')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">10</button>
+                  <button type="button" onclick="setProductSize(6, '10.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">10.5</button>
+                  <button type="button" onclick="setProductSize(6, '11')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">11</button>
+                </div>
+              </div>
+
+              <!-- Action CTAs: Direct functional WhatsApp Link & Add to Cart -->
+              <div class="pt-3 grid grid-cols-1 gap-2 font-mono text-xs">
+                <!-- Direct Functional WhatsApp Link con mensaje preconfigurado al 3008831730 -->
+                <a 
+                  id="waBuyBtn-6"
+                  href="https://wa.me/573008831730?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Me%20interesa%20asegurar%20los%20tenis%20Adidas%20Adidas%20Campus%2000s%20%27Core%20Black%27%20en%20talla%20US%209.%20%C2%BFMe%20confirman%20disponibilidad%20y%20m%C3%A9todos%20de%20env%C3%ADo%3F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full py-3 bg-accent-acid hover:bg-accent-acidHover text-black font-black uppercase tracking-wider flex items-center justify-center gap-2 transition-all transform active:scale-95 glow-acid-sm cursor-pointer"
+                >
+                  <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+                  <span>Comprar Ahora</span>
+                </a>
+
+                <!-- Functional Add to Cart (Black & White Style) -->
+                <button 
+                  type="button"
+                  onclick="triggerAddToCart(6)"
+                  class="w-full py-2 bg-black hover:bg-noir-850 border border-white/15 hover:border-white text-white hover:text-accent-acid font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all text-[11px] cursor-pointer"
+                >
+                  <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                  <span>Añadir al Carrito</span>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="product-card group bg-noir-900 border border-noir-border hover:border-accent-acid/50 p-4 sm:p-5 flex flex-col justify-between transition-all duration-300 relative shadow-2xl hover:-translate-y-1" data-brand="Nike" data-name="Nike Air Force 1 '07 'Triple White'">
+            
+            <!-- DUAL IMAGE PERSPECTIVE CONTAINER -->
+            <div class="relative w-full aspect-square bg-black overflow-hidden mb-4 border border-white/5 flex items-center justify-center p-3 cursor-pointer" onclick="openQuickModal(7)" title="Click para ver detalles">
+              
+              <!-- Tag Pill (B&W or Hyper Green) -->
+              <span class="absolute top-3 left-3 z-20 px-2.5 py-0.5 text-[9px] font-mono tracking-widest uppercase bg-black text-white border border-white/30 font-bold">
+                IMPORTADO G5
+              </span>
+
+              <!-- Quick View Eye Action -->
+              <button 
+                type="button"
+                onclick="event.stopPropagation(); openQuickModal(7)" 
+                class="absolute top-3 right-3 z-20 w-8 h-8 bg-noir-950/80 hover:bg-accent-acid hover:text-black border border-white/10 text-white flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 cursor-pointer"
+                title="Vista Rápida"
+              >
+                <i data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+
+              <!-- Primary Angle Image (Default) -->
+              <img 
+                src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?auto=format&fit=crop&w=900&q=80" 
+                alt="Nike Air Force 1 '07 'Triple White' - Vista Principal" 
+                loading="lazy"
+                class="absolute inset-0 w-full h-full object-contain p-4 filter drop-shadow-[0_15px_15px_rgba(0,0,0,0.85)] transition-opacity duration-500 opacity-100 group-hover:opacity-0"
+              />
+
+              <!-- Secondary Angle Image (Revealed on Hover) -->
+              <img 
+                src="https://images.unsplash.com/photo-1595341888016-a392ef81b7de?auto=format&fit=crop&w=900&q=80" 
+                alt="Nike Air Force 1 '07 'Triple White' - Ángulo Alternativo" 
+                loading="lazy"
+                class="absolute inset-0 w-full h-full object-contain p-4 filter drop-shadow-[0_15px_15px_rgba(0,0,0,0.85)] transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:scale-105"
+              />
+
+              <div class="absolute bottom-2 left-2 z-10 text-[8px] font-mono text-gray-500 uppercase tracking-widest group-hover:text-accent-acid transition-colors">
+                Hover: Ángulo 2
+              </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="space-y-3 flex-1 flex flex-col justify-between">
+              
+              <div>
+                <div class="flex items-center justify-between text-[10px] font-mono text-gray-400 uppercase tracking-widest">
+                  <span class="text-white font-bold">Nike</span>
+                  <span class="text-accent-acid font-bold flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-accent-acid animate-pulse"></span>
+                    STOCK CONFIRMADO
+                  </span>
+                </div>
+                <h3 onclick="openQuickModal(7)" class="font-syne font-black text-base text-white uppercase group-hover:text-accent-acid transition-colors mt-0.5 line-clamp-1 cursor-pointer">
+                  Nike Air Force 1 '07 'Triple White'
+                </h3>
+              </div>
+
+              <!-- Price (Crisp B&W) -->
+              <div class="flex items-baseline gap-2 font-mono">
+                <span class="font-black text-lg text-white">
+                  $ 150.000 COP
+                </span>
+                <span class="text-xs line-through text-gray-500">
+                  $ 185.000 COP
+                </span>
+              </div>
+
+              <!-- Quick US Size Selector (US 7 to 11) -->
+              <div class="pt-2 border-t border-noir-border/80">
+                <div class="flex items-center justify-between text-[10px] font-mono text-gray-400 mb-1.5 uppercase">
+                  <span>Talla US:</span>
+                  <span class="text-accent-acid font-bold" id="sizeLabelFeedback-7">
+                    US 9
+                  </span>
+                </div>
+
+                <div class="grid grid-cols-5 gap-1" id="sizeGrid-7">
+                  <button type="button" onclick="setProductSize(7, '7')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">7</button>
+                  <button type="button" onclick="setProductSize(7, '7.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">7.5</button>
+                  <button type="button" onclick="setProductSize(7, '8')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">8</button>
+                  <button type="button" onclick="setProductSize(7, '8.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">8.5</button>
+                  <button type="button" onclick="setProductSize(7, '9')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-accent-acid text-black border-accent-acid font-black shadow-[0_0_8px_rgba(204,255,0,0.5)]">9</button>
+                  <button type="button" onclick="setProductSize(7, '9.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">9.5</button>
+                  <button type="button" onclick="setProductSize(7, '10')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">10</button>
+                  <button type="button" onclick="setProductSize(7, '10.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">10.5</button>
+                  <button type="button" onclick="setProductSize(7, '11')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">11</button>
+                </div>
+              </div>
+
+              <!-- Action CTAs: Direct functional WhatsApp Link & Add to Cart -->
+              <div class="pt-3 grid grid-cols-1 gap-2 font-mono text-xs">
+                <!-- Direct Functional WhatsApp Link con mensaje preconfigurado al 3008831730 -->
+                <a 
+                  id="waBuyBtn-7"
+                  href="https://wa.me/573008831730?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Me%20interesa%20asegurar%20los%20tenis%20Nike%20Nike%20Air%20Force%201%20%2707%20%27Triple%20White%27%20en%20talla%20US%209.%20%C2%BFMe%20confirman%20disponibilidad%20y%20m%C3%A9todos%20de%20env%C3%ADo%3F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full py-3 bg-accent-acid hover:bg-accent-acidHover text-black font-black uppercase tracking-wider flex items-center justify-center gap-2 transition-all transform active:scale-95 glow-acid-sm cursor-pointer"
+                >
+                  <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+                  <span>Comprar Ahora</span>
+                </a>
+
+                <!-- Functional Add to Cart (Black & White Style) -->
+                <button 
+                  type="button"
+                  onclick="triggerAddToCart(7)"
+                  class="w-full py-2 bg-black hover:bg-noir-850 border border-white/15 hover:border-white text-white hover:text-accent-acid font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all text-[11px] cursor-pointer"
+                >
+                  <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                  <span>Añadir al Carrito</span>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="product-card group bg-noir-900 border border-noir-border hover:border-accent-acid/50 p-4 sm:p-5 flex flex-col justify-between transition-all duration-300 relative shadow-2xl hover:-translate-y-1" data-brand="New Balance" data-name="New Balance 9060 'Rain Cloud'">
+            
+            <!-- DUAL IMAGE PERSPECTIVE CONTAINER -->
+            <div class="relative w-full aspect-square bg-black overflow-hidden mb-4 border border-white/5 flex items-center justify-center p-3 cursor-pointer" onclick="openQuickModal(8)" title="Click para ver detalles">
+              
+              <!-- Tag Pill (B&W or Hyper Green) -->
+              <span class="absolute top-3 left-3 z-20 px-2.5 py-0.5 text-[9px] font-mono tracking-widest uppercase bg-accent-acid text-black font-black shadow-[0_0_10px_rgba(204,255,0,0.5)]">
+                HOT DROP
+              </span>
+
+              <!-- Quick View Eye Action -->
+              <button 
+                type="button"
+                onclick="event.stopPropagation(); openQuickModal(8)" 
+                class="absolute top-3 right-3 z-20 w-8 h-8 bg-noir-950/80 hover:bg-accent-acid hover:text-black border border-white/10 text-white flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 cursor-pointer"
+                title="Vista Rápida"
+              >
+                <i data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+
+              <!-- Primary Angle Image (Default) -->
+              <img 
+                src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=900&q=80" 
+                alt="New Balance 9060 'Rain Cloud' - Vista Principal" 
+                loading="lazy"
+                class="absolute inset-0 w-full h-full object-contain p-4 filter drop-shadow-[0_15px_15px_rgba(0,0,0,0.85)] transition-opacity duration-500 opacity-100 group-hover:opacity-0"
+              />
+
+              <!-- Secondary Angle Image (Revealed on Hover) -->
+              <img 
+                src="https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=900&q=80" 
+                alt="New Balance 9060 'Rain Cloud' - Ángulo Alternativo" 
+                loading="lazy"
+                class="absolute inset-0 w-full h-full object-contain p-4 filter drop-shadow-[0_15px_15px_rgba(0,0,0,0.85)] transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:scale-105"
+              />
+
+              <div class="absolute bottom-2 left-2 z-10 text-[8px] font-mono text-gray-500 uppercase tracking-widest group-hover:text-accent-acid transition-colors">
+                Hover: Ángulo 2
+              </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="space-y-3 flex-1 flex flex-col justify-between">
+              
+              <div>
+                <div class="flex items-center justify-between text-[10px] font-mono text-gray-400 uppercase tracking-widest">
+                  <span class="text-white font-bold">New Balance</span>
+                  <span class="text-accent-acid font-bold flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-accent-acid animate-pulse"></span>
+                    STOCK CONFIRMADO
+                  </span>
+                </div>
+                <h3 onclick="openQuickModal(8)" class="font-syne font-black text-base text-white uppercase group-hover:text-accent-acid transition-colors mt-0.5 line-clamp-1 cursor-pointer">
+                  New Balance 9060 'Rain Cloud'
+                </h3>
+              </div>
+
+              <!-- Price (Crisp B&W) -->
+              <div class="flex items-baseline gap-2 font-mono">
+                <span class="font-black text-lg text-white">
+                  $ 195.000 COP
+                </span>
+                <span class="text-xs line-through text-gray-500">
+                  $ 235.000 COP
+                </span>
+              </div>
+
+              <!-- Quick US Size Selector (US 7 to 11) -->
+              <div class="pt-2 border-t border-noir-border/80">
+                <div class="flex items-center justify-between text-[10px] font-mono text-gray-400 mb-1.5 uppercase">
+                  <span>Talla US:</span>
+                  <span class="text-accent-acid font-bold" id="sizeLabelFeedback-8">
+                    US 9
+                  </span>
+                </div>
+
+                <div class="grid grid-cols-5 gap-1" id="sizeGrid-8">
+                  <button type="button" onclick="setProductSize(8, '7')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">7</button>
+                  <button type="button" onclick="setProductSize(8, '7.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">7.5</button>
+                  <button type="button" onclick="setProductSize(8, '8')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">8</button>
+                  <button type="button" onclick="setProductSize(8, '8.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">8.5</button>
+                  <button type="button" onclick="setProductSize(8, '9')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-accent-acid text-black border-accent-acid font-black shadow-[0_0_8px_rgba(204,255,0,0.5)]">9</button>
+                  <button type="button" onclick="setProductSize(8, '9.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">9.5</button>
+                  <button type="button" onclick="setProductSize(8, '10')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">10</button>
+                  <button type="button" onclick="setProductSize(8, '10.5')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">10.5</button>
+                  <button type="button" onclick="setProductSize(8, '11')" class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white">11</button>
+                </div>
+              </div>
+
+              <!-- Action CTAs: Direct functional WhatsApp Link & Add to Cart -->
+              <div class="pt-3 grid grid-cols-1 gap-2 font-mono text-xs">
+                <!-- Direct Functional WhatsApp Link con mensaje preconfigurado al 3008831730 -->
+                <a 
+                  id="waBuyBtn-8"
+                  href="https://wa.me/573008831730?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Me%20interesa%20asegurar%20los%20tenis%20New%20Balance%20New%20Balance%209060%20%27Rain%20Cloud%27%20en%20talla%20US%209.%20%C2%BFMe%20confirman%20disponibilidad%20y%20m%C3%A9todos%20de%20env%C3%ADo%3F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full py-3 bg-accent-acid hover:bg-accent-acidHover text-black font-black uppercase tracking-wider flex items-center justify-center gap-2 transition-all transform active:scale-95 glow-acid-sm cursor-pointer"
+                >
+                  <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+                  <span>Comprar Ahora</span>
+                </a>
+
+                <!-- Functional Add to Cart (Black & White Style) -->
+                <button 
+                  type="button"
+                  onclick="triggerAddToCart(8)"
+                  class="w-full py-2 bg-black hover:bg-noir-850 border border-white/15 hover:border-white text-white hover:text-accent-acid font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all text-[11px] cursor-pointer"
+                >
+                  <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                  <span>Añadir al Carrito</span>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
       </div>
 
       <!-- Empty Search Fallback -->
-      <div id="noResultsBox" class="hidden text-center py-20 border border-dashed border-noir-border">
-        <div class="w-12 h-12 rounded-full bg-noir-900 border border-noir-border flex items-center justify-center mx-auto text-gray-500 mb-4">
+      <div id="noResultsBox" class="hidden text-center py-20 border border-dashed border-white/20">
+        <div class="w-12 h-12 rounded-full bg-noir-900 border border-white/15 flex items-center justify-center mx-auto text-gray-500 mb-4">
           <i data-lucide="package-x" class="w-6 h-6"></i>
         </div>
         <h3 class="font-syne font-black text-xl text-white uppercase">Sin coincidencias en el archivo</h3>
@@ -449,7 +1414,7 @@
           </h2>
         </div>
         <p class="text-gray-400 text-xs sm:text-sm font-mono max-w-md">
-          Clientes reales luciendo sus pares en Medellín, Bogotá, Cali y Barranquilla. Más de 3,500 pares asegurados con empaque doble caja.
+          Clientes reales luciendo sus pares en Medellín, Bogotá, Cali y Barranquilla. Pedidos al WhatsApp <strong class="text-accent-acid">300 883 1730</strong>.
         </p>
       </div>
 
@@ -457,7 +1422,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
         <!-- Street Photo Card 1 -->
-        <div class="bg-noir-950 border border-noir-border p-4 flex flex-col justify-between group hover:border-accent-acid/40 transition-all">
+        <div class="bg-black border border-white/10 p-4 flex flex-col justify-between group hover:border-accent-acid/40 transition-all">
           <div class="relative aspect-[4/5] overflow-hidden bg-black mb-4">
             <img 
               src="https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=600&q=80" 
@@ -465,14 +1430,14 @@
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
               loading="lazy"
             />
-            <span class="absolute top-3 left-3 bg-black/80 backdrop-blur px-2.5 py-1 text-[10px] font-mono text-accent-acid font-bold border border-white/10 uppercase">
+            <span class="absolute top-3 left-3 bg-black/80 backdrop-blur px-2.5 py-1 text-[10px] font-mono text-accent-acid font-bold border border-white/15 uppercase">
               Verificado
             </span>
           </div>
           <div class="space-y-2">
             <div class="flex items-center justify-between text-xs font-mono">
               <span class="text-white font-bold">@mateo.urban</span>
-              <span class="text-gray-500">Medellín</span>
+              <span class="text-gray-400">Medellín</span>
             </div>
             <p class="text-xs text-gray-400 italic font-inter leading-relaxed">
               "Llegaron en 2 días con caja intacta y cordones extra. El cuero y los detalles del Jordan 1 están a otro nivel. 100% recomendados."
@@ -484,7 +1449,7 @@
         </div>
 
         <!-- Street Photo Card 2 -->
-        <div class="bg-noir-950 border border-noir-border p-4 flex flex-col justify-between group hover:border-accent-acid/40 transition-all">
+        <div class="bg-black border border-white/10 p-4 flex flex-col justify-between group hover:border-accent-acid/40 transition-all">
           <div class="relative aspect-[4/5] overflow-hidden bg-black mb-4">
             <img 
               src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=600&q=80" 
@@ -492,14 +1457,14 @@
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
               loading="lazy"
             />
-            <span class="absolute top-3 left-3 bg-black/80 backdrop-blur px-2.5 py-1 text-[10px] font-mono text-accent-acid font-bold border border-white/10 uppercase">
+            <span class="absolute top-3 left-3 bg-black/80 backdrop-blur px-2.5 py-1 text-[10px] font-mono text-accent-acid font-bold border border-white/15 uppercase">
               Verificado
             </span>
           </div>
           <div class="space-y-2">
             <div class="flex items-center justify-between text-xs font-mono">
               <span class="text-white font-bold">@valeria.archive</span>
-              <span class="text-gray-500">Bogotá D.C.</span>
+              <span class="text-gray-400">Bogotá D.C.</span>
             </div>
             <p class="text-xs text-gray-400 italic font-inter leading-relaxed">
               "La asesoría de tallas por WhatsApp fue clave para acertar en New Balance. La calidad G5 es idéntica a los originales de tienda."
@@ -511,7 +1476,7 @@
         </div>
 
         <!-- Street Photo Card 3 -->
-        <div class="bg-noir-950 border border-noir-border p-4 flex flex-col justify-between group hover:border-accent-acid/40 transition-all">
+        <div class="bg-black border border-white/10 p-4 flex flex-col justify-between group hover:border-accent-acid/40 transition-all">
           <div class="relative aspect-[4/5] overflow-hidden bg-black mb-4">
             <img 
               src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=600&q=80" 
@@ -519,14 +1484,14 @@
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
               loading="lazy"
             />
-            <span class="absolute top-3 left-3 bg-black/80 backdrop-blur px-2.5 py-1 text-[10px] font-mono text-accent-acid font-bold border border-white/10 uppercase">
+            <span class="absolute top-3 left-3 bg-black/80 backdrop-blur px-2.5 py-1 text-[10px] font-mono text-accent-acid font-bold border border-white/15 uppercase">
               Verificado
             </span>
           </div>
           <div class="space-y-2">
             <div class="flex items-center justify-between text-xs font-mono">
               <span class="text-white font-bold">@camilo_kicks</span>
-              <span class="text-gray-500">Cali</span>
+              <span class="text-gray-400">Cali</span>
             </div>
             <p class="text-xs text-gray-400 italic font-inter leading-relaxed">
               "Pagué contra entrega en efectivo en la puerta de mi casa. Cero riesgos. Los Travis Scott Reverse Mocha son una obra de arte."
@@ -538,7 +1503,7 @@
         </div>
 
         <!-- Street Photo Card 4 -->
-        <div class="bg-noir-950 border border-noir-border p-4 flex flex-col justify-between group hover:border-accent-acid/40 transition-all">
+        <div class="bg-black border border-white/10 p-4 flex flex-col justify-between group hover:border-accent-acid/40 transition-all">
           <div class="relative aspect-[4/5] overflow-hidden bg-black mb-4">
             <img 
               src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=600&q=80" 
@@ -546,14 +1511,14 @@
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
               loading="lazy"
             />
-            <span class="absolute top-3 left-3 bg-black/80 backdrop-blur px-2.5 py-1 text-[10px] font-mono text-accent-acid font-bold border border-white/10 uppercase">
+            <span class="absolute top-3 left-3 bg-black/80 backdrop-blur px-2.5 py-1 text-[10px] font-mono text-accent-acid font-bold border border-white/15 uppercase">
               Verificado
             </span>
           </div>
           <div class="space-y-2">
             <div class="flex items-center justify-between text-xs font-mono">
               <span class="text-white font-bold">@santiago.snkrs</span>
-              <span class="text-gray-500">Barranquilla</span>
+              <span class="text-gray-400">Barranquilla</span>
             </div>
             <p class="text-xs text-gray-400 italic font-inter leading-relaxed">
               "Cuarto par que compro en CAURE BRAND. Son los únicos que responden de inmediato por WhatsApp con fotos reales del stock."
@@ -570,15 +1535,15 @@
   </section>
 
   <!-- ============================================================ -->
-  <!-- 6. VALUE PILLARS & GUARANTEE                                 -->
+  <!-- 6. VALUE PILLARS & GUARANTEE (PURE B&W + HYPER GREEN)        -->
   <!-- ============================================================ -->
-  <section id="garantia" class="py-20 bg-noir-950 border-b border-noir-border">
+  <section id="garantia" class="py-20 bg-black border-b border-noir-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
         <!-- Pillar 1 -->
-        <div class="bg-noir-900 border border-noir-border p-6 space-y-3 hover:border-accent-acid/40 transition-colors">
+        <div class="bg-noir-900 border border-white/10 p-6 space-y-3 hover:border-accent-acid/50 transition-colors">
           <div class="w-10 h-10 bg-accent-acid/10 border border-accent-acid/30 text-accent-acid flex items-center justify-center">
             <i data-lucide="shield-check" class="w-5 h-5"></i>
           </div>
@@ -588,9 +1553,9 @@
           </p>
         </div>
 
-        <!-- Pillar 2 -->
-        <div class="bg-noir-900 border border-noir-border p-6 space-y-3 hover:border-accent-acid/40 transition-colors">
-          <div class="w-10 h-10 bg-accent-orange/10 border border-accent-orange/30 text-accent-orange flex items-center justify-center">
+        <!-- Pillar 2 (B&W) -->
+        <div class="bg-noir-900 border border-white/10 p-6 space-y-3 hover:border-white/40 transition-colors">
+          <div class="w-10 h-10 bg-white/10 border border-white/20 text-white flex items-center justify-center">
             <i data-lucide="package" class="w-5 h-5"></i>
           </div>
           <h3 class="font-syne font-bold text-base text-white uppercase">Empaque Doble Caja</h3>
@@ -600,8 +1565,8 @@
         </div>
 
         <!-- Pillar 3 -->
-        <div class="bg-noir-900 border border-noir-border p-6 space-y-3 hover:border-accent-acid/40 transition-colors">
-          <div class="w-10 h-10 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center">
+        <div class="bg-noir-900 border border-white/10 p-6 space-y-3 hover:border-accent-acid/50 transition-colors">
+          <div class="w-10 h-10 bg-accent-acid/10 border border-accent-acid/30 text-accent-acid flex items-center justify-center">
             <i data-lucide="banknote" class="w-5 h-5"></i>
           </div>
           <h3 class="font-syne font-bold text-base text-white uppercase">Pago Contra Entrega</h3>
@@ -611,13 +1576,13 @@
         </div>
 
         <!-- Pillar 4 -->
-        <div class="bg-noir-900 border border-noir-border p-6 space-y-3 hover:border-accent-acid/40 transition-colors">
+        <div class="bg-noir-900 border border-white/10 p-6 space-y-3 hover:border-accent-acid/50 transition-colors">
           <div class="w-10 h-10 bg-accent-acid/10 border border-accent-acid/30 text-accent-acid flex items-center justify-center">
             <i data-lucide="headset" class="w-5 h-5"></i>
           </div>
-          <h3 class="font-syne font-bold text-base text-white uppercase">Asesoría de Tallas 24/7</h3>
+          <h3 class="font-syne font-bold text-base text-white uppercase">Línea WhatsApp 300 883 1730</h3>
           <p class="text-xs text-gray-400 leading-relaxed font-inter">
-            Si tienes dudas con tu medida en centímetros o equivalencia US/EU, te enviamos mediciones exactas por WhatsApp.
+            Asesoría personalizada de tallas y despachos 24/7 directa al número oficial de pedidos: <strong class="text-white">300 883 1730</strong>.
           </p>
         </div>
 
@@ -627,7 +1592,7 @@
   </section>
 
   <!-- ============================================================ -->
-  <!-- 7. FOOTER                                                    -->
+  <!-- 7. FOOTER CON LOGO OFICIAL DEL HALCÓN                        -->
   <!-- ============================================================ -->
   <footer class="bg-black pt-16 pb-12 font-mono">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -635,25 +1600,32 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
         
         <div class="lg:col-span-2 space-y-4">
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 bg-accent-acid text-black flex items-center justify-center font-syne font-black text-lg">
-              C
+          <!-- LOGO EN FOOTER -->
+          <div class="flex items-center gap-3.5">
+            <div class="w-11 h-11 bg-black border border-white/20 p-1 flex items-center justify-center">
+              <img 
+                src="logo-white.png" 
+                onerror="this.onerror=null; this.src='logotipo sin fondo.png'; this.style.filter='invert(1)';" 
+                alt="CAURE BRAND Halcón Logo" 
+                class="w-full h-full object-contain filter brightness-110" 
+              />
             </div>
-            <span class="font-syne font-black text-xl tracking-tight text-white uppercase">
+            <span class="font-syne font-black text-2xl tracking-tight text-white uppercase">
               CAURE <span class="text-accent-acid">BRAND</span>
             </span>
           </div>
           <p class="text-gray-400 text-xs leading-relaxed max-w-sm font-inter">
-            Firma especializada en calzado urbano de alta gama y cultura sneaker. Elevamos tu rotación diaria con las piezas más exclusivas del mundo.
+            Firma especializada en calzado urbano de alta gama y cultura sneaker. Pedidos y atención personalizada al WhatsApp <strong class="text-white">+57 300 883 1730</strong>.
           </p>
           <div class="flex items-center gap-3 pt-2">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-noir-900 hover:bg-accent-acid hover:text-black border border-noir-border flex items-center justify-center text-gray-400 transition-colors cursor-pointer" aria-label="Instagram">
-              <i data-lucide="instagram" class="w-4 h-4"></i>
+            <!-- Native SVG icons -->
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-noir-900 hover:bg-white hover:text-black border border-white/15 flex items-center justify-center text-gray-400 transition-colors cursor-pointer" aria-label="Instagram">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
             </a>
-            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-noir-900 hover:bg-accent-acid hover:text-black border border-noir-border flex items-center justify-center text-gray-400 transition-colors cursor-pointer" aria-label="TikTok">
-              <i data-lucide="video" class="w-4 h-4"></i>
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-noir-900 hover:bg-white hover:text-black border border-white/15 flex items-center justify-center text-gray-400 transition-colors cursor-pointer" aria-label="TikTok">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
             </a>
-            <a id="footerWaDirect" href="https://wa.me/573001234567?text=%C2%A1Hola!%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Quisiera%20asesor%C3%ADa%20sobre%20el%20cat%C3%A1logo%20exclusivo%20y%20disponibilidad%20de%20tallas." target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-noir-900 hover:bg-emerald-400 hover:text-black border border-noir-border flex items-center justify-center text-gray-400 transition-colors cursor-pointer" aria-label="WhatsApp">
+            <a id="footerWaDirect" href="https://wa.me/573008831730?text=%C2%A1Hola!%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Quisiera%20asesor%C3%ADa%20sobre%20el%20cat%C3%A1logo%20exclusivo%20y%20disponibilidad%20de%20tallas." target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-noir-900 hover:bg-accent-acid hover:text-black border border-white/15 flex items-center justify-center text-gray-400 transition-colors cursor-pointer" aria-label="WhatsApp">
               <i data-lucide="message-circle" class="w-4 h-4"></i>
             </a>
           </div>
@@ -682,27 +1654,27 @@
         </div>
 
         <div class="space-y-3">
-          <h4 class="text-white text-xs font-bold uppercase tracking-widest">Pagos & Envíos</h4>
+          <h4 class="text-white text-xs font-bold uppercase tracking-widest">Línea de Pedidos</h4>
           <p class="text-xs text-gray-400 font-inter">
-            Aceptamos Efectivo Contra Entrega, Nequi, Daviplata, Bancolombia y Tarjetas.
+            WhatsApp Oficial: <strong class="text-accent-acid block font-mono text-sm mt-1">300 883 1730</strong>
           </p>
           <div class="pt-2">
-            <span class="inline-block px-2.5 py-1 bg-noir-900 border border-white/10 text-accent-acid text-[10px] font-bold">
-              ⚡ Envíos asegurados por Servientrega, Envía e Interrapidísimo.
+            <span class="inline-block px-2.5 py-1 bg-noir-900 border border-white/10 text-white text-[10px] font-bold">
+              ⚡ Envíos asegurados a toda Colombia con pago contra entrega.
             </span>
           </div>
         </div>
 
       </div>
 
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-gray-500">
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-gray-400">
         <div>
           © <span id="currentYearDisplay">2024</span> CAURE BRAND. Streetwear Architecture & Sneaker Archive.
         </div>
         <div class="flex items-center gap-2 text-accent-acid">
           <span>HIGH-END ARCHIVE</span>
           <span>//</span>
-          <span>COLOMBIA</span>
+          <span>WHATSAPP: 300 883 1730</span>
         </div>
       </div>
 
@@ -713,27 +1685,27 @@
   <!-- 8. FLOATING WHATSAPP BUTTON WITH CLICKABLE NOTIFICATION      -->
   <!-- ============================================================ -->
   <div class="fixed bottom-6 right-6 z-40 flex items-center gap-3">
-    <!-- Clickable Bubble with requested text -->
+    <!-- Clickable Bubble con el número 300 883 1730 -->
     <a 
       id="dynamicWaBubble" 
-      href="https://wa.me/573001234567?text=%C2%A1Hola!%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Tengo%20dudas%20con%20mi%20talla%20de%20tenis.%20%C2%BFMe%20pueden%20asesorar%3F" 
+      href="https://wa.me/573008831730?text=%C2%A1Hola!%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Tengo%20dudas%20con%20mi%20talla%20de%20tenis.%20%C2%BFMe%20pueden%20asesorar%3F" 
       target="_blank" 
-      rel="noopener noreferrer"
-      class="hidden sm:flex items-center gap-2.5 bg-noir-900/95 backdrop-blur-md border border-accent-acid/50 hover:border-accent-acid py-2 px-3.5 shadow-2xl rounded cursor-pointer transition-all hover:scale-105"
-      title="Escríbenos por WhatsApp"
+      rel="noopener noreferrer" 
+      class="hidden sm:flex items-center gap-2.5 bg-black/95 backdrop-blur-md border border-white/20 hover:border-accent-acid py-2 px-3.5 shadow-2xl rounded cursor-pointer transition-all hover:scale-105"
+      title="Escríbenos al 300 883 1730"
     >
       <span class="w-2 h-2 rounded-full bg-accent-acid animate-ping"></span>
       <span class="font-mono text-xs text-white font-bold">¡Hola! ¿Dudas con tu talla? Escríbenos 👟</span>
     </a>
 
-    <!-- Floating Round Button -->
+    <!-- Floating Round Button (Hyper Green) -->
     <a 
       id="floatingWhatsappTrigger" 
-      href="https://wa.me/573001234567?text=%C2%A1Hola!%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Quisiera%20asesor%C3%ADa%20sobre%20el%20cat%C3%A1logo%20exclusivo%20y%20disponibilidad%20de%20tallas." 
+      href="https://wa.me/573008831730?text=%C2%A1Hola!%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Quisiera%20asesor%C3%ADa%20sobre%20el%20cat%C3%A1logo%20exclusivo%20y%20disponibilidad%20de%20tallas." 
       target="_blank" 
-      rel="noopener noreferrer"
-      class="relative w-14 h-14 bg-accent-acid text-black flex items-center justify-center shadow-[0_0_25px_rgba(204,255,0,0.5)] hover:scale-105 active:scale-95 transition-transform cursor-pointer"
-      aria-label="Atención por WhatsApp"
+      rel="noopener noreferrer" 
+      class="relative w-14 h-14 bg-accent-acid text-black flex items-center justify-center shadow-[0_0_25px_rgba(204,255,0,0.6)] hover:scale-105 active:scale-95 transition-transform cursor-pointer"
+      aria-label="Atención por WhatsApp 300 883 1730"
     >
       <!-- Radar ring -->
       <span class="absolute inset-0 bg-accent-acid animate-ping opacity-30 pointer-events-none"></span>
@@ -742,15 +1714,15 @@
   </div>
 
   <!-- ============================================================ -->
-  <!-- 9. SHOPPING CART SLIDE-OVER DRAWER                           -->
+  <!-- 9. SHOPPING CART SLIDE-OVER DRAWER (CRISP B&W + HYPER GREEN) -->
   <!-- ============================================================ -->
   <div id="cartSlideDrawer" class="fixed inset-0 z-50 pointer-events-none overflow-hidden transition-opacity duration-300 opacity-0">
     <div id="cartOverlayBackdrop" class="absolute inset-0 bg-black/85 backdrop-blur-sm pointer-events-auto cursor-pointer"></div>
 
     <div class="absolute inset-y-0 right-0 max-w-full flex pl-10">
-      <div id="cartDrawerPanel" class="w-screen max-w-md bg-noir-900 border-l border-noir-border p-6 shadow-2xl flex flex-col pointer-events-auto transform translate-x-full transition-transform duration-300">
+      <div id="cartDrawerPanel" class="w-screen max-w-md bg-noir-900 border-l border-white/10 p-6 shadow-2xl flex flex-col pointer-events-auto transform translate-x-full transition-transform duration-300">
         
-        <div class="flex items-center justify-between pb-5 border-b border-noir-border">
+        <div class="flex items-center justify-between pb-5 border-b border-white/10">
           <div class="flex items-center gap-2">
             <i data-lucide="shopping-bag" class="w-5 h-5 text-accent-acid"></i>
             <h3 class="font-syne font-black text-xl text-white uppercase">Tu Carrito</h3>
@@ -765,29 +1737,29 @@
           <!-- Injected via JS -->
         </div>
 
-        <div class="pt-5 border-t border-noir-border space-y-4 font-mono">
+        <div class="pt-5 border-t border-white/10 space-y-4 font-mono">
           <div class="space-y-1.5 text-xs">
             <div class="flex justify-between text-gray-400">
               <span>Subtotal</span>
-              <span id="cartSubtotalValue">$ 0</span>
+              <span id="cartSubtotalValue" class="text-white font-bold">$ 0</span>
             </div>
             <div class="flex justify-between text-accent-acid">
               <span>Envío Nacional</span>
               <span>¡GRATIS HOY!</span>
             </div>
-            <div class="flex justify-between text-base font-bold text-white pt-2 border-t border-white/5">
+            <div class="flex justify-between text-base font-bold text-white pt-2 border-t border-white/10">
               <span>Total Estimado</span>
               <span id="cartGrandTotal" class="text-accent-acid font-black text-lg">$ 0</span>
             </div>
           </div>
 
-          <a id="cartCheckoutWaBtn" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-4 bg-accent-acid hover:bg-accent-acidHover text-black font-mono font-black text-xs uppercase tracking-widest flex items-center justify-center gap-2 transition-all cursor-pointer">
+          <a id="cartCheckoutWaBtn" href="https://wa.me/573008831730" target="_blank" rel="noopener noreferrer" class="w-full py-4 bg-accent-acid hover:bg-accent-acidHover text-black font-mono font-black text-xs uppercase tracking-widest flex items-center justify-center gap-2 transition-all cursor-pointer glow-acid-sm">
             <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
-            Completar Pedido por WhatsApp
+            Completar Pedido al 300 883 1730
           </a>
 
           <p class="text-[10px] text-center text-gray-400">
-            Coordinarás pago contra entrega o transferencia directamente con un asesor.
+            Coordinarás pago contra entrega o transferencia directamente con un asesor por WhatsApp.
           </p>
         </div>
 
@@ -801,13 +1773,13 @@
   <div id="quickModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
     <div id="quickModalBackdrop" class="absolute inset-0 bg-black/90 backdrop-blur-md cursor-pointer"></div>
 
-    <div class="relative bg-noir-900 border border-noir-border max-w-3xl w-full p-6 sm:p-8 shadow-2xl z-10 max-h-[90vh] overflow-y-auto">
-      <button id="quickModalCloseBtn" class="absolute top-5 right-5 p-2 bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white cursor-pointer" aria-label="Cerrar">
+    <div class="relative bg-noir-900 border border-white/20 max-w-3xl w-full p-6 sm:p-8 shadow-2xl z-10 max-h-[90vh] overflow-y-auto">
+      <button id="quickModalCloseBtn" class="absolute top-5 right-5 p-2 bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white cursor-pointer" aria-label="Cerrar">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <div class="bg-black/60 p-4 border border-white/5 flex items-center justify-center relative">
+        <div class="bg-black p-4 border border-white/10 flex items-center justify-center relative">
           <img id="quickImage" src="" alt="Sneaker preview" class="w-full h-64 sm:h-80 object-contain drop-shadow-2xl" />
         </div>
 
@@ -820,10 +1792,10 @@
           <div class="flex items-center gap-3 font-mono">
             <span id="quickPrice" class="font-black text-2xl text-white"></span>
             <span id="quickOriginalPrice" class="text-xs line-through text-gray-500"></span>
-            <span id="quickBadge" class="bg-accent-orange/20 border border-accent-orange/40 text-accent-orange text-[10px] font-bold px-2 py-0.5 uppercase"></span>
+            <span id="quickBadge" class="bg-accent-acid text-black font-black text-[10px] px-2.5 py-0.5 uppercase"></span>
           </div>
 
-          <p id="quickDescription" class="text-gray-400 text-xs leading-relaxed font-inter"></p>
+          <p id="quickDescription" class="text-gray-300 text-xs leading-relaxed font-inter"></p>
 
           <div class="space-y-2 pt-2 font-mono">
             <div class="flex items-center justify-between text-xs">
@@ -836,11 +1808,11 @@
           </div>
 
           <div class="pt-4 flex flex-col sm:flex-row gap-3 font-mono text-xs">
-            <a id="quickBuyWaBtn" href="#" target="_blank" rel="noopener noreferrer" class="flex-1 py-3.5 bg-accent-acid hover:bg-accent-acidHover text-black font-black uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer transition-all">
+            <a id="quickBuyWaBtn" href="https://wa.me/573008831730" target="_blank" rel="noopener noreferrer" class="flex-1 py-3.5 bg-accent-acid hover:bg-accent-acidHover text-black font-black uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer transition-all glow-acid-sm">
               <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
-              Comprar Ahora
+              Comprar Ahora (300 883 1730)
             </a>
-            <button id="quickAddCartBtn" class="px-5 py-3.5 bg-noir-850 hover:bg-noir-800 border border-noir-border text-white font-bold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer transition-all">
+            <button id="quickAddCartBtn" class="px-5 py-3.5 bg-black hover:bg-noir-850 border border-white/20 hover:border-white text-white font-bold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer transition-all">
               <i data-lucide="shopping-bag" class="w-4 h-4"></i>
               Añadir al Carrito
             </button>
@@ -856,8 +1828,8 @@
   <div id="sizeGuideModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
     <div id="sizeGuideBackdrop" class="absolute inset-0 bg-black/90 backdrop-blur-md cursor-pointer"></div>
 
-    <div class="relative bg-noir-900 border border-noir-border max-w-xl w-full p-6 sm:p-8 shadow-2xl z-10 max-h-[90vh] overflow-y-auto font-mono">
-      <button onclick="closeSizeGuideModal()" class="absolute top-5 right-5 p-2 bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white cursor-pointer" aria-label="Cerrar">
+    <div class="relative bg-noir-900 border border-white/20 max-w-xl w-full p-6 sm:p-8 shadow-2xl z-10 max-h-[90vh] overflow-y-auto font-mono">
+      <button onclick="closeSizeGuideModal()" class="absolute top-5 right-5 p-2 bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white cursor-pointer" aria-label="Cerrar">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
 
@@ -875,7 +1847,7 @@
 
         <div class="overflow-x-auto border border-white/10 rounded">
           <table class="w-full text-left text-xs">
-            <thead class="bg-noir-950 text-accent-acid border-b border-white/10 uppercase">
+            <thead class="bg-black text-accent-acid border-b border-white/10 uppercase">
               <tr>
                 <th class="p-2.5">Talla US</th>
                 <th class="p-2.5">Talla COL / EU</th>
@@ -887,7 +1859,7 @@
               <tr><td class="p-2.5 font-bold text-white">US 7.5</td><td class="p-2.5">39 - 40</td><td class="p-2.5">25.5 cm</td></tr>
               <tr><td class="p-2.5 font-bold text-white">US 8</td><td class="p-2.5">40</td><td class="p-2.5">26.0 cm</td></tr>
               <tr><td class="p-2.5 font-bold text-white">US 8.5</td><td class="p-2.5">41</td><td class="p-2.5">26.5 cm</td></tr>
-              <tr><td class="p-2.5 font-bold text-accent-acid">US 9</td><td class="p-2.5 text-accent-acid">41 - 42 (Más común)</td><td class="p-2.5 text-accent-acid">27.0 cm</td></tr>
+              <tr><td class="p-2.5 font-bold text-accent-acid">US 9</td><td class="p-2.5 text-accent-acid font-bold">41 - 42 (Más común)</td><td class="p-2.5 text-accent-acid font-bold">27.0 cm</td></tr>
               <tr><td class="p-2.5 font-bold text-white">US 9.5</td><td class="p-2.5">42</td><td class="p-2.5">27.5 cm</td></tr>
               <tr><td class="p-2.5 font-bold text-white">US 10</td><td class="p-2.5">43</td><td class="p-2.5">28.0 cm</td></tr>
               <tr><td class="p-2.5 font-bold text-white">US 10.5</td><td class="p-2.5">43 - 44</td><td class="p-2.5">28.5 cm</td></tr>
@@ -897,11 +1869,11 @@
         </div>
 
         <div class="pt-2 flex flex-col sm:flex-row gap-3">
-          <a href="https://wa.me/573001234567?text=%C2%A1Hola!%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Tengo%20dudas%20con%20mi%20talla%20y%20quisiera%20asesor%C3%ADa%20personalizada." target="_blank" rel="noopener noreferrer" class="flex-1 py-3 bg-accent-acid text-black font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer">
+          <a href="https://wa.me/573008831730?text=%C2%A1Hola!%20%F0%9F%91%8B%20Vengo%20de%20la%20web%20de%20CAURE%20BRAND.%20Tengo%20dudas%20con%20mi%20talla%20y%20quisiera%20asesor%C3%ADa%20personalizada." target="_blank" rel="noopener noreferrer" class="flex-1 py-3 bg-accent-acid text-black font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer">
             <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
-            Asesoría de Talla por WhatsApp
+            Asesoría de Talla al 300 883 1730
           </a>
-          <button onclick="closeSizeGuideModal()" class="px-5 py-3 bg-noir-950 border border-white/10 text-white font-bold text-xs uppercase cursor-pointer">
+          <button onclick="closeSizeGuideModal()" class="px-5 py-3 bg-black border border-white/20 text-white font-bold text-xs uppercase cursor-pointer">
             Cerrar
           </button>
         </div>
@@ -910,9 +1882,9 @@
   </div>
 
   <!-- ============================================================ -->
-  <!-- 12. TOAST FEEDBACK ALERT                                     -->
+  <!-- 12. TOAST FEEDBACK ALERT (B&W + HYPER GREEN)                 -->
   <!-- ============================================================ -->
-  <div id="toastAlert" class="fixed top-6 right-6 z-50 transform translate-y-[-160%] transition-transform duration-300 flex items-center gap-3 bg-noir-900 border border-accent-acid text-white px-5 py-3.5 shadow-2xl font-mono text-xs font-bold pointer-events-none">
+  <div id="toastAlert" class="fixed top-6 right-6 z-50 transform translate-y-[-160%] transition-transform duration-300 flex items-center gap-3 bg-black border border-accent-acid text-white px-5 py-3.5 shadow-2xl font-mono text-xs font-bold pointer-events-none">
     <i data-lucide="check" class="w-4 h-4 text-accent-acid"></i>
     <span id="toastAlertText">Notificación</span>
   </div>
@@ -922,110 +1894,112 @@
   <!-- ============================================================ -->
   <script>
     /* ==============================================================
-       CONFIGURACIÓN MAESTRA DE CAURE BRAND
+       CONFIGURACIÓN MAESTRA DE CAURE BRAND CON NÚMERO 3008831730
        ============================================================== */
     const CAURE_CONFIG = {
-      phone: "573001234567", // Tu WhatsApp internacional sin '+' ni espacios
+      phone: "573008831730", // 3008831730 (+57 Colombia)
+      rawPhone: "300 883 1730",
+      displayPhone: "+57 300 883 1730",
       brandName: "CAURE BRAND",
       formatPrice: (amount) => `$ ${amount.toLocaleString('es-CO')} COP`
     };
 
-    /* Tallas US estándar solicitadas (7 al 11) */
+    /* Tallas US estándar */
     const AVAILABLE_US_SIZES = ["7", "7.5", "8", "8.5", "9", "9.5", "10", "10.5", "11"];
 
-    /* Catálogo con Doble Perspectiva (Dual-Image Hover) */
+    /* Catálogo en memoria para interacciones */
     const SNEAKERS_DATA = [
-      {
-        id: 1,
-        name: "Air Jordan 1 Low 'Reverse Mocha'",
-        brand: "Jordan",
-        price: 195000,
-        originalPrice: 245000,
-        tag: "HOT DROP",
-        imagePrimary: "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=900&q=80",
-        imageSecondary: "https://images.unsplash.com/photo-1597045566677-8cf032ed6634?auto=format&fit=crop&w=900&q=80",
-        description: "Colaboración Travis Scott x Cactus Jack con cuero nobuck marrón premium, Swoosh invertido off-white y caja conmemorativa."
-      },
-      {
-        id: 2,
-        name: "Air Jordan 4 Retro 'Military Black'",
-        brand: "Jordan",
-        price: 210000,
-        originalPrice: 260000,
-        tag: "ÚLTIMOS PARES",
-        imagePrimary: "https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?auto=format&fit=crop&w=900&q=80",
-        imageSecondary: "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=900&q=80",
-        description: "Silueta legendaria con paneles laterales en red negra, puntera en gamuza gris ceniza y soporte alado icónico de 1989."
-      },
-      {
-        id: 3,
-        name: "Nike Dunk Low Retro 'Panda'",
-        brand: "Nike",
-        price: 165000,
-        originalPrice: 200000,
-        tag: "IMPORTADO G5",
-        imagePrimary: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=900&q=80",
-        imageSecondary: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=900&q=80",
-        description: "El clásico de blanco y negro más versátil del streetwear. Cuero suave con suela exterior de caucho de máxima durabilidad."
-      },
-      {
-        id: 4,
-        name: "New Balance 550 'White Green'",
-        brand: "New Balance",
-        price: 180000,
-        originalPrice: 220000,
-        tag: "IMPORTADO G5",
-        imagePrimary: "https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=900&q=80",
-        imageSecondary: "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=900&q=80",
-        description: "Estilo retro basketball de los años 80 con cuero perforado transpirable, detalles en verde botella y logo 'N' en relieve."
-      },
-      {
-        id: 5,
-        name: "Air Jordan 1 High OG 'Lost & Found'",
-        brand: "Jordan",
-        price: 225000,
-        originalPrice: 280000,
-        tag: "ÚLTIMOS PARES",
-        imagePrimary: "https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?auto=format&fit=crop&w=900&q=80",
-        imageSecondary: "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?auto=format&fit=crop&w=900&q=80",
-        description: "Tributo al Chicago 1985 original con tratamiento de cuero craquelado vintage, lengüeta amarillenta y factura retro en la caja."
-      },
-      {
-        id: 6,
-        name: "Adidas Campus 00s 'Core Black'",
-        brand: "Adidas",
-        price: 155000,
-        originalPrice: 190000,
-        tag: "HOT DROP",
-        imagePrimary: "https://images.unsplash.com/photo-1518002171953-a080ee817e1f?auto=format&fit=crop&w=900&q=80",
-        imageSecondary: "https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?auto=format&fit=crop&w=900&q=80",
-        description: "Silueta skater ancha inspirada en la cultura Y2K con exterior de ante grueso, cordones acolchados XXL y suela de caramelo."
-      },
-      {
-        id: 7,
-        name: "Nike Air Force 1 '07 'Triple White'",
-        brand: "Nike",
-        price: 150000,
-        originalPrice: 185000,
-        tag: "IMPORTADO G5",
-        imagePrimary: "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?auto=format&fit=crop&w=900&q=80",
-        imageSecondary: "https://images.unsplash.com/photo-1595341888016-a392ef81b7de?auto=format&fit=crop&w=900&q=80",
-        description: "La silueta insustituible. Construcción en piel lisa totalmente blanca con cámara de aire Nike Air oculta y dubrae metálico."
-      },
-      {
-        id: 8,
-        name: "New Balance 9060 'Rain Cloud'",
-        brand: "New Balance",
-        price: 195000,
-        originalPrice: 235000,
-        tag: "HOT DROP",
-        imagePrimary: "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=900&q=80",
-        imageSecondary: "https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=900&q=80",
-        description: "Diseño futurista con silueta voluminosa, entresuela esculpida ABZORB de doble densidad y superposiciones de gamuza gris."
-      }
-    ];
+    {
+        "id": 1,
+        "name": "Air Jordan 1 Low 'Reverse Mocha'",
+        "brand": "Jordan",
+        "price": 195000,
+        "originalPrice": 245000,
+        "tag": "HOT DROP",
+        "imagePrimary": "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=900&q=80",
+        "imageSecondary": "https://images.unsplash.com/photo-1597045566677-8cf032ed6634?auto=format&fit=crop&w=900&q=80",
+        "description": "Colaboración Travis Scott x Cactus Jack con cuero nobuck marrón premium, Swoosh invertido off-white y caja conmemorativa."
+    },
+    {
+        "id": 2,
+        "name": "Air Jordan 4 Retro 'Military Black'",
+        "brand": "Jordan",
+        "price": 210000,
+        "originalPrice": 260000,
+        "tag": "ÚLTIMOS PARES",
+        "imagePrimary": "https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?auto=format&fit=crop&w=900&q=80",
+        "imageSecondary": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=900&q=80",
+        "description": "Silueta legendaria con paneles laterales en red negra, puntera en gamuza gris ceniza y soporte alado icónico de 1989."
+    },
+    {
+        "id": 3,
+        "name": "Nike Dunk Low Retro 'Panda'",
+        "brand": "Nike",
+        "price": 165000,
+        "originalPrice": 200000,
+        "tag": "IMPORTADO G5",
+        "imagePrimary": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=900&q=80",
+        "imageSecondary": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=900&q=80",
+        "description": "El clásico de blanco y negro más versátil del streetwear. Cuero suave con suela exterior de caucho de máxima durabilidad."
+    },
+    {
+        "id": 4,
+        "name": "New Balance 550 'White Green'",
+        "brand": "New Balance",
+        "price": 180000,
+        "originalPrice": 220000,
+        "tag": "IMPORTADO G5",
+        "imagePrimary": "https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=900&q=80",
+        "imageSecondary": "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=900&q=80",
+        "description": "Estilo retro basketball de los años 80 con cuero perforado transpirable, detalles en verde botella y logo 'N' en relieve."
+    },
+    {
+        "id": 5,
+        "name": "Air Jordan 1 High OG 'Lost & Found'",
+        "brand": "Jordan",
+        "price": 225000,
+        "originalPrice": 280000,
+        "tag": "ÚLTIMOS PARES",
+        "imagePrimary": "https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?auto=format&fit=crop&w=900&q=80",
+        "imageSecondary": "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?auto=format&fit=crop&w=900&q=80",
+        "description": "Tributo al Chicago 1985 original con tratamiento de cuero craquelado vintage, lengüeta amarillenta y factura retro en la caja."
+    },
+    {
+        "id": 6,
+        "name": "Adidas Campus 00s 'Core Black'",
+        "brand": "Adidas",
+        "price": 155000,
+        "originalPrice": 190000,
+        "tag": "HOT DROP",
+        "imagePrimary": "https://images.unsplash.com/photo-1518002171953-a080ee817e1f?auto=format&fit=crop&w=900&q=80",
+        "imageSecondary": "https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?auto=format&fit=crop&w=900&q=80",
+        "description": "Silueta skater ancha inspirada en la cultura Y2K con exterior de ante grueso, cordones acolchados XXL y suela de caramelo."
+    },
+    {
+        "id": 7,
+        "name": "Nike Air Force 1 '07 'Triple White'",
+        "brand": "Nike",
+        "price": 150000,
+        "originalPrice": 185000,
+        "tag": "IMPORTADO G5",
+        "imagePrimary": "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?auto=format&fit=crop&w=900&q=80",
+        "imageSecondary": "https://images.unsplash.com/photo-1595341888016-a392ef81b7de?auto=format&fit=crop&w=900&q=80",
+        "description": "La silueta insustituible. Construcción en piel lisa totalmente blanca con cámara de aire Nike Air oculta y dubrae metálico."
+    },
+    {
+        "id": 8,
+        "name": "New Balance 9060 'Rain Cloud'",
+        "brand": "New Balance",
+        "price": 195000,
+        "originalPrice": 235000,
+        "tag": "HOT DROP",
+        "imagePrimary": "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=900&q=80",
+        "imageSecondary": "https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=900&q=80",
+        "description": "Diseño futurista con silueta voluminosa, entresuela esculpida ABZORB de doble densidad y superposiciones de gamuza gris."
+    }
+];
 
-    /* Estado de la aplicación: Pre-asignamos US 9 por defecto a cada par para que cualquier botón funcione al primer clic */
+    /* Estado de la aplicación: US 9 pre-asignado a cada par */
     let selectedBrandFilter = 'all';
     let currentSearchTerm = '';
     let chosenSizes = {};
@@ -1038,200 +2012,31 @@
     let quickActiveSize = "9";
 
     /* ==============================================================
-       GENERADOR DE ENLACES DE WHATSAPP (MENSAJE EXACTO SOLICITADO)
+       GENERADOR DE ENLACES DE WHATSAPP (MENSAJE EXACTO AL 3008831730)
        "¡Hola! 👋 Vengo de la web de CAURE BRAND. Me interesa asegurar los tenis [Modelo] en talla [Talla]. ¿Me confirman disponibilidad y métodos de envío?"
        ============================================================== */
     function buildWhatsAppPurchaseUrl(product, size) {
       const modelText = `${product.brand} ${product.name}`;
       const sizeText = size ? `US ${size}` : "US 9";
-      
       const message = `¡Hola! 👋 Vengo de la web de CAURE BRAND. Me interesa asegurar los tenis ${modelText} en talla ${sizeText}. ¿Me confirman disponibilidad y métodos de envío?`;
-      
       return `https://wa.me/${CAURE_CONFIG.phone}?text=${encodeURIComponent(message)}`;
     }
 
     function buildCartWhatsAppUrl() {
       if (shoppingCart.length === 0) {
-        return `https://wa.me/${CAURE_CONFIG.phone}?text=${encodeURIComponent("¡Hola! 👋 Vengo de la web de CAURE BRAND. Quisiera asesoría sobre disponibilidad de tenis.")}`;
+        return `https://wa.me/${CAURE_CONFIG.phone}?text=${encodeURIComponent("¡Hola! 👋 Vengo de la web de CAURE BRAND. Quisiera asesoría sobre disponibilidad de tenis al 3008831730.")}`;
       }
       let itemsList = shoppingCart.map((it, i) => 
         `${i + 1}. *${it.name}* | Talla: *US ${it.size}* | Cantidad: ${it.quantity} | ${CAURE_CONFIG.formatPrice(it.price * it.quantity)}`
       ).join('\n');
 
       const total = shoppingCart.reduce((s, it) => s + (it.price * it.quantity), 0);
-
       const message = `¡Hola! 👋 Vengo de la web de CAURE BRAND. Deseo confirmar y asegurar el siguiente pedido:\n\n${itemsList}\n\n*TOTAL: ${CAURE_CONFIG.formatPrice(total)}*\n\n¿Me confirman disponibilidad para despacho y pago contra entrega?`;
       return `https://wa.me/${CAURE_CONFIG.phone}?text=${encodeURIComponent(message)}`;
     }
 
     /* ==============================================================
-       RENDERIZADO DEL CATÁLOGO CON BOTONES TOTALMENTE FUNCIONALES
-       ============================================================== */
-    function renderCatalogGrid() {
-      const grid = document.getElementById('catalogGrid');
-      const noResults = document.getElementById('noResultsBox');
-      const countFeedback = document.getElementById('catalogCountFeedback');
-
-      const filtered = SNEAKERS_DATA.filter(item => {
-        const matchesBrand = (selectedBrandFilter === 'all') 
-          ? true 
-          : item.brand.toLowerCase() === selectedBrandFilter.toLowerCase();
-
-        const matchesQuery = item.name.toLowerCase().includes(currentSearchTerm.toLowerCase()) || 
-                             item.brand.toLowerCase().includes(currentSearchTerm.toLowerCase());
-        return matchesBrand && matchesQuery;
-      });
-
-      countFeedback.textContent = `Mostrando ${filtered.length} de ${SNEAKERS_DATA.length} modelos curados`;
-
-      if (filtered.length === 0) {
-        grid.innerHTML = '';
-        noResults.classList.remove('hidden');
-        return;
-      } else {
-        noResults.classList.add('hidden');
-      }
-
-      grid.innerHTML = filtered.map(item => {
-        const activeSize = chosenSizes[item.id] || "9";
-        const waUrl = buildWhatsAppPurchaseUrl(item, activeSize);
-
-        return `
-          <div class="product-card group bg-noir-900 border border-noir-border hover:border-accent-acid/50 p-4 sm:p-5 flex flex-col justify-between transition-all duration-300 relative shadow-xl hover:-translate-y-1">
-            
-            <!-- DUAL IMAGE PERSPECTIVE CONTAINER -->
-            <div class="relative w-full aspect-square bg-black overflow-hidden mb-4 border border-white/5 flex items-center justify-center p-3 cursor-pointer" onclick="openQuickModal(${item.id})" title="Click para ver detalles">
-              
-              <!-- Tag Pill -->
-              <span class="absolute top-3 left-3 z-20 px-2 py-0.5 text-[9px] font-mono font-black tracking-widest uppercase ${
-                item.tag === 'ÚLTIMOS PARES' 
-                  ? 'bg-accent-orange text-black' 
-                  : item.tag === 'HOT DROP' 
-                    ? 'bg-accent-acid text-black' 
-                    : 'bg-white/10 text-white border border-white/20'
-              }">
-                ${item.tag}
-              </span>
-
-              <!-- Quick View Eye Action -->
-              <button 
-                type="button"
-                onclick="event.stopPropagation(); openQuickModal(${item.id})" 
-                class="absolute top-3 right-3 z-20 w-8 h-8 bg-noir-950/80 hover:bg-accent-acid hover:text-black border border-white/10 text-white flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 cursor-pointer"
-                title="Vista Rápida"
-              >
-                <i data-lucide="eye" class="w-4 h-4"></i>
-              </button>
-
-              <!-- Primary Angle Image (Default) -->
-              <img 
-                src="${item.imagePrimary}" 
-                alt="${item.name} - Vista Principal" 
-                loading="lazy"
-                class="absolute inset-0 w-full h-full object-contain p-4 filter drop-shadow-[0_15px_15px_rgba(0,0,0,0.85)] transition-opacity duration-500 opacity-100 group-hover:opacity-0"
-              />
-
-              <!-- Secondary Angle Image (Revealed on Hover) -->
-              <img 
-                src="${item.imageSecondary}" 
-                alt="${item.name} - Ángulo Alternativo" 
-                loading="lazy"
-                class="absolute inset-0 w-full h-full object-contain p-4 filter drop-shadow-[0_15px_15px_rgba(0,0,0,0.85)] transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:scale-105"
-              />
-
-              <div class="absolute bottom-2 left-2 z-10 text-[8px] font-mono text-gray-500 uppercase tracking-widest group-hover:text-accent-acid transition-colors">
-                Hover: Ángulo 2
-              </div>
-            </div>
-
-            <!-- Product Info -->
-            <div class="space-y-3 flex-1 flex flex-col justify-between">
-              
-              <div>
-                <div class="flex items-center justify-between text-[10px] font-mono text-gray-400 uppercase tracking-widest">
-                  <span>${item.brand}</span>
-                  <span class="text-accent-acid font-bold">STOCK CONFIRMADO</span>
-                </div>
-                <h3 onclick="openQuickModal(${item.id})" class="font-syne font-black text-base text-white uppercase group-hover:text-accent-acid transition-colors mt-0.5 line-clamp-1 cursor-pointer">
-                  ${item.name}
-                </h3>
-              </div>
-
-              <!-- Price -->
-              <div class="flex items-baseline gap-2 font-mono">
-                <span class="font-black text-lg text-white">
-                  ${CAURE_CONFIG.formatPrice(item.price)}
-                </span>
-                <span class="text-xs line-through text-gray-500">
-                  ${CAURE_CONFIG.formatPrice(item.originalPrice)}
-                </span>
-              </div>
-
-              <!-- Quick US Size Selector (US 7 to 11) -->
-              <div class="pt-2 border-t border-noir-border/80">
-                <div class="flex items-center justify-between text-[10px] font-mono text-gray-400 mb-1.5 uppercase">
-                  <span>Talla US:</span>
-                  <span class="text-accent-acid font-bold" id="sizeLabelFeedback-${item.id}">
-                    US ${activeSize}
-                  </span>
-                </div>
-
-                <div class="grid grid-cols-5 gap-1" id="sizeGrid-${item.id}">
-                  ${AVAILABLE_US_SIZES.map(sz => {
-                    const isSelected = activeSize === sz;
-                    return `
-                      <button 
-                        type="button"
-                        onclick="setProductSize(${item.id}, '${sz}')"
-                        class="py-1 font-mono text-[11px] font-bold border transition-all text-center cursor-pointer ${
-                          isSelected 
-                            ? 'bg-accent-acid text-black border-accent-acid font-black shadow-[0_0_8px_rgba(204,255,0,0.5)]' 
-                            : 'bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/60 hover:text-white'
-                        }"
-                      >
-                        ${sz}
-                      </button>
-                    `;
-                  }).join('')}
-                </div>
-              </div>
-
-              <!-- Action CTAs: Direct functional WhatsApp Link & Add to Cart -->
-              <div class="pt-3 grid grid-cols-1 gap-2 font-mono text-xs">
-                <!-- Direct Functional WhatsApp Link -->
-                <a 
-                  id="waBuyBtn-${item.id}"
-                  href="${waUrl}"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="w-full py-3 bg-accent-acid hover:bg-accent-acidHover text-black font-black uppercase tracking-wider flex items-center justify-center gap-2 transition-all transform active:scale-95 glow-acid-sm cursor-pointer"
-                >
-                  <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
-                  <span>Comprar Ahora</span>
-                </a>
-
-                <!-- Functional Add to Cart -->
-                <button 
-                  type="button"
-                  onclick="triggerAddToCart(${item.id})"
-                  class="w-full py-2 bg-noir-950 hover:bg-noir-850 border border-noir-border hover:border-white/30 text-gray-300 hover:text-accent-acid font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-colors text-[11px] cursor-pointer"
-                >
-                  <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
-                  <span>Añadir al Carrito</span>
-                </button>
-              </div>
-
-            </div>
-
-          </div>
-        `;
-      }).join('');
-
-      lucide.createIcons();
-    }
-
-    /* ==============================================================
-       SELECCIÓN INTERACTIVA DE TALLAS US & ACTUALIZACIÓN INMEDIATA
+       ACTUALIZACIÓN DINÁMICA DE TALLA Y ENLACE DE WHATSAPP
        ============================================================== */
     function setProductSize(productId, sizeStr) {
       chosenSizes[productId] = sizeStr;
@@ -1291,7 +2096,6 @@
 
       refreshCartUI();
       showToastAlert(`¡${product.name} (US ${size}) agregado al carrito! 🔥`);
-      // Open drawer so the user immediately sees the action was successful
       toggleCartDrawer(true);
     }
 
@@ -1303,12 +2107,13 @@
       const grandTotalEl = document.getElementById('cartGrandTotal');
       const checkoutBtn = document.getElementById('cartCheckoutWaBtn');
 
+      if (!badgePill || !listContainer) return;
+
       const totalItems = shoppingCart.reduce((acc, it) => acc + it.quantity, 0);
       const totalAmount = shoppingCart.reduce((acc, it) => acc + (it.price * it.quantity), 0);
 
-      // Pill animation
       badgePill.textContent = totalItems;
-      drawerBadge.textContent = totalItems;
+      if (drawerBadge) drawerBadge.textContent = totalItems;
 
       if (totalItems > 0) {
         badgePill.classList.remove('scale-0');
@@ -1318,16 +2123,15 @@
         badgePill.classList.add('scale-0');
       }
 
-      subtotalEl.textContent = CAURE_CONFIG.formatPrice(totalAmount);
-      grandTotalEl.textContent = CAURE_CONFIG.formatPrice(totalAmount);
+      if (subtotalEl) subtotalEl.textContent = CAURE_CONFIG.formatPrice(totalAmount);
+      if (grandTotalEl) grandTotalEl.textContent = CAURE_CONFIG.formatPrice(totalAmount);
 
-      // Update checkout WhatsApp link
-      checkoutBtn.href = buildCartWhatsAppUrl();
+      if (checkoutBtn) checkoutBtn.href = buildCartWhatsAppUrl();
 
       if (shoppingCart.length === 0) {
         listContainer.innerHTML = `
           <div class="text-center py-16 space-y-3 font-mono">
-            <div class="w-12 h-12 rounded-full bg-noir-950 border border-noir-border flex items-center justify-center mx-auto text-gray-600">
+            <div class="w-12 h-12 rounded-full bg-black border border-white/10 flex items-center justify-center mx-auto text-gray-500">
               <i data-lucide="shopping-bag" class="w-6 h-6"></i>
             </div>
             <p class="text-gray-400 text-xs uppercase tracking-wider">Tu carrito está vacío</p>
@@ -1338,7 +2142,7 @@
         `;
       } else {
         listContainer.innerHTML = shoppingCart.map((item, idx) => `
-          <div class="flex items-center gap-3 bg-noir-950 p-3 border border-noir-border font-mono">
+          <div class="flex items-center gap-3 bg-black p-3 border border-white/10 font-mono">
             <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-contain bg-black p-1 border border-white/5" />
             <div class="flex-1 min-w-0">
               <h4 class="font-syne font-bold text-xs text-white uppercase truncate">${item.name}</h4>
@@ -1348,19 +2152,21 @@
                 <span class="text-white font-bold">${CAURE_CONFIG.formatPrice(item.price)}</span>
               </div>
               <div class="flex items-center gap-2 mt-2">
-                <button onclick="adjustCartQty(${idx}, -1)" class="w-5 h-5 bg-noir-850 border border-white/10 text-white flex items-center justify-center text-xs cursor-pointer hover:bg-accent-acid hover:text-black transition-colors">-</button>
+                <button onclick="adjustCartQty(${idx}, -1)" class="w-5 h-5 bg-noir-850 border border-white/15 text-white flex items-center justify-center text-xs cursor-pointer hover:bg-accent-acid hover:text-black transition-colors">-</button>
                 <span class="text-xs font-bold px-1">${item.quantity}</span>
-                <button onclick="adjustCartQty(${idx}, 1)" class="w-5 h-5 bg-noir-850 border border-white/10 text-white flex items-center justify-center text-xs cursor-pointer hover:bg-accent-acid hover:text-black transition-colors">+</button>
+                <button onclick="adjustCartQty(${idx}, 1)" class="w-5 h-5 bg-noir-850 border border-white/15 text-white flex items-center justify-center text-xs cursor-pointer hover:bg-accent-acid hover:text-black transition-colors">+</button>
               </div>
             </div>
-            <button onclick="deleteCartItem(${idx})" class="text-gray-500 hover:text-red-400 p-2 cursor-pointer transition-colors" title="Quitar">
+            <button onclick="deleteCartItem(${idx})" class="text-gray-500 hover:text-white p-2 cursor-pointer transition-colors" title="Quitar">
               <i data-lucide="trash-2" class="w-4 h-4"></i>
             </button>
           </div>
         `).join('');
       }
 
-      lucide.createIcons();
+      if (window.lucide) {
+        lucide.createIcons();
+      }
     }
 
     function adjustCartQty(index, amount) {
@@ -1381,6 +2187,7 @@
     function toggleCartDrawer(open) {
       const drawer = document.getElementById('cartSlideDrawer');
       const panel = document.getElementById('cartDrawerPanel');
+      if (!drawer || !panel) return;
 
       if (open) {
         drawer.classList.remove('opacity-0', 'pointer-events-none');
@@ -1398,7 +2205,7 @@
     }
 
     /* ==============================================================
-       QUICK VIEW MODAL (CON BOTÓN DE WHATSAPP DIRECTO)
+       QUICK VIEW MODAL
        ============================================================== */
     function openQuickModal(productId) {
       const product = SNEAKERS_DATA.find(p => p.id === productId);
@@ -1416,7 +2223,6 @@
       document.getElementById('quickDescription').textContent = product.description;
       document.getElementById('quickSelectedSizeLabel').textContent = `US ${quickActiveSize}`;
 
-      // Update buy button direct href
       const quickBuyBtn = document.getElementById('quickBuyWaBtn');
       quickBuyBtn.href = buildWhatsAppPurchaseUrl(product, quickActiveSize);
 
@@ -1427,7 +2233,7 @@
           onclick="setQuickSize('${sz}')"
           class="quick-sz-btn px-3 py-1.5 font-mono text-xs font-bold border transition-all cursor-pointer ${
             sz === quickActiveSize 
-              ? 'bg-accent-acid text-black border-accent-acid' 
+              ? 'bg-accent-acid text-black border-accent-acid font-black' 
               : 'bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/50'
           }"
           data-size="${sz}"
@@ -1449,16 +2255,14 @@
       const btns = document.querySelectorAll('.quick-sz-btn');
       btns.forEach(b => {
         if (b.getAttribute('data-size') === sz) {
-          b.className = 'quick-sz-btn px-3 py-1.5 font-mono text-xs font-bold border transition-all cursor-pointer bg-accent-acid text-black border-accent-acid';
+          b.className = 'quick-sz-btn px-3 py-1.5 font-mono text-xs font-bold border transition-all cursor-pointer bg-accent-acid text-black border-accent-acid font-black';
         } else {
           b.className = 'quick-sz-btn px-3 py-1.5 font-mono text-xs font-bold border transition-all cursor-pointer bg-noir-950 border-white/10 text-gray-400 hover:border-accent-acid/50';
         }
       });
 
-      // Update link URL in modal
       if (quickActiveProduct) {
         document.getElementById('quickBuyWaBtn').href = buildWhatsAppPurchaseUrl(quickActiveProduct, sz);
-        // Also sync with main card
         setProductSize(quickActiveProduct.id, sz);
       }
     }
@@ -1488,20 +2292,59 @@
     }
 
     /* ==============================================================
-       FILTRADO RÁPIDO DESDE EL FOOTER
+       FILTRADO RÁPIDO DE MARCAS & BUSCADOR
        ============================================================== */
+    function filterCards() {
+      const cards = document.querySelectorAll('.product-card');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const brand = card.getAttribute('data-brand') || '';
+        const name = card.getAttribute('data-name') || '';
+
+        const matchesBrand = (selectedBrandFilter === 'all') 
+          ? true 
+          : brand.toLowerCase() === selectedBrandFilter.toLowerCase();
+
+        const matchesQuery = name.toLowerCase().includes(currentSearchTerm.toLowerCase()) || 
+                             brand.toLowerCase().includes(currentSearchTerm.toLowerCase());
+
+        if (matchesBrand && matchesQuery) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      const feedback = document.getElementById('catalogCountFeedback');
+      if (feedback) {
+        feedback.textContent = `Mostrando ${visibleCount} de ${cards.length} modelos curados`;
+      }
+
+      const noResults = document.getElementById('noResultsBox');
+      if (noResults) {
+        if (visibleCount === 0) {
+          noResults.classList.remove('hidden');
+        } else {
+          noResults.classList.add('hidden');
+        }
+      }
+    }
+
     function quickFilterFromFooter(brandName) {
       selectedBrandFilter = brandName;
       const tabs = document.querySelectorAll('.filter-tab');
       tabs.forEach(t => {
         if (t.getAttribute('data-brand').toLowerCase() === brandName.toLowerCase()) {
-          t.className = 'filter-tab active-tab px-5 py-2.5 bg-accent-acid text-black font-black border border-accent-acid transition-all whitespace-nowrap cursor-pointer';
+          t.className = 'filter-tab active-tab px-5 py-2.5 bg-accent-acid text-black font-black border border-accent-acid transition-all whitespace-nowrap cursor-pointer shadow-[0_0_12px_rgba(204,255,0,0.4)]';
         } else {
-          t.className = 'filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-noir-border hover:border-white/20 transition-all whitespace-nowrap cursor-pointer';
+          t.className = 'filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-white/10 hover:border-white/30 transition-all whitespace-nowrap cursor-pointer';
         }
       });
-      renderCatalogGrid();
-      document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth' });
+      filterCards();
+      const cat = document.getElementById('catalogo');
+      if (cat) cat.scrollIntoView({ behavior: 'smooth' });
     }
 
     /* ==============================================================
@@ -1511,12 +2354,14 @@
     function showToastAlert(msg, type = "success") {
       const toast = document.getElementById('toastAlert');
       const text = document.getElementById('toastAlertText');
+      if (!toast || !text) return;
+
       text.textContent = msg;
 
       if (type === "warning") {
-        toast.className = 'fixed top-6 right-6 z-50 transform translate-y-0 transition-transform duration-300 flex items-center gap-3 bg-noir-900 border border-accent-orange text-accent-orange px-5 py-3.5 shadow-2xl font-mono text-xs font-bold';
+        toast.className = 'fixed top-6 right-6 z-50 transform translate-y-0 transition-transform duration-300 flex items-center gap-3 bg-black border border-white text-white px-5 py-3.5 shadow-2xl font-mono text-xs font-bold';
       } else {
-        toast.className = 'fixed top-6 right-6 z-50 transform translate-y-0 transition-transform duration-300 flex items-center gap-3 bg-noir-900 border border-accent-acid text-white px-5 py-3.5 shadow-2xl font-mono text-xs font-bold';
+        toast.className = 'fixed top-6 right-6 z-50 transform translate-y-0 transition-transform duration-300 flex items-center gap-3 bg-black border border-accent-acid text-white px-5 py-3.5 shadow-2xl font-mono text-xs font-bold';
       }
 
       if (toastTimer) clearTimeout(toastTimer);
@@ -1553,33 +2398,35 @@
        ============================================================== */
     window.addEventListener('scroll', () => {
       const header = document.getElementById('mainHeader');
+      if (!header) return;
       if (window.scrollY > 40) {
-        header.classList.add('bg-noir-950/95', 'shadow-2xl', 'border-white/10');
-        header.classList.remove('bg-noir-950/60', 'border-white/5');
+        header.classList.add('bg-black/95', 'shadow-2xl', 'border-white/15');
+        header.classList.remove('bg-black/80', 'border-white/10');
       } else {
-        header.classList.add('bg-noir-950/60', 'border-white/5');
-        header.classList.remove('bg-noir-950/95', 'shadow-2xl', 'border-white/10');
+        header.classList.add('bg-black/80', 'border-white/10');
+        header.classList.remove('bg-black/95', 'shadow-2xl', 'border-white/15');
       }
     });
 
     /* ==============================================================
-       INICIALIZACIÓN Y EVENT LISTENERS ROBUSTOS
+       INICIALIZACIÓN INMEDIATA Y ROBUSTA
        ============================================================== */
-    document.addEventListener('DOMContentLoaded', () => {
+    function initializeApp() {
       // Año dinámico
-      document.getElementById('currentYearDisplay').textContent = new Date().getFullYear();
+      const yr = document.getElementById('currentYearDisplay');
+      if (yr) yr.textContent = new Date().getFullYear();
 
       // Pestañas de filtrado de marca
       const tabs = document.querySelectorAll('.filter-tab');
       tabs.forEach(tab => {
         tab.addEventListener('click', () => {
           tabs.forEach(t => {
-            t.className = 'filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-noir-border hover:border-white/20 transition-all whitespace-nowrap cursor-pointer';
+            t.className = 'filter-tab px-5 py-2.5 bg-noir-900 hover:bg-noir-850 text-gray-300 hover:text-white border border-white/10 hover:border-white/30 transition-all whitespace-nowrap cursor-pointer';
           });
-          tab.className = 'filter-tab active-tab px-5 py-2.5 bg-accent-acid text-black font-black border border-accent-acid transition-all whitespace-nowrap cursor-pointer';
+          tab.className = 'filter-tab active-tab px-5 py-2.5 bg-accent-acid text-black font-black border border-accent-acid transition-all whitespace-nowrap cursor-pointer shadow-[0_0_12px_rgba(204,255,0,0.4)]';
 
           selectedBrandFilter = tab.getAttribute('data-brand');
-          renderCatalogGrid();
+          filterCards();
         });
       });
 
@@ -1587,49 +2434,65 @@
       const searchInput = document.getElementById('liveSearchField');
       const clearBtn = document.getElementById('clearSearchBtn');
 
-      searchInput.addEventListener('input', (e) => {
-        currentSearchTerm = e.target.value.trim();
-        if (currentSearchTerm.length > 0) {
-          clearBtn.classList.remove('hidden');
-        } else {
+      if (searchInput && clearBtn) {
+        searchInput.addEventListener('input', (e) => {
+          currentSearchTerm = e.target.value.trim();
+          if (currentSearchTerm.length > 0) {
+            clearBtn.classList.remove('hidden');
+          } else {
+            clearBtn.classList.add('hidden');
+          }
+          filterCards();
+        });
+
+        clearBtn.addEventListener('click', () => {
+          searchInput.value = '';
+          currentSearchTerm = '';
           clearBtn.classList.add('hidden');
-        }
-        renderCatalogGrid();
-      });
+          filterCards();
+        });
+      }
 
-      clearBtn.addEventListener('click', () => {
-        searchInput.value = '';
-        currentSearchTerm = '';
-        clearBtn.classList.add('hidden');
-        renderCatalogGrid();
-      });
-
-      document.getElementById('resetSearchBtn').addEventListener('click', () => {
-        searchInput.value = '';
-        currentSearchTerm = '';
-        selectedBrandFilter = 'all';
-        clearBtn.classList.add('hidden');
-        tabs[0].click();
-      });
+      const resetBtn = document.getElementById('resetSearchBtn');
+      if (resetBtn && tabs.length > 0) {
+        resetBtn.addEventListener('click', () => {
+          if (searchInput) searchInput.value = '';
+          currentSearchTerm = '';
+          selectedBrandFilter = 'all';
+          if (clearBtn) clearBtn.classList.add('hidden');
+          tabs[0].click();
+        });
+      }
 
       // Carrito Drawer Eventos
-      document.getElementById('cartDrawerOpenBtn').addEventListener('click', () => toggleCartDrawer(true));
-      document.getElementById('cartDrawerCloseBtn').addEventListener('click', () => toggleCartDrawer(false));
-      document.getElementById('cartOverlayBackdrop').addEventListener('click', () => toggleCartDrawer(false));
+      const openCartBtn = document.getElementById('cartDrawerOpenBtn');
+      const closeCartBtn = document.getElementById('cartDrawerCloseBtn');
+      const cartBackdrop = document.getElementById('cartOverlayBackdrop');
+
+      if (openCartBtn) openCartBtn.addEventListener('click', () => toggleCartDrawer(true));
+      if (closeCartBtn) closeCartBtn.addEventListener('click', () => toggleCartDrawer(false));
+      if (cartBackdrop) cartBackdrop.addEventListener('click', () => toggleCartDrawer(false));
 
       // Quick View Modal Eventos
-      document.getElementById('quickModalCloseBtn').addEventListener('click', closeQuickModal);
-      document.getElementById('quickModalBackdrop').addEventListener('click', closeQuickModal);
+      const quickClose = document.getElementById('quickModalCloseBtn');
+      const quickBackdrop = document.getElementById('quickModalBackdrop');
+      const quickAddBtn = document.getElementById('quickAddCartBtn');
 
-      document.getElementById('quickAddCartBtn').addEventListener('click', () => {
-        if (!quickActiveProduct) return;
-        chosenSizes[quickActiveProduct.id] = quickActiveSize;
-        triggerAddToCart(quickActiveProduct.id);
-        closeQuickModal();
-      });
+      if (quickClose) quickClose.addEventListener('click', closeQuickModal);
+      if (quickBackdrop) quickBackdrop.addEventListener('click', closeQuickModal);
+
+      if (quickAddBtn) {
+        quickAddBtn.addEventListener('click', () => {
+          if (!quickActiveProduct) return;
+          chosenSizes[quickActiveProduct.id] = quickActiveSize;
+          triggerAddToCart(quickActiveProduct.id);
+          closeQuickModal();
+        });
+      }
 
       // Size Guide Backdrop click
-      document.getElementById('sizeGuideBackdrop').addEventListener('click', closeSizeGuideModal);
+      const sgBackdrop = document.getElementById('sizeGuideBackdrop');
+      if (sgBackdrop) sgBackdrop.addEventListener('click', closeSizeGuideModal);
 
       // Cerrar modales con tecla ESC
       window.addEventListener('keydown', (e) => {
@@ -1646,32 +2509,43 @@
       const iconOpen = document.getElementById('mobileMenuIconOpen');
       const iconClose = document.getElementById('mobileMenuIconClose');
 
-      mobileToggle.addEventListener('click', () => {
-        const isHidden = mobileDrawer.classList.contains('hidden');
-        if (isHidden) {
-          mobileDrawer.classList.remove('hidden');
-          iconOpen.classList.add('hidden');
-          iconClose.classList.remove('hidden');
-        } else {
-          mobileDrawer.classList.add('hidden');
-          iconOpen.classList.remove('hidden');
-          iconClose.classList.add('hidden');
-        }
-      });
+      if (mobileToggle && mobileDrawer && iconOpen && iconClose) {
+        mobileToggle.addEventListener('click', () => {
+          const isHidden = mobileDrawer.classList.contains('hidden');
+          if (isHidden) {
+            mobileDrawer.classList.remove('hidden');
+            iconOpen.classList.add('hidden');
+            iconClose.classList.remove('hidden');
+          } else {
+            mobileDrawer.classList.add('hidden');
+            iconOpen.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+          }
+        });
+      }
 
       document.querySelectorAll('.mobile-nav-link').forEach(link => {
         link.addEventListener('click', () => {
-          mobileDrawer.classList.add('hidden');
-          iconOpen.classList.remove('hidden');
-          iconClose.classList.add('hidden');
+          if (mobileDrawer) mobileDrawer.classList.add('hidden');
+          if (iconOpen) iconOpen.classList.remove('hidden');
+          if (iconClose) iconClose.classList.add('hidden');
         });
       });
 
-      // Iniciar cuenta regresiva y catálogo
+      // Iniciar cuenta regresiva, Lucide y carrito
       startCountdown();
-      renderCatalogGrid();
       refreshCartUI();
-    });
+      if (window.lucide) {
+        try { lucide.createIcons(); } catch(e) {}
+      }
+    }
+
+    // Inicialización inmediata garantizada
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initializeApp);
+    } else {
+      initializeApp();
+    }
   </script>
 </body>
 </html>
