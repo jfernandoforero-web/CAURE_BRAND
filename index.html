@@ -1661,18 +1661,19 @@
        El halcón del video es oscuro: se ve tal cual sobre fondo blanco
        y se invierte a claro sobre los fondos negros (intro y banda).
        ============================================================== */
+    /* Contraste: sobre blanco el halcón se oscurece a casi negro; sobre negro se aclara a casi blanco */
     .logo-img.is-anim,
-    .hero-lockup img.is-anim { filter: none; animation: none !important; }
+    .hero-lockup img.is-anim { filter: brightness(0.6); animation: none !important; }
     .logo-link:hover .logo-img.is-anim { animation: none !important; }
     .brand-band img.brand-band-mark.is-anim {
-      filter: invert(1) drop-shadow(0 12px 30px rgba(0,0,0,0.6));
+      filter: invert(1) brightness(1.18) drop-shadow(0 12px 30px rgba(0,0,0,0.6));
       animation: none !important;
       width: 190px; height: 135px;
     }
     @media (min-width: 768px) {
       .brand-band img.brand-band-mark.is-anim { width: 270px; height: 192px; }
     }
-    .brand-splash img.is-anim { filter: invert(1); width: 200px; }
+    .brand-splash img.is-anim { filter: invert(1) brightness(1.18); width: 200px; }
 
   </style>
 </head>
